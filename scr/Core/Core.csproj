@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AcceptanceCriteria.cs" />
-    <Compile Include="Model\Context.cs" />
-    <Compile Include="Model\ContextAssertions.cs" />
-    <Compile Include="Model\ContextBehaviour.cs" />
-    <Compile Include="Model\Feature.cs" />
-    <Compile Include="Model\UserStory.cs" />
-    <Compile Include="Model\UserStoryList.cs" />
+    <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
+    <Compile Include="Model\SpecificationPart.cs" />
+    <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
+    <Compile Include="Model\Concepts\Context\Context.cs" />
+    <Compile Include="Model\Concepts\Context\ContextAssertions.cs" />
+    <Compile Include="Model\Concepts\Context\ContextBehaviour.cs" />
+    <Compile Include="Model\Concepts\Feature.cs" />
+    <Compile Include="Model\Concepts\Role.cs" />
+    <Compile Include="Model\Concepts\RoleList.cs" />
+    <Compile Include="Model\Concepts\UserStory.cs" />
+    <Compile Include="Model\Concepts\UserStoryList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,17 +5,37 @@ using System.Text;
 
 namespace BDDish
 {
-	public class Feature : Concept
+	public class Feature : SpecificationPart
 	{	
-		public string Content;
+		public UserStoryList UserStories = new UserStoryList();
+		public RoleList Audience = new RoleList();
 
-		public UserStory UserStory;
+		/// <summary>
+		/// Acceptance criteria directly assigned to this Feature. 
+		/// </summary>
+		/// <remarks>
+		/// These criteria don't have a user stories  assigned.
+		/// </remarks>
+		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
+		
 
-		public Feature(){}
-
-		public Feature(string content)
+		public Feature(string content) : base(content)
 		{
-			Content = content;
 		}
+
+		public Feature AddUserStory(params UserStory[] userStories)
+		{
+			foreach(var userStory in userStories)
+				UserStories.Add(userStory);
+
+			return this;
+		}
+
+		public Feature AddAudience(Role audience)
+		{
+			Audience.Add(audience);
+			return this;
+		}
+
 	}
 }

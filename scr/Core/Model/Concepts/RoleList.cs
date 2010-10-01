@@ -5,9 +5,7 @@ using System.Text;
 
 namespace BDDish
 {
-	public class Concept
+	public class RoleList : List<Role>
 	{
-		public string RenderedConceptName;
-
 	}
 }

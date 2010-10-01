@@ -1,16 +1,16 @@
 ﻿EN:
 
-Interfaces("Schnittstellen").
+Feature("Interfaces").
 Feature("FANTASYformat v1.0"). 
-  As("MusterFirma"). 
-  IWantTo("Rechnungen nach FANTASYformat exportieren"). 
-     AcceptanceCriteria("Das erstellte Dokument ist gegen XSD zu validieren").
-     AcceptanceCriteria("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-     AcceptanceCriteria("Bei einem Export wird eine Datei erstellt in dem Muster yyyy-mm-dd.xml erstellt")
-  As("FirmaSondermann1").
-     AcceptanceCriteria("dass die Beschreibung nicht länger als 250 Zeichen ist.").
-  As("FirmaSondermann2").
-     AktzeptanzKriterium("Leere Knoten sollen nicht geschrieben werden").
+  As("DreamCompany"). 
+  IWantTo("Export invoice to FANTASYformat "). 
+     AcceptanceCriteria("Validate the created document against XSD.").
+     AcceptanceCriteria("The invoice properties are completly exported to fantasy format").
+     AcceptanceCriteria("The created file should have name with the pattern: "yyyy-mm-dd.xml" erstellt")
+  As("SpecialCompany1").
+     AcceptanceCriteria("The descripton should not be longer as 250 chars").
+  As("SpecialCompany2").
+     AktzeptanzKriterium("Empty nodes should be ignored").
 
 DE:
 

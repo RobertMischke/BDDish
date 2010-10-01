@@ -5,7 +5,18 @@ using System.Text;
 
 namespace BDDish
 {
-	public class UserStory
+	public class UserStory : SpecificationPart
 	{
+		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
+
+		public UserStory(string content) : base(content)
+		{
+		}
+
+		public UserStory AddAcceptanceCriterion(string content)
+		{
+			AcceptanceCriteria.Add(new AcceptanceCriterion(content));
+			return this;
+		}
 	}
 }

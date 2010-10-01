@@ -9,12 +9,17 @@ namespace BDDish.Tests
 	public class Playground
 	{
 		[Test]
-		public void Playing_arround()
+		public void Playing_arround_with_the_model()
 		{
 
-			var feature = new Feature("");
-			new Feature()
-				
+			var feature = new Feature("FANTASYformat v1.0");
+			feature.AddAudience(new Role("SampleCustomer"));
+			feature.AddUserStory(
+				new UserStory("Export invoice to FANTASYformat")
+					.AddAcceptanceCriterion("Validate the created document against XSD.")
+					.AddAcceptanceCriterion("The invoice properties are completly exported to fantasy format"), 
+				new UserStory(""));
+
 
 		}
 

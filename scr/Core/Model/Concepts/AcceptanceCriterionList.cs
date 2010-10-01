@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish
 {
-	public class AcceptanceCriteria
+	public class AcceptanceCriterionList : List<AcceptanceCriterion>
 	{
 	}
 }
