@@ -1,0 +1,27 @@
+﻿EN:
+
+Interfaces("Schnittstellen").
+Feature("FANTASYformat v1.0"). 
+  As("MusterFirma"). 
+  IWantTo("Rechnungen nach FANTASYformat exportieren"). 
+     AcceptanceCriteria("Das erstellte Dokument ist gegen XSD zu validieren").
+     AcceptanceCriteria("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
+     AcceptanceCriteria("Bei einem Export wird eine Datei erstellt in dem Muster yyyy-mm-dd.xml erstellt")
+  As("FirmaSondermann1").
+     AcceptanceCriteria("dass die Beschreibung nicht länger als 250 Zeichen ist.").
+  As("FirmaSondermann2").
+     AktzeptanzKriterium("Leere Knoten sollen nicht geschrieben werden").
+
+DE:
+
+Feature("Schnittstellen").
+Feature("FANTASYformat v1.0"). 
+  Als("MusterFirma"). 
+  MöchteIch("Rechnungen nach FANTASYformat exportieren"). 
+     AktzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
+     AktzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
+     AktzeptanzKriterium("Bei einem Export wird eine Datei erstellt in dem Muster yyyy-mm-dd.xml erstellt")
+  Als("FirmaSondermann1").
+     AktzeptanzKriterium("dass die Beschreibung nicht länger als 250 Zeichen ist.").
+  Als("FirmaSondermann2").
+     AktzeptanzKriterium("Leere Knoten sollen nicht geschrieben werden").

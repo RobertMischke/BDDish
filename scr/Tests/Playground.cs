@@ -11,7 +11,11 @@ namespace BDDish.Tests
 		[Test]
 		public void Playing_arround()
 		{
-					
+
+			var feature = new Feature("");
+			new Feature()
+				
+
 		}
 
 	}

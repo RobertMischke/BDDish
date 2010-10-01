@@ -5,8 +5,9 @@ using System.Text;
 
 namespace BDDish
 {
-	public class Feature
+	public class Concept
 	{
-		public UserStory UserStory;
+		public string RenderedConceptName;
+
 	}
 }
