@@ -10,7 +10,7 @@ namespace BDDish
 		public string Name;
 		public string Description;
 
-		public ContextAssertionList Assertions = new ContextAssertionList();
+		public AssertionList Assertions = new AssertionList();
 
 		public void Setup(){}
 

@@ -50,6 +50,9 @@ UserStory("FANTASYformat v1.0").
   MöchteIch("Rechnungen nach FANTASYformat exportieren"). 
      AktzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
      AktzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
+	   .Für("Eine exportierte openTRANS für MusterFirma1 und MusterVorgang24)
+ 	   .Gilt("Feld A entspricht Feld B")
+ 	   .Gilt("Feld A entspricht Feld B")
      AktzeptanzKriterium("Bei einem Export wird eine Datei erstellt in dem Muster yyyy-mm-dd.xml erstellt")
   Als("FirmaSondermann1").
      AktzeptanzKriterium("dass die Beschreibung nicht länger als 250 Zeichen ist.").

@@ -13,5 +13,9 @@ namespace BDDish
 				Add(assertion);
 		}
 
+		public void Add(AssertionList assertions)
+		{
+			AddRange(assertions);
+		}
 	}
 }

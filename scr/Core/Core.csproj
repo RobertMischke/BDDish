@@ -41,13 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
-    <Compile Include="Model\Concepts\Context\ContextAssertion.cs" />
+    <Compile Include="Model\Concepts\Context\Assertion.cs" />
     <Compile Include="Model\Concepts\Context\ContextBehavior.cs" />
     <Compile Include="Model\ModelExecuter.cs" />
     <Compile Include="Model\SpecificationPart.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
     <Compile Include="Model\Concepts\Context\Context.cs" />
-    <Compile Include="Model\Concepts\Context\ContextAssertionList.cs" />
+    <Compile Include="Model\Concepts\Context\AssertionList.cs" />
     <Compile Include="Model\Concepts\Feature.cs" />
     <Compile Include="Model\Concepts\Role.cs" />
     <Compile Include="Model\Concepts\RoleList.cs" />

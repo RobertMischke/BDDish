@@ -9,7 +9,7 @@ namespace Core.Model
 	{
 		public decimal GetTotalPrice()
 		{
-			return this.Sum(p => p.Preis);
+			return this.Sum(p => p.Price);
 		}
 
 	}

@@ -15,16 +15,11 @@ namespace BDDish
 			Sponsors.Add(sponsor);
 		}
 
-		public UserStory AddAcceptanceCriterion(Role sponsor, string acceptanceContent)
-		{
-			AcceptanceCriteria.Add(new AcceptanceCriterion(sponsor, acceptanceContent));
-			return this;
-		}
-
+		
 		public UserStory AddAcceptanceCriterion(
 			Role sponsor, 
 			string acceptanceContent,
-			ContextAssertionList assertions)
+			AssertionList assertions)
 		{
 			AcceptanceCriteria.Add(new AcceptanceCriterion(sponsor, acceptanceContent, assertions));
 			return this;
@@ -32,7 +27,7 @@ namespace BDDish
 
 		public UserStory AddAcceptanceCriterion(
 			string acceptanceContent,
-			ContextAssertionList assertions)
+			AssertionList assertions)
 		{
 			AcceptanceCriteria.Add(new AcceptanceCriterion(acceptanceContent, assertions));
 			return this;

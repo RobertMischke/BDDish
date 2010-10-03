@@ -10,28 +10,28 @@ namespace Core.Schnittstellen
 	public class FantasyFormatExporter
 	{
 
-		public void Run(Auftrag auftrag, string pfad)
+		public void Run(Order order, string pfad)
 		{
-			Run(new FantasyFormatExporterCommand {Auftrag = auftrag, OutputPath = pfad});
+			Run(new FantasyFormatExporterCommand {Order = order, OutputPath = pfad});
 		}
 
 		public void Run(FantasyFormatExporterCommand cmd)
 		{
-			var auftrag = cmd.Auftrag;
+			var auftrag = cmd.Order;
 
 			var xDoc = new XDocument(
 				new XElement("Auftrag",
 					new XElement("Id", auftrag.Id),
 					new XElement("Käufer",
-						new XElement("Id", auftrag.Käufer.Id),
-						new XElement("Name", auftrag.Käufer.Name)),
+						new XElement("Id", auftrag.Buyer.Id),
+						new XElement("Name", auftrag.Buyer.Name)),
 					new XElement("Verkäufer",
-						new XElement("Id", auftrag.Verkäufer.Id),
-						new XElement("Name", auftrag.Verkäufer.Name)),
+						new XElement("Id", auftrag.Seller.Id),
+						new XElement("Name", auftrag.Seller.Name)),
 					new XElement("Positionen"),
-						auftrag.Positionen.Select(pos => new XElement("Position",
+						auftrag.Positions.Select(pos => new XElement("Position",
 								new XElement("Id", pos.Id),
-								new XElement("Preis", pos.Preis))
+								new XElement("Preis", pos.Price))
 							)));
 
 			xDoc.Save(cmd.OutputPath);

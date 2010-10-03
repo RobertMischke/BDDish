@@ -8,24 +8,26 @@ namespace BDDish
 	public class AcceptanceCriterion : SpecificationPart
 	{
 		public RoleList Sponsors = new RoleList();
-		public Context Context;
 		public AssertionList Assertions = new AssertionList();
 		
 
-		public AcceptanceCriterion(string content) : base(content)
-		{			
-		}
-
-		public AcceptanceCriterion(Role demander, string acceptanceContent, AssertionList asssetions) : base(acceptanceContent)
+		public AcceptanceCriterion(string content, AssertionList assertions) : base(content)
 		{
-			Sponsors.Add(demander);
+			Assertions.Add(assertions);
 		}
 
-		public AcceptanceCriterion(Role demander, Context context, string acceptanceContent)
+		public AcceptanceCriterion(Role sponsor, string acceptanceContent, AssertionList assertions) : base(acceptanceContent)
+		{
+			Sponsors.Add(sponsor);
+			Assertions.Add(assertions);
+		}
+
+		public AcceptanceCriterion(Role sponsor, string acceptanceContent)
 			: base(acceptanceContent)
 		{
-			Context = context;
-			Sponsors.Add(demander);
+			Sponsors.Add(sponsor);
 		}
+
+		
 	}
 }

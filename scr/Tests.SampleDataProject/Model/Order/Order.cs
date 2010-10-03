@@ -14,7 +14,7 @@ namespace Core.Model
 
 		public Positions Positions ;
 
-		public decimal TotalPrice { get { return Positions.GetGesamtPreis(); } }
+		public decimal TotalPrice { get { return Positions.GetTotalPrice(); } }
 
 	}
 }

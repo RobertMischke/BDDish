@@ -8,6 +8,6 @@ namespace Core.Model
 	public class Position
 	{
 		public int Id;
-		public decimal Preis;
+		public decimal Price;
 	}
 }
