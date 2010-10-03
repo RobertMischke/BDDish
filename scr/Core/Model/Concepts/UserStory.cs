@@ -7,17 +7,17 @@ namespace BDDish
 {
 	public class UserStory : SpecificationPart
 	{
-		public RoleList Sponsors = new RoleList();
+		public SponsorList Sponsors = new SponsorList();
 		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 
-		public UserStory(Role sponsor, string content): base(content)
+		public UserStory(Sponsor sponsor, string content): base(content)
 		{
 			Sponsors.Add(sponsor);
 		}
 
 		
 		public UserStory AddAcceptanceCriterion(
-			Role sponsor, 
+			Sponsor sponsor, 
 			string acceptanceContent,
 			AssertionList assertions)
 		{
