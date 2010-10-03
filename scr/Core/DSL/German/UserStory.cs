@@ -7,8 +7,10 @@ namespace BDDish.German
 {
 	public class UserStory
 	{
-
-		//public Als()
+		public Kunde Als(string name)
+		{
+			return new Kunde();
+		}
 
 	}
 }

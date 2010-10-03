@@ -5,10 +5,7 @@ using System.Text;
 
 namespace BDDish
 {
-	public class Sponsor : SpecificationPart 
+	public class CustomerList : List<Customer>
 	{
-		public Sponsor(string content) : base(content)
-		{
-		}
 	}
 }

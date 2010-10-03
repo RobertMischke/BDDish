@@ -7,7 +7,7 @@ namespace BDDish
 {
 	public class AcceptanceCriterion : SpecificationPart
 	{
-		public SponsorList Sponsors = new SponsorList();
+		public CustomerList Customers = new CustomerList();
 		public AssertionList Assertions = new AssertionList();
 		
 
@@ -16,16 +16,16 @@ namespace BDDish
 			Assertions.Add(assertions);
 		}
 
-		public AcceptanceCriterion(Sponsor sponsor, string acceptanceContent, AssertionList assertions) : base(acceptanceContent)
+		public AcceptanceCriterion(Customer customer, string acceptanceContent, AssertionList assertions) : base(acceptanceContent)
 		{
-			Sponsors.Add(sponsor);
+			Customers.Add(customer);
 			Assertions.Add(assertions);
 		}
 
-		public AcceptanceCriterion(Sponsor sponsor, string acceptanceContent)
+		public AcceptanceCriterion(Customer customer, string acceptanceContent)
 			: base(acceptanceContent)
 		{
-			Sponsors.Add(sponsor);
+			Customers.Add(customer);
 		}
 
 		

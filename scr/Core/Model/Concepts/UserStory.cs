@@ -7,21 +7,21 @@ namespace BDDish
 {
 	public class UserStory : SpecificationPart
 	{
-		public SponsorList Sponsors = new SponsorList();
+		public CustomerList Customers = new CustomerList();
 		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 
-		public UserStory(Sponsor sponsor, string content): base(content)
+		public UserStory(Customer customer, string content): base(content)
 		{
-			Sponsors.Add(sponsor);
+			Customers.Add(customer);
 		}
 
 		
 		public UserStory AddAcceptanceCriterion(
-			Sponsor sponsor, 
+			Customer customer, 
 			string acceptanceContent,
 			AssertionList assertions)
 		{
-			AcceptanceCriteria.Add(new AcceptanceCriterion(sponsor, acceptanceContent, assertions));
+			AcceptanceCriteria.Add(new AcceptanceCriterion(customer, acceptanceContent, assertions));
 			return this;
 		}
 

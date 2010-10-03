@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BDDish
+namespace BDDish.German
 {
-	public class SponsorList : List<Sponsor>
+	public class Kunde
 	{
 	}
 }
