@@ -12,9 +12,11 @@ namespace BDDish.German
 			throw new NotImplementedException();
 		}
 
-		public UserStory UserStory(string beschreibung)
+		public UserStory Anforderung(string beschreibung)
 		{
 			return new UserStory();
 		}
+
+
 	}
 }

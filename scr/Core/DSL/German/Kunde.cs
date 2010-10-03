@@ -7,5 +7,9 @@ namespace BDDish.German
 {
 	public class Kunde
 	{
+		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

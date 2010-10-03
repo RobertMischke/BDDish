@@ -40,17 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSL\German\AkzeptanzKriterium.cs" />
+    <Compile Include="DSL\German\Feature.cs" />
+    <Compile Include="DSL\German\Fuer.cs" />
+    <Compile Include="DSL\German\Gilt_.cs" />
+    <Compile Include="DSL\German\Kunde.cs" />
+    <Compile Include="DSL\German\UserStory.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concepts\Context\Assertion.cs" />
-    <Compile Include="Model\Concepts\Context\ContextBehavior.cs" />
+    <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
+      <DependentUpon>Context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Concepts\Context\IContext.cs">
+      <DependentUpon>Context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Concepts\ICustomer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ModelExecuter.cs" />
     <Compile Include="Model\SpecificationPart.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
     <Compile Include="Model\Concepts\Context\Context.cs" />
     <Compile Include="Model\Concepts\Context\AssertionList.cs" />
     <Compile Include="Model\Concepts\Feature.cs" />
-    <Compile Include="Model\Concepts\Role.cs" />
-    <Compile Include="Model\Concepts\RoleList.cs" />
+    <Compile Include="Model\Concepts\Customer.cs" />
+    <Compile Include="Model\Concepts\CustomerList.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Concepts\UserStory.cs" />
     <Compile Include="Model\Concepts\UserStoryList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,7 +74,6 @@
   <ItemGroup>
     <Folder Include="DSL\English\" />
     <Folder Include="DSL\German.Strict\" />
-    <Folder Include="DSL\German\" />
     <Folder Include="Model.Visualizer\Console\" />
     <Folder Include="Model.Visualizer\Html\" />
   </ItemGroup>

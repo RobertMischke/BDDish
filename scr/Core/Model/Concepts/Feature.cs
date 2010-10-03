@@ -8,7 +8,7 @@ namespace BDDish
 	public class Feature : SpecificationPart
 	{	
 		public UserStoryList UserStories = new UserStoryList();
-		public SponsorList Sponsors = new SponsorList();
+		public CustomerList Customers = new CustomerList();
 
 		/// <summary>
 		/// Acceptance criteria directly assigned to this Feature. 
@@ -31,9 +31,9 @@ namespace BDDish
 			return this;
 		}
 
-		public Feature AddSponsor(Sponsor sponsor)
+		public Feature AddSponsor(Customer customer)
 		{
-			Sponsors.Add(sponsor);
+			Customers.Add(customer);
 			return this;
 		}
 

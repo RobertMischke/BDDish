@@ -5,16 +5,17 @@ using System.Text;
 
 namespace BDDish
 {
-	public class Context : SpecificationPart 
+	public class Context : SpecificationPart, IContext
 	{
 		public string Name;
 		public string Description;
 
 		public AssertionList Assertions = new AssertionList();
 
-		public void Setup(){}
-
-
+		public void Create()
+		{
+			
+		}
 
 	}
 }
