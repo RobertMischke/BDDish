@@ -21,8 +21,6 @@ namespace BDDish.Tests
 					.AddAcceptanceCriterion(
 						new Role("CompanyA"), "The invoice properties are completly exported to fantasy format"));
 
-
-
 		}
 
 	}

@@ -8,7 +8,7 @@ namespace BDDish
 	public class Feature : SpecificationPart
 	{	
 		public UserStoryList UserStories = new UserStoryList();
-		public RoleList Demanders = new RoleList();
+		public RoleList Sponsors = new RoleList();
 
 		/// <summary>
 		/// Acceptance criteria directly assigned to this Feature. 
@@ -31,9 +31,9 @@ namespace BDDish
 			return this;
 		}
 
-		public Feature AddDemander(Role audience)
+		public Feature AddDemander(Role sponsor)
 		{
-			Demanders.Add(audience);
+			Sponsors.Add(sponsor);
 			return this;
 		}
 

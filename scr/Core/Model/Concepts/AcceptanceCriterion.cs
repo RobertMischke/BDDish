@@ -7,7 +7,7 @@ namespace BDDish
 {
 	public class AcceptanceCriterion : SpecificationPart
 	{
-		public RoleList Demanders = new RoleList();
+		public RoleList Sponsors = new RoleList();
 
 		public AcceptanceCriterion(string content) : base(content)
 		{			
@@ -15,7 +15,7 @@ namespace BDDish
 
 		public AcceptanceCriterion(Role demander, string acceptanceContent) : base(acceptanceContent)
 		{
-			Demanders.Add(demander);
+			Sponsors.Add(demander);
 		}
 	}
 }

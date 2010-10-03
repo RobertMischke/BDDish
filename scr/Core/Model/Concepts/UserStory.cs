@@ -19,9 +19,9 @@ namespace BDDish
 			return this;
 		}
 
-		public UserStory AddAcceptanceCriterion(Role demander, string acceptanceContent)
+		public UserStory AddAcceptanceCriterion(Role sponsor, string acceptanceContent)
 		{
-			AcceptanceCriteria.Add(new AcceptanceCriterion(demander, acceptanceContent));
+			AcceptanceCriteria.Add(new AcceptanceCriterion(sponsor, acceptanceContent));
 			return this;
 		}
 	}
