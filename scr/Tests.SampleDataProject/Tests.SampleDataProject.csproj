@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{51B62357-FE43-42EF-ACC2-9DED7B343586}</ProjectGuid>
+    <ProjectGuid>{9394EA88-B29E-4745-90B7-228B3F19CE0C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BDDish</RootNamespace>
-    <AssemblyName>BDDish</AssemblyName>
+    <RootNamespace>Tests.SampleDataProject</RootNamespace>
+    <AssemblyName>Tests.SampleDataProject</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,27 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
-    <Compile Include="Model\Concepts\Context\ContextAssertion.cs" />
-    <Compile Include="Model\Concepts\Context\ContextBehavior.cs" />
-    <Compile Include="Model\ModelExecuter.cs" />
-    <Compile Include="Model\SpecificationPart.cs" />
-    <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
-    <Compile Include="Model\Concepts\Context\Context.cs" />
-    <Compile Include="Model\Concepts\Context\ContextAssertionList.cs" />
-    <Compile Include="Model\Concepts\Feature.cs" />
-    <Compile Include="Model\Concepts\Role.cs" />
-    <Compile Include="Model\Concepts\RoleList.cs" />
-    <Compile Include="Model\Concepts\UserStory.cs" />
-    <Compile Include="Model\Concepts\UserStoryList.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DSL\English\" />
-    <Folder Include="DSL\German.Strict\" />
-    <Folder Include="DSL\German\" />
-    <Folder Include="Model.Visualizer\Console\" />
-    <Folder Include="Model.Visualizer\Html\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

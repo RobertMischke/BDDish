@@ -1,4 +1,6 @@
-﻿EN:
+﻿-------------------------------------------------------
+EN (Acceptance Criteria Only):
+-------------------------------------------------------
 
 Feature("Interfaces").
 UserStory("FANTASYformat v1.0"). 
@@ -8,11 +10,39 @@ UserStory("FANTASYformat v1.0").
      AcceptanceCriteria("The invoice properties are completly exported to fantasy format").
      AcceptanceCriteria("The created file should have name with the pattern: "yyyy-mm-dd.xml" erstellt")
   As("SpecialCompany1").
-     AcceptanceCriteria("The descripton should not be longer as 250 chars").
+     AcceptanceCriteria("The article descripton should not be longer as 250 chars").
   As("SpecialCompany2").
      AktzeptanzKriterium("Empty nodes should be ignored").
 
+-------------------------------------------------------
+EN (Acceptance With Inspections):
+-------------------------------------------------------
+
+Feature("Interfaces").
+UserStory("FANTASYformat v1.0"). 
+  As("DreamCompany"). 
+  IWantTo("Export invoice to FANTASYformat "). 
+     AcceptanceCriteria("Validate the created document against XSD.").
+        Given("Exported document for SampleCompanyX and SampleArticleFoo"). 
+        Inspect("Validation against FANTASYformat.xsd should be successfull")
+     AcceptanceCriteria("The invoice properties are completly exported to fantasy format").
+        Given("StandardContext"). 
+        Inspect(Field A.01 equals Field B.01")
+        Inspect(Field A.47 equals Field B.47")
+     AcceptanceCriteria("The created file should have name with the pattern: "yyyy-mm-dd.xml" erstellt")
+  As("SpecialCompany1").
+     AcceptanceCriteria("The article descripton should not be longer as 250 chars").
+        Given("StandardContext + where article description has 301 chars "). 
+        Inspect(Field A.Desc.01 length is 250 ")
+        Inspect(Field A.Desc.02 length is 51 ")
+  As("SpecialCompany2").
+     AktzeptanzKriterium("Empty nodes should be ignored").
+        Given("Exported document StandardContext"). 
+        Inspect(Field A.Desc.02 length is 51 ")
+
+-------------------------------------------------------
 DE:
+-------------------------------------------------------
 
 Feature("Schnittstellen").
 UserStory("FANTASYformat v1.0"). 

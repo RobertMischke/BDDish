@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BDDish
+namespace Tests.SampleDataProject
 {
-	public class ContextAssertions
+	public class Class1
 	{
 	}
 }

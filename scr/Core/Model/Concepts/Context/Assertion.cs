@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish
 {
-	public class ContextBehaviour
+	public class Assertion
 	{
 	}
 }
