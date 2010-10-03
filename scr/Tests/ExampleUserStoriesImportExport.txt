@@ -1,7 +1,7 @@
 ﻿EN:
 
 Feature("Interfaces").
-Feature("FANTASYformat v1.0"). 
+UserStory("FANTASYformat v1.0"). 
   As("DreamCompany"). 
   IWantTo("Export invoice to FANTASYformat "). 
      AcceptanceCriteria("Validate the created document against XSD.").
@@ -15,7 +15,7 @@ Feature("FANTASYformat v1.0").
 DE:
 
 Feature("Schnittstellen").
-Feature("FANTASYformat v1.0"). 
+UserStory("FANTASYformat v1.0"). 
   Als("MusterFirma"). 
   MöchteIch("Rechnungen nach FANTASYformat exportieren"). 
      AktzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").

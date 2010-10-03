@@ -13,12 +13,14 @@ namespace BDDish.Tests
 		{
 
 			var feature = new Feature("FANTASYformat v1.0");
-			feature.AddAudience(new Role("SampleCustomer"));
+			feature.AddDemander(new Role("SampleCustomer"));
 			feature.AddUserStory(
 				new UserStory("Export invoice to FANTASYformat")
 					.AddAcceptanceCriterion("Validate the created document against XSD.")
-					.AddAcceptanceCriterion("The invoice properties are completly exported to fantasy format"), 
-				new UserStory(""));
+					.AddAcceptanceCriterion("The invoice properties are completly exported to fantasy format")
+					.AddAcceptanceCriterion(
+						new Role("CompanyA"), "The invoice properties are completly exported to fantasy format"));
+
 
 
 		}
