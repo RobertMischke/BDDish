@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Tests.SampleDataProject
+namespace Core.Model
 {
-	public class Class1
+	public class Buyer
 	{
+		public int Id;
+		public string Name;
 	}
 }
