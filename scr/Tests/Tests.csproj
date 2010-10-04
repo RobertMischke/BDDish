@@ -54,6 +54,7 @@
     <Compile Include="SampleData\SampleDataA.cs" />
     <Compile Include="SampleData\SampleKunde.cs" />
     <Compile Include="SampleData\SampleKunde1.cs" />
+    <Compile Include="SampleData\SampleKunde2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

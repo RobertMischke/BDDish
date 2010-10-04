@@ -7,14 +7,18 @@ namespace BDDish.German
 {
 	public class Feature
 	{
+		private readonly BDDish.Feature _feature;
+
 		public Feature(string beschreibung)
 		{
-			throw new NotImplementedException();
+			_feature = new BDDish.Feature(beschreibung);
 		}
 
-		public UserStory Anforderung(string beschreibung)
+		public Anforderung Anforderung(string beschreibung)
 		{
-			return new UserStory();
+			var userStory = new UserStory(beschreibung);
+			_feature.AddUserStory(userStory);
+			return new Anforderung(userStory);
 		}
 
 
