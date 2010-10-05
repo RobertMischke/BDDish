@@ -25,13 +25,15 @@ namespace BDDish
 			public void Setup(){}
 		}
 
-		public Context(AcceptanceCriterion parentAcceptanceCriterion)
+		public Context(string labelConcept, string labelBody, AcceptanceCriterion parentAcceptanceCriterion) : 
+			base(labelConcept, labelBody)
 		{
 			_internalDesrciption = new InternalDescription();
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
 		}
 
-		public Context(IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion)
+		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion) 
+			: base(labelConcept, contextDescription.Name )
 		{
 			_internalDesrciption = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;

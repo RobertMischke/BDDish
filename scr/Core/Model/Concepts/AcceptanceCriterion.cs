@@ -17,9 +17,11 @@ namespace BDDish
 			ParentCustomer = parentCustomer;
 		}
 
-		public void AddContext(IContextDescription contextDescription)
+		public void AddContext(string labelConcept, IContextDescription contextDescription)
 		{
-			Context = new Context(contextDescription, this);
+			Context = new Context(labelConcept, contextDescription, this);
 		}
+
+
 	}
 }

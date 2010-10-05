@@ -16,7 +16,7 @@ namespace BDDish
 		
 		public string Label
 		{
-			get { return LabelConcept + ":" + LabelBody; }
+			get { return LabelConcept + ": " + LabelBody; }
 		}
 
 		protected SpecificationPart(){}

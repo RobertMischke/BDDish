@@ -7,13 +7,19 @@ namespace BDDish
 {
 	public class ModelExecuter
 	{
+		private const string IndentUserStory = " ";
+		private const string IndentCustomer = " ";
+		private const string IndentAceptanceCriteria = "    ";
+		private const string IndentContext = "      ";
+		private const string IndentAssertion = "      ";
+
 		public void Run(Feature feature)
 		{
 			Console.WriteLine(feature.Label);
 
 			foreach (var userStory in feature.UserStories)
 			{
-				Console.WriteLine(userStory.Label);
+				Console.WriteLine(IndentUserStory + userStory.Label);
 				WriteCustomerInfo(userStory);
 			}
 		}
@@ -22,7 +28,7 @@ namespace BDDish
 		{
 			foreach (var customer in userStory.Customers)
 			{
-				Console.WriteLine(customer.Label);
+				Console.WriteLine(IndentCustomer + customer.Label);
 				WriteAcceptanceInfo(customer);
 			}
 		}
@@ -31,8 +37,8 @@ namespace BDDish
 		{
 			foreach (var acceptanceCriterion in customer.AcceptanceCriteria)
 			{
-				Console.WriteLine(acceptanceCriterion.Label);
-				Console.WriteLine(acceptanceCriterion.Context);
+				Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
+				Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
 				WriteAndExcecuteAssertion(acceptanceCriterion);
 				
 			}
@@ -42,7 +48,7 @@ namespace BDDish
 		{
 			foreach (var assertion in acceptanceCriterion.Context.Assertions)
 			{
-				Console.WriteLine(assertion.LabelConcept);
+				Console.WriteLine(IndentAssertion + assertion.LabelConcept);
 
 				try { assertion.Action(); }
 				catch (NotImplementedException e) { }

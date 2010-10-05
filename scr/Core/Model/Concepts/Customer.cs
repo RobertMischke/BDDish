@@ -32,7 +32,8 @@ namespace BDDish
 			ParentUserStory = userStory;
 		}
 
-		public Customer(ICustomerDescription customerDescription, UserStory userStory)
+		public Customer(string labelConcept, ICustomerDescription customerDescription, UserStory userStory)
+			: base(labelConcept, customerDescription.Name)
 		{
 			_customerDescription = customerDescription;
 			ParentUserStory = userStory;

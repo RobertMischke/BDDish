@@ -17,13 +17,13 @@ namespace BDDish.German
 
 		public Gilt_ Gilt(Action asssertionAction)
 		{
-			_modelContext.Add(new Assertion(LabelConcept, asssertionAction, _modelContext));
+			_modelContext.Add(new Assertion(Gilt_.LabelConcept, asssertionAction, _modelContext));
 			return new Gilt_(_modelContext);
 		}
 
 		public Gilt_ Gilt(string assertionA, EqualConstraint equalTo)
 		{
-			_modelContext.Add(LabelConcept, assertionA, equalTo);
+			_modelContext.Add(Gilt_.LabelConcept, assertionA, equalTo);
 			return new Gilt_(_modelContext);
 		}
 	}

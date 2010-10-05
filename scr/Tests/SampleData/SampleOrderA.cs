@@ -13,7 +13,7 @@ namespace BDDish.Tests
 
 		public SampleOrderA()
 		{
-			Name = GetType().Name;
+			Name = "SampleOrderA";
 			Desciption =
 				@"3 Positionen
 				Position1: Id = 1

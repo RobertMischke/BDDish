@@ -41,7 +41,7 @@ namespace BDDish.German
 
 		public Kunde Als(ICustomerDescription kundenBeschreibung)
 		{
-			var modelCustomer = new Customer(kundenBeschreibung,
+			var modelCustomer = new Customer(Kunde.LabelConcept, kundenBeschreibung,
 			                                 _modelContext.ParentAceptanceCriterion.ParentCustomer.ParentUserStory);
 
 			_modelContext.ParentAceptanceCriterion.

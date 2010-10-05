@@ -26,7 +26,7 @@ namespace BDDish.German
 
 		public Kunde Als(ICustomerDescription kunde)
 		{
-			var modelCustomer = new Customer(kunde, _modelUserStory);
+			var modelCustomer = new Customer(Kunde.LabelConcept, kunde, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Kunde(modelCustomer);
 		}
