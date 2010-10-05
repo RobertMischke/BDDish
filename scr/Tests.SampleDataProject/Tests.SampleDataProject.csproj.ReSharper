@@ -1,0 +1,6 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>9394EA88-B29E-4745-90B7-228B3F19CE0C/d:Interfaces</SkipFolder>
+    <SkipFolder>9394EA88-B29E-4745-90B7-228B3F19CE0C/d:Model</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

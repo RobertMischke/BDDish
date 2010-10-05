@@ -1,6 +1,6 @@
-﻿using Core.Model;
+﻿using BDDish.Tests.SampleData;
 
-namespace Core.Schnittstellen
+namespace BDDish.Tests.SampleData
 {
 	public class FantasyFormatExporterCommand
 	{

@@ -9,7 +9,7 @@ namespace BDDish.Tests
 	public class PlaygroundDSLGerman
 	{
 		[Test]
-		public void Foo()
+		public void SampleTest()
 		{
 			new German.Feature("Schnittstellen").
 					Anforderung("FANTASYformat v1.0 exportieren").
@@ -24,7 +24,7 @@ namespace BDDish.Tests
 						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
 								Für(SampleData.OrderA).
-								Gilt("FeldA", Is.EqualTo("FeldB")).
+								Gilt(SampleData.OrderA.Name , Is.EqualTo("Name")).
 								Gilt("FeldB", Is.EqualTo("FeldB")).
 
 					Execute();

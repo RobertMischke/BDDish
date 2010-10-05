@@ -6,6 +6,7 @@ namespace BDDish.Tests
 	{
 		public string Name { get; set; }
 		public string Desciption { get; set; }
+		//public Positionen;
 
 		public void Setup()
 		{

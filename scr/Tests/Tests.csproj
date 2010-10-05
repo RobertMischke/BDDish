@@ -60,6 +60,10 @@
       <Project>{51B62357-FE43-42EF-ACC2-9DED7B343586}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tests.SampleDataProject\Tests.SampleDataProject.csproj">
+      <Project>{9394EA88-B29E-4745-90B7-228B3F19CE0C}</Project>
+      <Name>Tests.SampleDataProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExampleUserStoriesImportExport.txt" />

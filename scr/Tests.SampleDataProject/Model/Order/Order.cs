@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Core.Model
+namespace BDDish.Tests.SampleData
 {
 	public class Order
 	{
@@ -12,9 +12,9 @@ namespace Core.Model
 		public Buyer Buyer;
 		public Seller Seller;
 
-		public Positions Positions ;
+		public PositionList PositionList ;
 
-		public decimal TotalPrice { get { return Positions.GetTotalPrice(); } }
+		public decimal TotalPrice { get { return PositionList.GetTotalPrice(); } }
 
 	}
 }

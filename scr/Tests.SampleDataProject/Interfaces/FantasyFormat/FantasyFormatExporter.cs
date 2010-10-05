@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using Core.Model;
+using BDDish.Tests.SampleData;
 
-namespace Core.Schnittstellen
+namespace BDDish.Tests.SampleData
 {
 	public class FantasyFormatExporter
 	{
-
 		public void Run(Order order, string pfad)
 		{
 			Run(new FantasyFormatExporterCommand {Order = order, OutputPath = pfad});
@@ -29,7 +28,7 @@ namespace Core.Schnittstellen
 						new XElement("Id", auftrag.Seller.Id),
 						new XElement("Name", auftrag.Seller.Name)),
 					new XElement("Positionen"),
-						auftrag.Positions.Select(pos => new XElement("Position",
+						auftrag.PositionList.Select(pos => new XElement("Position",
 								new XElement("Id", pos.Id),
 								new XElement("Preis", pos.Price))
 							)));
