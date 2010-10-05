@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish.Tests
 {
-	public class EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24 : Order3Positions
+	public class EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 : Order3Positions
 	{
 		public override void Setup()
 		{

@@ -16,5 +16,11 @@ namespace BDDish.Tests
 			Assert.That(_camelCaseToText.GetText("SomeCamelCaseText"), Is.EqualTo("Some camel case text") );
 		}
 
+		[Test]
+		public void UpperCaseWordsInText_ShouldStayUpperCase()
+		{
+			Assert.That(_camelCaseToText.GetText("SomeCAMELCase"), Is.EqualTo("Some CAMEL case"));
+		}
+
 	}
 }

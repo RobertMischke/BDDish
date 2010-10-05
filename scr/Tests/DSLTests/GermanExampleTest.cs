@@ -29,15 +29,15 @@ namespace BDDish.Tests
 					Execute();
 		}
 
-		private EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24 context1;
-		private EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1 context2;
+		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
+		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;
 
-		private EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24 Context1(){
-			return context1 = new EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24();
+		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 Context1(){
+			return context1 = new EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24();
 		}
 
-		private EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1 Context2(){
-			return context2 = new EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1();
+		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 Context2(){
+			return context2 = new EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1();
 		}
 
 		public void SomeAssertionMethod()
