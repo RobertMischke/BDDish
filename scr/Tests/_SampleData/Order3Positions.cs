@@ -13,7 +13,7 @@ namespace BDDish.Tests
 		public Buyer Buyer;
 		public Seller Seller;
 
-		public void Setup()
+		public virtual void Setup()
 		{
 			Order = new Order
 			        	{
@@ -32,7 +32,6 @@ namespace BDDish.Tests
 
 		public Order3Positions()
 		{
-			Label = "SampleOrderA";
 			SampleDesciption =
 				@"3 Positionen
 				Position1: Id = 1

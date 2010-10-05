@@ -15,18 +15,29 @@ namespace BDDish.Tests
 					Anforderung("FANTASYformat v1.0 exportieren").
 						Als(Auftraggeber.Normalo).
 							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-								Für(Sample.Order3Positions).
+								Für(Context1()).
 								Gilt(SomeAssertionMethod).
 							AkzeptanzKriterium("...").
-								Für(Sample.Order1Position).
+								Für(Context2()).
 								Gilt(SomeAssertionMethod).
 						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-								Für(Sample.Order3Positions).
-								Gilt(Sample.Order3Positions.Positions.Count, Is.EqualTo(3)).
-								Gilt(Sample.Order3Positions.Positions[0].Price, Is.EqualTo(22m)).
+								Für(Context2()).
+								Gilt(context2.Positions.Count, Is.EqualTo(3)).
+								Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
 
 					Execute();
+		}
+
+		private EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24 context1;
+		private EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1 context2;
+
+		private EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24 Context1(){
+			return context1 = new EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24();
+		}
+
+		private EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1 Context2(){
+			return context2 = new EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1();
 		}
 
 		public void SomeAssertionMethod()

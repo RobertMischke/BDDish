@@ -49,10 +49,10 @@ UserStory("FANTASYformat v1.0").
   Als("MusterFirma"). 
   MöchteIch("Rechnungen nach FANTASYformat exportieren"). 
      AktzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-        Für("").
-        Gilt("").
+        Für("Ein exportiertes FANTASYformat mit 3 Positionen und MusterFirma1").
+        Gilt("Kann gegen XSD 'XY validiert werden'").
      AktzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-	   .Für("Eine exportiertes FANTASYformat für MusterFirma1 und MusterVorgang24)
+	   .Für("Ein exportiertes FANTASYformat Dokument für MusterFirma1 und MusterVorgang24)
  	   .Gilt("Feld A entspricht Feld B")
  	   .Gilt("Feld A entspricht Feld B")
      AktzeptanzKriterium("Bei einem Export wird eine Datei erstellt in dem Muster yyyy-mm-dd.xml erstellt")

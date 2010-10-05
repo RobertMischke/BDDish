@@ -25,7 +25,6 @@ namespace BDDish.Tests
 
 		public Order1Position()
 		{
-			Label = GetType().Name;
 			SampleDesciption =
 				@"
 				Nur kleine Variation zu SampleOrderA

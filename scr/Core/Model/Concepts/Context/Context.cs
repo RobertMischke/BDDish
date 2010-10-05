@@ -10,8 +10,8 @@ namespace BDDish
 	{
 		private readonly IContextDescription _internalDesrciption;
 
-		public string Name { get { return _internalDesrciption.Label; } set { _internalDesrciption.Label = value; } }
-		public string Description { get { return _internalDesrciption.Label; } set { _internalDesrciption.Label = value; } }
+		public string Name;
+		public string Description { get { return _internalDesrciption.SampleDesciption; } set { _internalDesrciption.SampleDesciption = value; } }
 
 		public AssertionList Assertions = new AssertionList();
 		
@@ -19,7 +19,6 @@ namespace BDDish
 
 		private class InternalDescription : IContextDescription
 		{
-			public string Label { get; set; }
 			public string SampleDesciption { get; set; }
 
 			public void Setup(){}
@@ -32,8 +31,8 @@ namespace BDDish
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
 		}
 
-		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion) 
-			: base(labelConcept, contextDescription.Label )
+		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion)
+			: base(labelConcept, new CamelCaseToText().GetText(contextDescription.GetType().Name))
 		{
 			_internalDesrciption = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;

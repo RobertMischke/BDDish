@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BDDish.Tests
+namespace BDDish
 {
 	public class CamelCaseToText
 	{

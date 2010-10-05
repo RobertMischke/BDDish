@@ -50,6 +50,8 @@
     <Compile Include="UnitTests\CamelCaseToTextTests.cs" />
     <Compile Include="UnitTests\MethodSignatureToStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_GermanContextes\EinExportiertesFANTASYformatDokumentfürMusterFirma1undMusterVorgang24.cs" />
+    <Compile Include="_GermanContextes\EinExportiertesFANTASYformatMit3PositionenUndMusterFirma1.cs" />
     <Compile Include="_Roles\German\Auftraggeber.cs" />
     <Compile Include="_Roles\German\AuftraggeberNormalo.cs" />
     <Compile Include="_Roles\German\AuftraggeberSondermann.cs" />

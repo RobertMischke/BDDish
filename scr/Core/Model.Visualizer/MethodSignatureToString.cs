@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BDDish.Tests
+namespace BDDish
 {
 	public class MethodSignatureToString
 	{

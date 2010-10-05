@@ -13,6 +13,8 @@ namespace BDDish
 		private const string IndentContext = "      ";
 		private const string IndentAssertion = "      ";
 
+		private MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
+
 		public void Run(Feature feature)
 		{
 			Console.WriteLine(feature.Label);
@@ -47,7 +49,7 @@ namespace BDDish
 		{
 			foreach (var assertion in acceptanceCriterion.Context.Assertions)
 			{
-				Console.WriteLine(IndentAssertion + assertion.LabelConcept);
+				Console.WriteLine(IndentAssertion + assertion.LabelConcept + _methodSignatureToString.GetString(assertion.Action));
 
 				try { assertion.Action(); }
 				catch (NotImplementedException e) { }
