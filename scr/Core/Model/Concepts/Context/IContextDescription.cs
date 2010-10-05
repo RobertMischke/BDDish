@@ -4,6 +4,7 @@
 	{
 		string Name { get; set; }
 		string Desciption { get; set; }
-		void Create();
+		
+		void Setup();
 	}
 }

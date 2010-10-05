@@ -22,7 +22,7 @@ namespace BDDish
 			public string Name { get; set; }
 			public string Desciption { get; set; }
 
-			public void Create(){}
+			public void Setup(){}
 		}
 
 		public Context(AcceptanceCriterion parentAcceptanceCriterion)

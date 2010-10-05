@@ -7,10 +7,8 @@ namespace BDDish.Tests
 {
 	public class SampleData
 	{
-		public static IContextDescription A { get { return new SampleDataA(); } }
-		public static IContextDescription B { get { return new SampleDataB(); } }
-		
-
+		public static IContextDescription OrderA { get { return new SampleOrderA(); } }
+		public static IContextDescription OrderB { get { return new SampleOrderB(); } }
 	}
 
 }
