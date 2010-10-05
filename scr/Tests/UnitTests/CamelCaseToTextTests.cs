@@ -20,6 +20,7 @@ namespace BDDish.Tests
 		public void UpperCaseWordsInText_ShouldStayUpperCase()
 		{
 			Assert.That(_camelCaseToText.GetText("SomeCAMELCase"), Is.EqualTo("Some CAMEL case"));
+			Assert.That(_camelCaseToText.GetText("SOMECAMELCASE"), Is.EqualTo("SOMECAMELCASE")); //edge cases
 		}
 
 	}

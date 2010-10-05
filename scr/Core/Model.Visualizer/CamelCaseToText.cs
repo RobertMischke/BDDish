@@ -20,7 +20,11 @@ namespace BDDish
 					charList.Add(character); continue;
 				}
 
-				if (Char.IsUpper(character) && NextCharacterIsUpperCase(index, chars)){
+				if (ItIsTheLastCharacterAndThisAndPreviousCharAreUpperCase(index, chars)){
+					charList.Add(character); continue;
+				}
+
+				if (ThisAndNextCharacterIsUpperCase(index, chars)){
 					if (PreviousCharacterIsLowerCase(index, chars))
 						charList.Add(' ');
 
@@ -39,9 +43,12 @@ namespace BDDish
 			return String.Join("", charList);
 		}
 
-		private bool NextCharacterIsUpperCase(int index, char[] chars)
+		private bool ThisAndNextCharacterIsUpperCase(int index, char[] chars)
 		{
-			if (index > chars.Length)
+			if (!Char.IsUpper(ThisChar(index, chars)))
+				return false;
+
+			if (index >= chars.Length - 1)
 				return false;
 
 			return Char.IsUpper(chars[index + 1]);
@@ -49,10 +56,48 @@ namespace BDDish
 
 		private bool PreviousCharacterIsLowerCase(int index, char[] chars)
 		{
-			if (index == 0)
+			if (IsFirst(index)) 
 				return false;
 
-			return Char.IsLower(chars[index - 1]);
+			return Char.IsLower(PreviousChar(index, chars));
 		}
+
+		private bool ItIsTheLastCharacterAndThisAndPreviousCharAreUpperCase(int index, char[] chars)
+		{
+			if (!IsLast(index, chars))
+				return false;
+
+			if (IsFirst(index))
+				return false;
+
+			return Char.IsUpper(PreviousChar(index, chars));
+		}
+
+		private bool IsFirst(int index)
+		{
+			if (index == 0)
+				return true;
+
+			return false;
+		}
+
+		private bool IsLast(int index, char[] chars)
+		{
+			if (index == chars.Length -1)
+				return true;
+
+			return false;
+		}
+
+		private char PreviousChar(int index, char[] chars)
+		{
+			return chars[index - 1];
+		}
+
+		private char ThisChar(int index, char[] chars)
+		{
+			return chars[index];
+		}
+
 	}
 }
