@@ -30,7 +30,7 @@ namespace BDDish
 		}
 
 		public Customer(string labelConcept, ICustomerDescription customerDescription, UserStory userStory)
-			: base(labelConcept, new CamelCaseToText().GetText(customerDescription.GetType().Name))
+			: base(labelConcept, new CamelCaseToText().GetTextCapitalized(customerDescription.GetType().Name))
 		{
 			_customerDescription = customerDescription;
 			ParentUserStory = userStory;
