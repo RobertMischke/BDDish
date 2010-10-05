@@ -23,5 +23,13 @@ namespace BDDish.Tests
 			Assert.That(_camelCaseToText.GetText("SOMECAMELCASE"), Is.EqualTo("SOMECAMELCASE")); //edge cases
 		}
 
+		[Test]
+		public void NumberShouldBeConsideredAsWords()
+		{
+			Assert.That(_camelCaseToText.GetText("SomeCamel3Case"), Is.EqualTo("Some camel 3 case"));
+			Assert.That(_camelCaseToText.GetText("SomeCamel34Case"), Is.EqualTo("Some camel 34 case"));
+			Assert.That(_camelCaseToText.GetText("SomeCamel346Case"), Is.EqualTo("Some camel 346 case"));
+		}
+
 	}
 }

@@ -20,6 +20,11 @@ namespace BDDish
 					charList.Add(character); continue;
 				}
 
+				if (IsTheBeginningOfANumber(index, chars)){
+					charList.Add(' ');
+					charList.Add(character); continue;
+				}
+					
 				if (ItIsTheLastCharacterAndThisAndPreviousCharAreUpperCase(index, chars)){
 					charList.Add(character); continue;
 				}
@@ -41,6 +46,20 @@ namespace BDDish
 			}
 
 			return String.Join("", charList);
+		}
+
+		private bool IsTheBeginningOfANumber(int index, char[] chars)
+		{
+			if (IsFirst(index))
+				return false;
+
+			if (Char.IsNumber(PreviousChar(index, chars)))
+				return false;
+
+			if (Char.IsNumber(ThisChar(index, chars)))
+				return true;
+
+			return false;
 		}
 
 		private bool ThisAndNextCharacterIsUpperCase(int index, char[] chars)
