@@ -13,7 +13,7 @@ namespace BDDish.Tests
 		{
 			new German.Feature("Schnittstellen").
 					Anforderung("FANTASYformat v1.0 exportieren").
-						Als(Rollen.NormalerKunde).
+						Als(Auftraggeber.Normalo).
 							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
 								Für(SampleData.OrderA).
 								Gilt(SomeAssertionMethod).
@@ -21,7 +21,7 @@ namespace BDDish.Tests
 							AkzeptanzKriterium("...").
 								Für(SampleData.OrderB).
 								Gilt(SomeAssertionMethod).
-						Als(Rollen.Sondermann).
+						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
 								Für(SampleData.OrderA).
 								Gilt("FeldA", Is.EqualTo("FeldB")).

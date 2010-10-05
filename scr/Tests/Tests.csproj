@@ -48,12 +48,12 @@
   <ItemGroup>
     <Compile Include="PlaygroundDSLGerman.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\German\Auftraggeber.cs" />
+    <Compile Include="Roles\German\AuftraggeberNormalo.cs" />
+    <Compile Include="Roles\German\AuftraggeberSondermann.cs" />
     <Compile Include="SampleData\SampleData.cs" />
     <Compile Include="SampleData\SampleOrderB.cs" />
     <Compile Include="SampleData\SampleOrderA.cs" />
-    <Compile Include="Roles\German\Rollen.cs" />
-    <Compile Include="Roles\German\RolleNormalerKunde.cs" />
-    <Compile Include="Roles\German\RolleSondernmann.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
