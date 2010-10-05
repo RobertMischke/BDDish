@@ -49,7 +49,7 @@ namespace BDDish
 		{
 			foreach (var assertion in acceptanceCriterion.Context.Assertions)
 			{
-				Console.WriteLine(IndentAssertion + assertion.LabelConcept + _methodSignatureToString.GetString(assertion.Action));
+				Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _methodSignatureToString.GetString(assertion.Action));
 
 				try { assertion.Action(); }
 				catch (NotImplementedException e) { }
