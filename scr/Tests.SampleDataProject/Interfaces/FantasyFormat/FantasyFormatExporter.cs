@@ -28,7 +28,7 @@ namespace BDDish.Tests.SampleData
 						new XElement("Id", auftrag.Seller.Id),
 						new XElement("Name", auftrag.Seller.Name)),
 					new XElement("Positionen"),
-						auftrag.PositionList.Select(pos => new XElement("Position",
+						auftrag.Positions.Select(pos => new XElement("Position",
 								new XElement("Id", pos.Id),
 								new XElement("Preis", pos.Price))
 							)));

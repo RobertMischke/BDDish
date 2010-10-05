@@ -6,25 +6,25 @@ using BDDish.German;
 
 namespace BDDish.Tests
 {
-	public class PlaygroundDSLGerman
+	public class GermanExampleTest
 	{
 		[Test]
-		public void SampleTest()
+		public void ExampleTest()
 		{
 			new German.Feature("Schnittstellen").
 					Anforderung("FANTASYformat v1.0 exportieren").
 						Als(Auftraggeber.Normalo).
 							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-								Für(SampleData.OrderA).
+								Für(Sample.Order3Positions).
 								Gilt(SomeAssertionMethod).
 								Gilt(SomeAssertionMethod, "").
 							AkzeptanzKriterium("...").
-								Für(SampleData.OrderB).
+								Für(Sample.Order1Position).
 								Gilt(SomeAssertionMethod).
 						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-								Für(SampleData.OrderA).
-								Gilt(SampleData.OrderA.Name , Is.EqualTo("Name")).
+								Für(Sample.Order3Positions).
+								Gilt(Sample.Order3Positions.Positions.Count, Is.EqualTo(1)).
 								Gilt("FeldB", Is.EqualTo("FeldB")).
 
 					Execute();

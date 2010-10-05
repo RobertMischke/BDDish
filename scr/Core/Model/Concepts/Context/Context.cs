@@ -10,8 +10,8 @@ namespace BDDish
 	{
 		private readonly IContextDescription _internalDesrciption;
 
-		public string Name { get { return _internalDesrciption.Name; } set { _internalDesrciption.Name = value; } }
-		public string Description { get { return _internalDesrciption.Name; } set { _internalDesrciption.Name = value; } }
+		public string Name { get { return _internalDesrciption.Label; } set { _internalDesrciption.Label = value; } }
+		public string Description { get { return _internalDesrciption.Label; } set { _internalDesrciption.Label = value; } }
 
 		public AssertionList Assertions = new AssertionList();
 		
@@ -19,8 +19,8 @@ namespace BDDish
 
 		private class InternalDescription : IContextDescription
 		{
-			public string Name { get; set; }
-			public string Desciption { get; set; }
+			public string Label { get; set; }
+			public string SampleDesciption { get; set; }
 
 			public void Setup(){}
 		}
@@ -33,7 +33,7 @@ namespace BDDish
 		}
 
 		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion) 
-			: base(labelConcept, contextDescription.Name )
+			: base(labelConcept, contextDescription.Label )
 		{
 			_internalDesrciption = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
@@ -44,10 +44,16 @@ namespace BDDish
 			Assertions.Add(assertion);
 		}
 
-		public void Add(string labelConcept, string assertion, EqualConstraint equalTo)
+		public void Add(string labelConcept, object assertion, EqualConstraint equalTo)
 		{
 			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}
+
+		public void Setup()
+		{
+			_internalDesrciption.Setup();
+		}
+
 
 	}
 }

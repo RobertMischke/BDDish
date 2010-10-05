@@ -21,9 +21,9 @@ namespace BDDish.German
 			return new Gilt_(_modelContext);
 		}
 
-		public Gilt_ Gilt(string assertionA, EqualConstraint equalTo)
+		public Gilt_ Gilt(object assertion, EqualConstraint equalTo)
 		{
-			_modelContext.Add(Gilt_.LabelConcept, assertionA, equalTo);
+			_modelContext.Add(Gilt_.LabelConcept, assertion, equalTo);
 			return new Gilt_(_modelContext);
 		}
 	}

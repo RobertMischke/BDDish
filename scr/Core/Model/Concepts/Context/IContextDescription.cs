@@ -2,8 +2,8 @@
 {
 	public interface IContextDescription
 	{
-		string Name { get; set; }
-		string Desciption { get; set; }
+		string Label { get; set; }
+		string SampleDesciption { get; set; }
 		
 		void Setup();
 	}

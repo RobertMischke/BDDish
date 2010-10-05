@@ -12,9 +12,9 @@ namespace BDDish.Tests.SampleData
 		public Buyer Buyer;
 		public Seller Seller;
 
-		public PositionList PositionList ;
+		public PositionList Positions ;
 
-		public decimal TotalPrice { get { return PositionList.GetTotalPrice(); } }
+		public decimal TotalPrice { get { return Positions.GetTotalPrice(); } }
 
 	}
 }

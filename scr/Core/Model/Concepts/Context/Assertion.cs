@@ -19,11 +19,12 @@ namespace BDDish
 			ParentContext = parentContext;
 		}
 
-		public Assertion(string labelConcept, string assertion, EqualConstraint equalTo, Context parentContext) : 
+		public Assertion(string labelConcept, object assertion, EqualConstraint equalTo, Context parentContext) : 
 			base(labelConcept)
 		{
 			Action = () => Assert.That(assertion, equalTo);
 			ParentContext = parentContext;
 		}
+
 	}
 }
