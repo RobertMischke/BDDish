@@ -19,9 +19,10 @@ namespace BDDish
 			ParentContext = parentContext;
 		}
 
-		public Assertion(string assertion, EqualConstraint equalTo)
+		public Assertion(string assertion, EqualConstraint equalTo, Context parentContext)
 		{
 			Action = () => Assert.That(assertion, equalTo);
+			ParentContext = parentContext;
 		}
 	}
 }

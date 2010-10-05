@@ -27,13 +27,25 @@ namespace BDDish.German
 
 		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
 		{
-			//return new AkzeptanzKriterium();
-			throw new NotImplementedException();
+			var modelAcceptanceCriterion = new AcceptanceCriterion(beschreibung,
+			                                                       _modelContext.ParentAceptanceCriterion.ParentCustomer);
+			_modelContext.
+				ParentAceptanceCriterion.
+				ParentCustomer.Add(modelAcceptanceCriterion);
+
+			return new AkzeptanzKriterium(modelAcceptanceCriterion);
 		}
 
-		public Kunde Als(ICustomerDescription k2)
+		public Kunde Als(ICustomerDescription kundenBeschreibung)
 		{
-			throw new NotImplementedException();
+			var modelCustomer = new Customer(kundenBeschreibung,
+			                                 _modelContext.ParentAceptanceCriterion.ParentCustomer.ParentUserStory);
+
+			_modelContext.ParentAceptanceCriterion.
+				ParentCustomer.
+				ParentUserStory.AddCustomer(modelCustomer);
+
+			return new Kunde(modelCustomer);
 		}
 
 		public void Execute()

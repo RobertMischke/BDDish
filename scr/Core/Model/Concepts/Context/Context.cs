@@ -44,7 +44,7 @@ namespace BDDish
 
 		public void Add(string assertion, EqualConstraint equalTo)
 		{
-			Assertions.Add(new Assertion(assertion, equalTo));
+			Assertions.Add(new Assertion(assertion, equalTo, this));
 		}
 	}
 }

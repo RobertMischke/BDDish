@@ -16,7 +16,7 @@ namespace BDDish.German
 
 		public Anforderung Anforderung(string beschreibung)
 		{
-			var userStory = new UserStory(beschreibung);
+			var userStory = new UserStory(beschreibung, _feature);
 			_feature.AddUserStory(userStory);
 			return new Anforderung(userStory);
 		}

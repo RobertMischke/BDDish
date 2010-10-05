@@ -15,6 +15,8 @@ namespace BDDish
 		public string Name { get { return _customerDescription.Name; } set { _customerDescription.Name = value; } }
 		public string Desription { get { return _customerDescription.Desription; } set { _customerDescription.Desription = value; } }
 
+		public UserStory ParentUserStory;
+
 		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 
 		private class InternalDescription : ICustomerDescription
@@ -23,15 +25,17 @@ namespace BDDish
 			public string Desription { get; set; }
 		}
 
-		public Customer(string content) : base(content)
+		public Customer(string content, UserStory userStory) : base(content)
 		{
 			_customerDescription = new InternalDescription();
 			Name = content;
+			ParentUserStory = userStory;
 		}
 
-		public Customer(ICustomerDescription customerDescription)
+		public Customer(ICustomerDescription customerDescription, UserStory userStory)
 		{
 			_customerDescription = customerDescription;
+			ParentUserStory = userStory;
 		}
 
 		public void Add(AcceptanceCriterion acceptanceCriterion)

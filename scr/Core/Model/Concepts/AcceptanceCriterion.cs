@@ -8,26 +8,14 @@ namespace BDDish
 	public class AcceptanceCriterion : SpecificationPart
 	{
 		public Context Context;
-		public CustomerList Customers = new CustomerList();
-		public AssertionList Assertions = new AssertionList();
+		public Customer ParentCustomer;
 		
-		public AcceptanceCriterion(string content, AssertionList assertions) : base(content)
-		{
-			Assertions.Add(assertions);
-		}
 
-		public AcceptanceCriterion(Customer customer, string acceptanceContent, AssertionList assertions) : base(acceptanceContent)
-		{
-			Customers.Add(customer);
-			Assertions.Add(assertions);
-		}
-
-		public AcceptanceCriterion(Customer customer, string acceptanceContent)
+		public AcceptanceCriterion(string acceptanceContent, Customer parentCustomer) 
 			: base(acceptanceContent)
 		{
-			Customers.Add(customer);
+			ParentCustomer = parentCustomer;
 		}
-
 
 		public void AddContext(IContextDescription contextDescription)
 		{
