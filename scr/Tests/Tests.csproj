@@ -46,14 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GermanExampleTest.cs" />
+    <Compile Include="DSLTests\GermanExampleTest.cs" />
+    <Compile Include="UnitTests\CamelCaseToTextTests.cs" />
+    <Compile Include="UnitTests\MethodSignatureToStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Roles\German\Auftraggeber.cs" />
-    <Compile Include="Roles\German\AuftraggeberNormalo.cs" />
-    <Compile Include="Roles\German\AuftraggeberSondermann.cs" />
-    <Compile Include="SampleData\Sample.cs" />
-    <Compile Include="SampleData\Order1Position.cs" />
-    <Compile Include="SampleData\Order3Positions.cs" />
+    <Compile Include="_Roles\German\Auftraggeber.cs" />
+    <Compile Include="_Roles\German\AuftraggeberNormalo.cs" />
+    <Compile Include="_Roles\German\AuftraggeberSondermann.cs" />
+    <Compile Include="_SampleData\Sample.cs" />
+    <Compile Include="_SampleData\Order1Position.cs" />
+    <Compile Include="_SampleData\Order3Positions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

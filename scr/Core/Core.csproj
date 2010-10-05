@@ -50,6 +50,8 @@
     <Compile Include="DSL\German\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
+    <Compile Include="Model.Visualizer\CamelCaseToText.cs" />
+    <Compile Include="Model.Visualizer\MethodSignatureToString.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concepts\Context\Assertion.cs" />
     <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
