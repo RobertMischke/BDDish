@@ -39,7 +39,6 @@ namespace BDDish
 			{
 				Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
 				Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
-				acceptanceCriterion.Context.Setup();
 				WriteAndExcecuteAssertion(acceptanceCriterion);
 			}
 		}

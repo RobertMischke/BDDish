@@ -17,15 +17,14 @@ namespace BDDish.Tests
 							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
 								Für(Sample.Order3Positions).
 								Gilt(SomeAssertionMethod).
-								Gilt(SomeAssertionMethod, "").
 							AkzeptanzKriterium("...").
 								Für(Sample.Order1Position).
 								Gilt(SomeAssertionMethod).
 						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
 								Für(Sample.Order3Positions).
-								Gilt(Sample.Order3Positions.Positions.Count, Is.EqualTo(1)).
-								Gilt("FeldB", Is.EqualTo("FeldB")).
+								Gilt(Sample.Order3Positions.Positions.Count, Is.EqualTo(3)).
+								Gilt(Sample.Order3Positions.Positions[0].Price, Is.EqualTo(22m)).
 
 					Execute();
 		}

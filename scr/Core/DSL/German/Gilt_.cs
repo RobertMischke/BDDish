@@ -15,15 +15,10 @@ namespace BDDish.German
 			_modelContext = modelContext;
 		}
 
-		public Gilt_ Gilt(string assertionA, EqualConstraint equalTo)
+		public Gilt_ Gilt(object assertionA, EqualConstraint equalTo)
 		{
 			Assert.That(assertionA, equalTo);
 
-			return new Gilt_(_modelContext);
-		}
-
-		public Gilt_ Gilt(Action someAssertionMethod, string empty)
-		{
 			return new Gilt_(_modelContext);
 		}
 

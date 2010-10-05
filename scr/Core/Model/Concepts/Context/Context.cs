@@ -37,6 +37,7 @@ namespace BDDish
 		{
 			_internalDesrciption = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
+			contextDescription.Setup();
 		}
 
 		public void Add(Assertion assertion)
@@ -48,12 +49,6 @@ namespace BDDish
 		{
 			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}
-
-		public void Setup()
-		{
-			_internalDesrciption.Setup();
-		}
-
 
 	}
 }
