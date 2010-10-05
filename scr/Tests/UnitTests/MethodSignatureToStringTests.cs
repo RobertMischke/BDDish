@@ -8,7 +8,7 @@ namespace BDDish.Tests
 	public class MethodSignatureToStringTests
 	{
 		[Test]
-		public void MethodSignatureToTest()
+		public void Method_signature_to_string()
 		{
 			var singatureToString = new MethodSignatureToString();
 			Assert.That(singatureToString.GetString(SampleSignature), Is.EqualTo("Sample signature"));
