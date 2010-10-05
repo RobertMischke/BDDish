@@ -12,7 +12,6 @@ namespace BDDish
 	{
 		private readonly ICustomerDescription _customerDescription;
 
-		public string Name { get { return _customerDescription.Name; } set { _customerDescription.Name = value; } }
 		public string Desription { get { return _customerDescription.Desription; } set { _customerDescription.Desription = value; } }
 
 		public UserStory ParentUserStory;
@@ -21,19 +20,17 @@ namespace BDDish
 
 		private class InternalDescription : ICustomerDescription
 		{
-			public string Name { get; set; }
 			public string Desription { get; set; }
 		}
 
 		public Customer(string labelConcept, string labelBody, UserStory userStory) : base(labelConcept, labelBody)
 		{
 			_customerDescription = new InternalDescription();
-			Name = labelBody;
 			ParentUserStory = userStory;
 		}
 
 		public Customer(string labelConcept, ICustomerDescription customerDescription, UserStory userStory)
-			: base(labelConcept, customerDescription.Name)
+			: base(labelConcept, new CamelCaseToText().GetText(customerDescription.GetType().Name))
 		{
 			_customerDescription = customerDescription;
 			ParentUserStory = userStory;

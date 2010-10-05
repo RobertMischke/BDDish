@@ -13,7 +13,7 @@ namespace BDDish
 		private const string IndentContext = "      ";
 		private const string IndentAssertion = "      ";
 
-		private MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
+		private readonly MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
 
 		public void Run(Feature feature)
 		{
