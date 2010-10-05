@@ -31,8 +31,11 @@ namespace BDDish.Tests
 			Assert.That(_camelCaseToText.GetText("SomeCamel346Case"), Is.EqualTo("Some camel 346 case"));
 		}
 
-		//[Test]
-		//public void Optionali
+		[Test]
+		public void Optionally_capitalize_words()
+		{
+			Assert.That(_camelCaseToText.GetTextCapitalized("SomeCamel3Case"), Is.EqualTo("Some Camel 3 Case"));
+		}
 
 	}
 }

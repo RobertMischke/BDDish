@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 
 namespace BDDish
 {
@@ -118,5 +119,9 @@ namespace BDDish
 			return chars[index];
 		}
 
+		public string GetTextCapitalized(string camelCaseString)
+		{
+			return new CapitalizeText().GetCapitalized(GetText(camelCaseString));		
+		}
 	}
 }
