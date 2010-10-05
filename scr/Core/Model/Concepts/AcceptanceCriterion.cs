@@ -31,7 +31,7 @@ namespace BDDish
 
 		public void AddContext(IContextDescription contextDescription)
 		{
-			Context = new Context(contextDescription);
+			Context = new Context(contextDescription, this);
 		}
 	}
 }

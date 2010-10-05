@@ -25,11 +25,16 @@ namespace BDDish
 			public void Create(){}
 		}
 
-		public Context(){ _internalDesrciption = new InternalDescription(); }
+		public Context(AcceptanceCriterion parentAcceptanceCriterion)
+		{
+			_internalDesrciption = new InternalDescription();
+			ParentAceptanceCriterion = parentAcceptanceCriterion;
+		}
 
-		public Context(IContextDescription contextDescription)
+		public Context(IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion)
 		{
 			_internalDesrciption = contextDescription;
+			ParentAceptanceCriterion = parentAcceptanceCriterion;
 		}
 
 		public void Add(Assertion assertion)

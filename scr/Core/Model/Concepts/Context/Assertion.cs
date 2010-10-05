@@ -10,10 +10,13 @@ namespace BDDish
 	public class Assertion
 	{
 		public Action Action;
+		
+		public Context ParentContext;
 
-		public Assertion(Action action)
+		public Assertion(Action action, Context parentContext)
 		{
 			Action = action;
+			ParentContext = parentContext;
 		}
 
 		public Assertion(string assertion, EqualConstraint equalTo)
