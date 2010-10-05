@@ -7,8 +7,10 @@ namespace BDDish
 {
 	public class ModelExecuter
 	{
-		public static void Run(Feature feature)
+		public void Run(Feature feature)
 		{
+			
+			Console.WriteLine(feature.Label);
 			
 		}
 	}

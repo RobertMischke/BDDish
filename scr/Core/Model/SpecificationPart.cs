@@ -8,13 +8,13 @@ namespace BDDish
 	public abstract class SpecificationPart
 	{
 		public string RenderedConceptName;
-		public string Content;
+		public string Label;
 
 		protected SpecificationPart(){}
 
-		protected SpecificationPart(string content)
+		protected SpecificationPart(string label)
 		{
-			Content = content;
+			Label = label;
 		}
 
 	}

@@ -50,7 +50,12 @@ namespace BDDish.German
 
 		public void Execute()
 		{
-			throw new NotImplementedException();
+			new ModelExecuter()
+				.Run(_modelContext.
+						ParentAceptanceCriterion.
+						ParentCustomer.
+						ParentUserStory.
+						ParentFeature);
 		}
 	}
 }
