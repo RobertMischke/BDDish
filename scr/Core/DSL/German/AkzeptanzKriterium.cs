@@ -4,6 +4,8 @@ namespace BDDish.German
 {
 	public class AkzeptanzKriterium
 	{
+		public const string LabelConcept = "AkzeptanzKriterium";
+
 		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
 
 		public AkzeptanzKriterium(AcceptanceCriterion modelAcceptanceCriterion)

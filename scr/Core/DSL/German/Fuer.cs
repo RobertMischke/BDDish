@@ -6,6 +6,8 @@ namespace BDDish.German
 {
 	public class Für
 	{
+		public const string LabelConcept = "Für";
+
 		private readonly Context _modelContext;
 
 		public Für(Context modelContext)

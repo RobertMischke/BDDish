@@ -9,10 +9,10 @@ namespace BDDish
 	{
 		public Context Context;
 		public Customer ParentCustomer;
-		
 
-		public AcceptanceCriterion(string acceptanceContent, Customer parentCustomer) 
-			: base(acceptanceContent)
+		
+		public AcceptanceCriterion(string labelConcept, string acceptanceContent, Customer parentCustomer)
+			: base(labelConcept, acceptanceContent)
 		{
 			ParentCustomer = parentCustomer;
 		}

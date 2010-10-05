@@ -7,6 +7,8 @@ namespace BDDish.German
 {
 	public class Anforderung
 	{
+		public const string LabelConcept = "Anforderung";
+
 		public UserStory _modelUserStory;
 		public Customer _modelCustomer;
 
@@ -17,7 +19,7 @@ namespace BDDish.German
 
 		public Kunde Als(string name)
 		{
-			var modelCustomer = new Customer(name, _modelUserStory);
+			var modelCustomer = new Customer(Kunde.LabelConcept, name, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Kunde(modelCustomer);
 		}

@@ -6,6 +6,8 @@ namespace BDDish.German
 {
 	public class Gilt_
 	{
+		public const string LabelConcept = "Gilt";
+
 		private readonly Context _modelContext;
 
 		public Gilt_(Context modelContext)
@@ -27,8 +29,9 @@ namespace BDDish.German
 
 		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
 		{
-			var modelAcceptanceCriterion = new AcceptanceCriterion(beschreibung,
-			                                                       _modelContext.ParentAceptanceCriterion.ParentCustomer);
+			var modelAcceptanceCriterion = new AcceptanceCriterion(German.AkzeptanzKriterium.LabelConcept, beschreibung,
+				_modelContext.ParentAceptanceCriterion.ParentCustomer);
+
 			_modelContext.
 				ParentAceptanceCriterion.
 				ParentCustomer.Add(modelAcceptanceCriterion);

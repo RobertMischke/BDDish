@@ -19,7 +19,7 @@ namespace BDDish
 		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 		
 
-		public Feature(string content) : base(content)
+		public Feature(string labelConcept, string labelBody) : base(labelConcept, labelBody)
 		{
 		}
 

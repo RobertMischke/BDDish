@@ -12,7 +12,8 @@ namespace BDDish
 		
 		public Feature ParentFeature;
 
-		public UserStory(string content, Feature parentFeature) : base(content){}
+		public UserStory(string labelConcept, string labelBody, Feature parentFeature) : 
+			base(labelConcept, labelBody){}
 
 
 		public void AddCustomer(Customer customer)

@@ -7,14 +7,24 @@ namespace BDDish
 {
 	public abstract class SpecificationPart
 	{
-		public string RenderedConceptName;
-		public string Label;
+		/// <summary>
+		/// Feature, UserStory, etc.
+		/// </summary>
+		public string LabelConcept;
+
+		public string LabelBody;
+		
+		public string Label
+		{
+			get { return LabelConcept + ":" + LabelBody; }
+		}
 
 		protected SpecificationPart(){}
 
-		protected SpecificationPart(string label)
+		protected SpecificationPart(string labelConcept, string labelBody)
 		{
-			Label = label;
+			LabelConcept = labelConcept;
+			LabelBody = labelBody;
 		}
 
 	}

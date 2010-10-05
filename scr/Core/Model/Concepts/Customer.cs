@@ -25,10 +25,10 @@ namespace BDDish
 			public string Desription { get; set; }
 		}
 
-		public Customer(string content, UserStory userStory) : base(content)
+		public Customer(string labelConcept, string labelBody, UserStory userStory) : base(labelConcept, labelBody)
 		{
 			_customerDescription = new InternalDescription();
-			Name = content;
+			Name = labelBody;
 			ParentUserStory = userStory;
 		}
 
