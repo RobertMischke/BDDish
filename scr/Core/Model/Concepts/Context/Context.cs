@@ -42,9 +42,10 @@ namespace BDDish
 			Assertions.Add(assertion);
 		}
 
-		public void Add(string assertion, EqualConstraint equalTo)
+		public void Add(string labelConcept, string assertion, EqualConstraint equalTo)
 		{
-			Assertions.Add(new Assertion(assertion, equalTo, this));
+			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}
+
 	}
 }

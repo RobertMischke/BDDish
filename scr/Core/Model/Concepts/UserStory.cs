@@ -13,7 +13,10 @@ namespace BDDish
 		public Feature ParentFeature;
 
 		public UserStory(string labelConcept, string labelBody, Feature parentFeature) : 
-			base(labelConcept, labelBody){}
+			base(labelConcept, labelBody)
+		{
+			ParentFeature = parentFeature;
+		}
 
 
 		public void AddCustomer(Customer customer)

@@ -21,9 +21,13 @@ namespace BDDish
 
 		protected SpecificationPart(){}
 
-		protected SpecificationPart(string labelConcept, string labelBody)
+		protected SpecificationPart(string labelConcept)
 		{
 			LabelConcept = labelConcept;
+		}
+
+		protected SpecificationPart(string labelConcept, string labelBody) : this(labelConcept)
+		{
 			LabelBody = labelBody;
 		}
 
