@@ -4,9 +4,11 @@ namespace BDDish.Tests
 {
 	public class MethodSignatureToString
 	{
+		private readonly CamelCaseToText _camelCaseToText = new CamelCaseToText();
+
 		public string GetString(Action sampleSignature)
 		{
-			return sampleSignature.Method.Name;
+			return _camelCaseToText.GetText(sampleSignature.Method.Name);
 		}
 	}
 }
