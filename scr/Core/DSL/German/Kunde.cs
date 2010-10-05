@@ -7,16 +7,18 @@ namespace BDDish.German
 {
 	public class Kunde
 	{
-		private readonly Customer _customer;
+		private readonly Customer _modelCustomer;
 
-		public Kunde(Customer customer)
+		public Kunde(Customer modelCustomer)
 		{
-			_customer = customer;
+			_modelCustomer = modelCustomer;
 		}
 
 		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
 		{
-			throw new NotImplementedException();
+			var modelAcceptanceCriterion = new AcceptanceCriterion(_modelCustomer, beschreibung);
+			_modelCustomer.Add(modelAcceptanceCriterion);
+			return new AkzeptanzKriterium(modelAcceptanceCriterion);
 		}
 	}
 }

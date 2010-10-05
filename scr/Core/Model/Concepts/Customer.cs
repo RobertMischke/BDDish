@@ -10,28 +10,33 @@ namespace BDDish
 	/// </summary>
 	public class Customer : SpecificationPart
 	{
+		private readonly ICustomerDescription _customerDescription;
 
-		private readonly CustomerDescription _customerDesciption;
+		public string Name { get { return _customerDescription.Name; } set { _customerDescription.Name = value; } }
+		public string Desription { get { return _customerDescription.Desription; } set { _customerDescription.Desription = value; } }
 
-		private class CustomerDescription : ICustomer
+		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
+
+		private class InternalDescription : ICustomerDescription
 		{
 			public string Name { get; set; }
 			public string Desription { get; set; }
 		}
 
-		public string Name { get { return _customerDesciption.Name; } set { _customerDesciption.Name = value; } }
-		public string Desription { get { return _customerDesciption.Desription; } set { _customerDesciption.Desription = value; } }
-
 		public Customer(string content) : base(content)
 		{
-			_customerDesciption = new CustomerDescription();
+			_customerDescription = new InternalDescription();
 			Name = content;
 		}
 
-		public Customer(ICustomer customer)
+		public Customer(ICustomerDescription customerDescription)
 		{
-			_customerDesciption = (CustomerDescription) customer;
+			_customerDescription = customerDescription;
 		}
 
+		public void Add(AcceptanceCriterion acceptanceCriterion)
+		{
+			AcceptanceCriteria.Add(acceptanceCriterion);
+		}
 	}
 }

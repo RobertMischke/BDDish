@@ -1,10 +1,20 @@
-﻿namespace BDDish.German
+﻿using System;
+
+namespace BDDish.German
 {
 	public class AkzeptanzKriterium
 	{
-		public Für Für(IContext kontext)
+		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
+
+		public AkzeptanzKriterium(AcceptanceCriterion modelAcceptanceCriterion)
 		{
-			return new Für();
+			_modelAcceptanceCriterion = modelAcceptanceCriterion;
+		}
+
+		public Für Für(IContextDescription kontext)
+		{
+			_modelAcceptanceCriterion.AddContext(kontext);
+			return new Für(_modelAcceptanceCriterion.Context);
 		}
 
 	}

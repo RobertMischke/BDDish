@@ -20,12 +20,13 @@ namespace BDDish.Tests
 						new Customer("CompanyA"), 
 						"Validate the created document against XSD.", 
 						new AssertionList(
-							new Assertion())
+							new Assertion(()=> Console.WriteLine("assertion1")))
 						)
 					.AddAcceptanceCriterion(
 						new Customer("CompanyA"), 
-						"The invoice properties are completly exported to fantasy format", 
-						new AssertionList(new Assertion()))
+						"The invoice properties are completly exported to fantasy format",
+						new AssertionList(
+							new Assertion(() => Console.WriteLine("assertion2"))))
 					.AddAcceptanceCriterion(
 						new Customer("CompanyA"), 
 						"The invoice properties are completly exported to fantasy format", 

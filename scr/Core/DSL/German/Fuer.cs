@@ -6,16 +6,23 @@ namespace BDDish.German
 {
 	public class Für
 	{
-		public Gilt_ Gilt(Action asssertionMethod)
+		private readonly Context _modelContext;
+
+		public Für(Context modelContext)
 		{
-			return new Gilt_();
+			_modelContext = modelContext;
+		}
+
+		public Gilt_ Gilt(Action asssertionAction)
+		{
+			_modelContext.Add(new Assertion(asssertionAction));
+			return new Gilt_(_modelContext);
 		}
 
 		public Gilt_ Gilt(string assertionA, EqualConstraint equalTo)
 		{
-			Assert.That(assertionA, equalTo);
-			
-			return new Gilt_();
+			_modelContext.Add(assertionA, equalTo);
+			return new Gilt_(_modelContext);
 		}
 	}
 }

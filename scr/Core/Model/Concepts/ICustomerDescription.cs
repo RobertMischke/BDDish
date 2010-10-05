@@ -1,6 +1,6 @@
 ﻿namespace BDDish
 {
-	public interface ICustomer
+	public interface ICustomerDescription
 	{
 		string Name { get; set; }
 		string Desription { get; set; }

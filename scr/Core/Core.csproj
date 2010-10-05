@@ -55,10 +55,10 @@
     <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\Context\IContext.cs">
+    <Compile Include="Model\Concepts\Context\IContextDescription.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\ICustomer.cs">
+    <Compile Include="Model\Concepts\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ModelExecuter.cs" />

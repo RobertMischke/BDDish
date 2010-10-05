@@ -7,10 +7,10 @@ namespace BDDish
 {
 	public class AcceptanceCriterion : SpecificationPart
 	{
+		public Context Context;
 		public CustomerList Customers = new CustomerList();
 		public AssertionList Assertions = new AssertionList();
 		
-
 		public AcceptanceCriterion(string content, AssertionList assertions) : base(content)
 		{
 			Assertions.Add(assertions);
@@ -28,6 +28,10 @@ namespace BDDish
 			Customers.Add(customer);
 		}
 
-		
+
+		public void AddContext(IContextDescription contextDescription)
+		{
+			Context = new Context(contextDescription);
+		}
 	}
 }

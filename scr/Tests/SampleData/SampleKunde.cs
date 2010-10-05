@@ -7,7 +7,7 @@ namespace BDDish.Tests
 {
 	public class SampleKunde
 	{
-		public static ICustomer NormalerKunde {get { return new SampleKunde1(); }}
-		public static ICustomer Sondermann { get { return new SampleKunde2(); } }
+		public static ICustomerDescription NormalerKunde {get { return new SampleKunde1(); }}
+		public static ICustomerDescription Sondermann { get { return new SampleKunde2(); } }
 	}
 }

@@ -6,26 +6,34 @@ namespace BDDish.German
 {
 	public class Gilt_
 	{
-		public Gilt_ Gilt(Action someAssertionMethod, string empty)
-		{
-			return new Gilt_();
-		}
+		private readonly Context _modelContext;
 
-		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
+		public Gilt_(Context modelContext)
 		{
-			throw new NotImplementedException();
-		}
-
-		public Kunde Als(ICustomer k2)
-		{
-			throw new NotImplementedException();
+			_modelContext = modelContext;
 		}
 
 		public Gilt_ Gilt(string assertionA, EqualConstraint equalTo)
 		{
 			Assert.That(assertionA, equalTo);
 
-			return new Gilt_();
+			return new Gilt_(_modelContext);
+		}
+
+		public Gilt_ Gilt(Action someAssertionMethod, string empty)
+		{
+			return new Gilt_(_modelContext);
+		}
+
+		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
+		{
+			//return new AkzeptanzKriterium();
+			throw new NotImplementedException();
+		}
+
+		public Kunde Als(ICustomerDescription k2)
+		{
+			throw new NotImplementedException();
 		}
 
 		public void Execute()
