@@ -8,15 +8,18 @@ namespace BDDish.German
 
 		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
 
-		public AkzeptanzKriterium(AcceptanceCriterion modelAcceptanceCriterion)
+		public Kunde ParentKunde;
+
+		public AkzeptanzKriterium(AcceptanceCriterion modelAcceptanceCriterion, Kunde parentKunde)
 		{
 			_modelAcceptanceCriterion = modelAcceptanceCriterion;
+			ParentKunde = parentKunde;
 		}
 
 		public Für Für(IContextDescription kontext)
 		{
 			_modelAcceptanceCriterion.AddContext(German.Für.LabelConcept, kontext);
-			return new Für(_modelAcceptanceCriterion.Context);
+			return new Für(_modelAcceptanceCriterion.Context, this);
 		}
 
 	}

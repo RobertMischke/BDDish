@@ -10,16 +10,19 @@ namespace BDDish.German
 
 		private readonly Context _modelContext;
 
-		public Gilt_(Context modelContext)
+		public Für ParentFür;
+
+		public Gilt_(Context modelContext, Für parentFür)
 		{
 			_modelContext = modelContext;
+			ParentFür = parentFür;
 		}
 
 		public Gilt_ Gilt(object assertionA, EqualConstraint equalTo)
 		{
 			Assert.That(assertionA, equalTo);
 
-			return new Gilt_(_modelContext);
+			return new Gilt_(_modelContext, ParentFür);
 		}
 
 		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
@@ -31,7 +34,7 @@ namespace BDDish.German
 				ParentAceptanceCriterion.
 				ParentCustomer.Add(modelAcceptanceCriterion);
 
-			return new AkzeptanzKriterium(modelAcceptanceCriterion);
+			return new AkzeptanzKriterium(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentKunde);
 		}
 
 		public Kunde Als(ICustomerDescription kundenBeschreibung)
@@ -43,17 +46,26 @@ namespace BDDish.German
 				ParentCustomer.
 				ParentUserStory.AddCustomer(modelCustomer);
 
-			return new Kunde(modelCustomer);
+			return new Kunde(modelCustomer, ParentFür.
+												ParentAkzeptanzkriterium.
+												ParentKunde.
+												ParentAnforderung);
 		}
 
-		public void Execute()
+		public Feature Execute()
 		{
 			new ModelExecuter()
-				.Run(_modelContext.
-						ParentAceptanceCriterion.
-						ParentCustomer.
-						ParentUserStory.
-						ParentFeature);
+				.Run( _modelContext.
+					 	ParentAceptanceCriterion.
+					 	ParentCustomer.
+					 	ParentUserStory.
+					 	ParentFeature);
+
+			return ParentFür.
+					ParentAkzeptanzkriterium.
+					ParentKunde.
+					ParentAnforderung.
+					ParentFeature;
 		}
 	}
 }

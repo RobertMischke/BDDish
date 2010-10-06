@@ -20,7 +20,7 @@ namespace BDDish.German
 		{
 			var userStory = new UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
 			_feature.AddUserStory(userStory);
-			return new Anforderung(userStory);
+			return new Anforderung(userStory, this);
 		}
 
 
