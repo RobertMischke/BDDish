@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DSLTests\GermanExampleTest.cs" />
+    <Compile Include="DSLTests\When_assertion_fails.cs" />
     <Compile Include="UnitTests\CamelCaseToTextTests.cs" />
     <Compile Include="UnitTests\MethodSignatureToStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

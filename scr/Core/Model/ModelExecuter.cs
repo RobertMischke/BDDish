@@ -13,6 +13,8 @@ namespace BDDish
 		private const string IndentContext = "      ";
 		private const string IndentAssertion = "      ";
 
+		private readonly List<Action> _actionsToExecute = new List<Action>();
+
 		private readonly MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
 
 		public void Run(Feature feature)
@@ -24,6 +26,9 @@ namespace BDDish
 				Console.WriteLine(IndentUserStory + userStory.Label);
 				WriteCustomerInfo(userStory);
 			}
+
+			ExecuteAllAssertionAction();
+
 		}
 
 		private void WriteCustomerInfo(UserStory userStory)
@@ -41,19 +46,29 @@ namespace BDDish
 			{
 				Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
 				Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
-				WriteAndExcecuteAssertion(acceptanceCriterion);
+				WriteAssertionInfo(acceptanceCriterion);
 			}
 		}
 
-		private void WriteAndExcecuteAssertion(AcceptanceCriterion acceptanceCriterion)
+		private void WriteAssertionInfo(AcceptanceCriterion acceptanceCriterion)
 		{
 			foreach (var assertion in acceptanceCriterion.Context.Assertions)
 			{
 				Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _methodSignatureToString.GetString(assertion.Action));
-
-				try { assertion.Action(); }
-				catch (NotImplementedException e) { }
+				_actionsToExecute.Add(assertion.Action);
 			}
 		}
+
+		private void ExecuteAllAssertionAction()
+		{
+			_actionsToExecute.ForEach(action => {
+				try { action(); }
+				catch (NotImplementedException e) { }
+			});
+
+		}
+
+
+
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 
@@ -20,7 +21,8 @@ namespace BDDish.German
 
 		public Gilt_ Gilt(object assertionA, EqualConstraint equalTo)
 		{
-			Assert.That(assertionA, equalTo);
+
+			_modelContext.Add(LabelConcept, assertionA, equalTo);
 
 			return new Gilt_(_modelContext, ParentFür);
 		}
