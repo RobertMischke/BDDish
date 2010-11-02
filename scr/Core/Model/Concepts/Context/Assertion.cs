@@ -9,6 +9,7 @@ namespace BDDish
 {
 	public class Assertion : SpecificationPart
 	{
+		public Func<AssertionResult> ActionWithResult;
 		public Action Action;
 		public Context ParentContext;
 
@@ -23,6 +24,13 @@ namespace BDDish
 			base(labelConcept)
 		{
 			Action = () => Assert.That(assertion, equalTo);
+			ParentContext = parentContext;
+		}
+
+		public Assertion(string labelConcept, Func<AssertionResult> func, Context parentContext) : 
+			base(labelConcept)
+		{
+			ActionWithResult = func;
 			ParentContext = parentContext;
 		}
 

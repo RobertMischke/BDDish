@@ -21,6 +21,7 @@ namespace BDDish.Tests.DSLTests
 				.Execute();
 		}
 
+		[Ignore("Manual test ")]
 		[Test]
 		public void The_output_should_be_complete()
 		{

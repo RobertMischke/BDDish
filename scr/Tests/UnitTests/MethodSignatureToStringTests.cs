@@ -1,22 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace BDDish.Tests
 {
 	public class MethodSignatureToStringTests
 	{
+		readonly MethodSignatureToString _signatureToString = new MethodSignatureToString();
+
 		[Test]
 		public void Method_signature_to_string()
 		{
-			var singatureToString = new MethodSignatureToString();
-			Assert.That(singatureToString.GetString(SampleSignature), Is.EqualTo("Sample signature"));
+			Assert.That(_signatureToString.GetString(SampleSignature), Is.EqualTo("Sample signature"));
 		}
 
-		public void SampleSignature()
+		public void SampleSignature(){}
+
+
+		[Test]
+		public void Action_signature_to_string()
 		{
-			
+			//TODO
+			Action action = () => Assert.That((object)"test", Is.EqualTo("test"));
+			Console.WriteLine(_signatureToString.GetString(action));
 		}
 
 	}

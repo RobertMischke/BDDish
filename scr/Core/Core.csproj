@@ -55,6 +55,7 @@
     <Compile Include="Model.Visualizer\MethodSignatureToString.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concepts\Context\Assertion.cs" />
+    <Compile Include="Model\Concepts\Context\AssertionResult.cs" />
     <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>

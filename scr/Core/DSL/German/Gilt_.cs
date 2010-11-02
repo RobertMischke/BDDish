@@ -19,11 +19,15 @@ namespace BDDish.German
 			ParentFür = parentFür;
 		}
 
+		public Gilt_ Gilt(Action asssertionAction)
+		{
+			_modelContext.Add(new Assertion(LabelConcept, asssertionAction, _modelContext));
+			return new Gilt_(_modelContext, ParentFür);
+		}
+
 		public Gilt_ Gilt(object assertionA, EqualConstraint equalTo)
 		{
-
 			_modelContext.Add(LabelConcept, assertionA, equalTo);
-
 			return new Gilt_(_modelContext, ParentFür);
 		}
 

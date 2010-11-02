@@ -1,4 +1,5 @@
 ﻿using System;
+using NUnit.Framework.Constraints;
 
 namespace BDDish
 {
@@ -6,9 +7,21 @@ namespace BDDish
 	{
 		private readonly CamelCaseToText _camelCaseToText = new CamelCaseToText();
 
-		public string GetString(Action sampleSignature)
+		public string GetString(Action<object, EqualConstraint> action)
 		{
-			return _camelCaseToText.GetText(sampleSignature.Method.Name);
+			throw new NotImplementedException();
 		}
+
+		public string GetString(Action action)
+		{
+			string methodName = action.Method.Name;
+
+			//if (methodName.Contains("<"))
+			//    return "No si";
+
+			return _camelCaseToText.GetText(action.Method.Name);
+		}
+
+
 	}
 }
