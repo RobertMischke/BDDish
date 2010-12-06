@@ -15,14 +15,14 @@ namespace BDDish.Tests
 					Anforderung("FANTASYformat v1.0 exportieren").
 						Als(Auftraggeber.Normalo).
 							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-								Für(Context1()).
-								Gilt(SomeAssertionMethod).
+								Für(ContextCamelCase()).
+								Gilt(SomeAssertionMethodWithCamelCase).
 							AkzeptanzKriterium("...").
-								Für(Context2()).
-								Gilt(SomeAssertionMethod).
+								Für(Context_with_underscores()).
+								Gilt(SomeAssertionMethodWithCamelCase).
 						Als(Auftraggeber.Sondermann).
 							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-								Für(Context2()).
+								Für(Context_with_underscores()).
 								Gilt(context2.Positions.Count, Is.EqualTo(3)).
 								Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
 
@@ -32,18 +32,21 @@ namespace BDDish.Tests
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;
 
-		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 Context1(){
+		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 ContextCamelCase(){
 			return context1 = new EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24();
 		}
 
-		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 Context2(){
+		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 Context_with_underscores(){
 			return context2 = new EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1();
 		}
 
-		public void SomeAssertionMethod()
+		public void SomeAssertionMethodWithCamelCase()
 		{
-			
 		}
+
+        public void Some_assertion_method_with_underscores()
+        {
+        }
 
 	}
 }

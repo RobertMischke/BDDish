@@ -33,7 +33,7 @@ namespace BDDish
 		}
 
 		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion)
-			: base(labelConcept, new CamelCaseToText().GetText(contextDescription.GetType().Name))
+			: base(labelConcept, new TextFormater().GetText(contextDescription.GetType().Name))
 		{
 			_internalDesrciption = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
