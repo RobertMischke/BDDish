@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework.Constraints;
 
-namespace BDDish
+namespace BDDish.Model.Visualizer
 {
 	public class MethodSignatureToString
 	{
