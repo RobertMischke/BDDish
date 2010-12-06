@@ -53,6 +53,8 @@
     <Compile Include="Model.Visualizer\TextTransformations\CamelCaseToText.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\CapitalizeText.cs" />
     <Compile Include="Model.Visualizer\MethodSignatureToString.cs" />
+    <Compile Include="Model.Visualizer\TextFormating\TextFormater.cs" />
+    <Compile Include="Model.Visualizer\TextFormating\TextFormatingIdentifier.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\UnderscoresToText.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concepts\Context\Assertion.cs" />
