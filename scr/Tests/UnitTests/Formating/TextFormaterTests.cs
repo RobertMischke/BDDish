@@ -15,6 +15,7 @@ namespace BDDish.Tests
             var textFormater = new TextFormater();
 
             Assert.That(textFormater.GetText("Hello_world_format_me_well"), Is.EqualTo("Hello world format me well"));
+            Assert.That(textFormater.GetText("HelloWorldFormatMeWell"), Is.EqualTo("Hello world format me well"));
         }
     }
 }
