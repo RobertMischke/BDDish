@@ -7,15 +7,17 @@ namespace BDDish.Model.Visualizer
 {
     public class TextFormater
     {
-        public string GetMostHumanReadable(string text)
+        public string GetText(string text)
         {
-            //if IsCamelCaseText()
-            //    return ""
-            //
-            //if IsUnderScoreText()
-            //    return ""
+            var textFormatIdentifier = new TextFormatingIdentifier();
 
-            return text;
+            if (textFormatIdentifier.IsUnderScoreText(text))
+                return new UnderscoresToText().GetText(text);
+
+            if (textFormatIdentifier.IsCamelCaseText(text))
+                return new CamelCaseToText().GetText(text);
+
+            throw new Exception("unidentified formater");
         }
     }
 }
