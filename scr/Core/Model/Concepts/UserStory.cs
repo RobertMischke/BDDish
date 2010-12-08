@@ -8,7 +8,6 @@ namespace BDDish
 	public class UserStory : SpecificationPart
 	{
 		public CustomerList Customers = new CustomerList();
-		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 		
 		public Feature ParentFeature;
 
@@ -23,5 +22,10 @@ namespace BDDish
 		{
 			Customers.Add(customer);
 		}
+
+	    public AssertionList GetAllAssertions()
+	    {
+	        return Customers.GetAllAssertions();
+	    }
 	}
 }

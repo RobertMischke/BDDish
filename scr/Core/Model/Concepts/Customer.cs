@@ -41,5 +41,10 @@ namespace BDDish
 		{
 			AcceptanceCriteria.Add(acceptanceCriterion);
 		}
+
+	    public AssertionList GetAllAssertions()
+	    {
+	        return AcceptanceCriteria.GetAllAssertions();
+	    }
 	}
 }

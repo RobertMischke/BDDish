@@ -9,16 +9,7 @@ namespace BDDish
 	{	
 		public UserStoryList UserStories = new UserStoryList();
 		public CustomerList Customers = new CustomerList();
-
-		/// <summary>
-		/// Acceptance criteria directly assigned to this Feature. 
-		/// </summary>
-		/// <remarks>
-		/// These criteria don't have a user stories  assigned.
-		/// </remarks>
-		public AcceptanceCriterionList AcceptanceCriteria = new AcceptanceCriterionList();
 		
-
 		public Feature(string labelConcept, string labelBody) : base(labelConcept, labelBody)
 		{
 		}
@@ -37,5 +28,10 @@ namespace BDDish
 			return this;
 		}
 
+
+	    public AssertionList GetAllAssertions()
+	    {
+	        return UserStories.GetAllessertions();
+	    }
 	}
 }

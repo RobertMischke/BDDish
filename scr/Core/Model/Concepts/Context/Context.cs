@@ -50,5 +50,9 @@ namespace BDDish
 			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}
 
+	    public AssertionList GetAllAssertions()
+	    {
+            return Assertions;
+	    }
 	}
 }

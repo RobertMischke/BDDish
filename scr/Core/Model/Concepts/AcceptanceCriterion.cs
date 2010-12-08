@@ -22,6 +22,9 @@ namespace BDDish
 			Context = new Context(labelConcept, contextDescription, this);
 		}
 
-
+	    public AssertionList GetAllAssertions()
+	    {
+	        return Context.GetAllAssertions();
+	    }
 	}
 }
