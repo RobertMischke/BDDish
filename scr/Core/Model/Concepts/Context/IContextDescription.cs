@@ -1,4 +1,4 @@
-﻿namespace BDDish
+﻿namespace BDDish.Model.Concept
 {
 	public interface IContextDescription
 	{

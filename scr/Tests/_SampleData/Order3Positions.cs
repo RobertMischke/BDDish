@@ -1,5 +1,6 @@
 ﻿using System;
 using BDDish.Tests.SampleData;
+using BDDish.Model.Concept;
 
 namespace BDDish.Tests
 {

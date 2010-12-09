@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3a Tests", "Tests\3a Tests.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3b Tests.SampleDataProject", "Tests.SampleDataProject\3b Tests.SampleDataProject.csproj", "{9394EA88-B29E-4745-90B7-228B3F19CE0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 View.Web", "Frontend.Web\1 View.Web.csproj", "{766244D6-67D9-44F6-993B-39ED37EBFF88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 View.Web", "View.Web\1 View.Web.csproj", "{766244D6-67D9-44F6-993B-39ED37EBFF88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

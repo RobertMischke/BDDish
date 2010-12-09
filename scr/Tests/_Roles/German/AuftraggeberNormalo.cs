@@ -1,4 +1,6 @@
-﻿namespace BDDish.Tests
+﻿using BDDish.Model.Concept;
+
+namespace BDDish.Tests
 {
 	public class AuftraggeberNormalo : ICustomerDescription
 	{

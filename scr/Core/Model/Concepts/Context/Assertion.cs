@@ -5,7 +5,7 @@ using System.Text;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 
-namespace BDDish
+namespace BDDish.Model.Concept
 {
 	public class Assertion : SpecificationPart
 	{
