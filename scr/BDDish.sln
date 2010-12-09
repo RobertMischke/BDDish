@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{51B62357-FE43-42EF-ACC2-9DED7B343586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 Core", "Core\2 Core.csproj", "{51B62357-FE43-42EF-ACC2-9DED7B343586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A38F047C-E293-4C46-8F34-19914969B18F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3a Tests", "Tests\3a Tests.csproj", "{A38F047C-E293-4C46-8F34-19914969B18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.SampleDataProject", "Tests.SampleDataProject\Tests.SampleDataProject.csproj", "{9394EA88-B29E-4745-90B7-228B3F19CE0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3b Tests.SampleDataProject", "Tests.SampleDataProject\3b Tests.SampleDataProject.csproj", "{9394EA88-B29E-4745-90B7-228B3F19CE0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1 View.Web", "Frontend.Web\1 View.Web.csproj", "{766244D6-67D9-44F6-993B-39ED37EBFF88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,16 @@ Global
 		{9394EA88-B29E-4745-90B7-228B3F19CE0C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9394EA88-B29E-4745-90B7-228B3F19CE0C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9394EA88-B29E-4745-90B7-228B3F19CE0C}.Release|x86.ActiveCfg = Release|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{766244D6-67D9-44F6-993B-39ED37EBFF88}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

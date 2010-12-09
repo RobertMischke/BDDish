@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
+using BDDish.Model.Concept;
 
 namespace BDDish.German
 {

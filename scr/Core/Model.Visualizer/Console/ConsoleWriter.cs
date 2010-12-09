@@ -1,5 +1,6 @@
 ﻿using System;
 using BDDish.Model.Visualizer;
+using BDDish.Model.Concept;
 
 namespace BDDish
 {

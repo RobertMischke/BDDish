@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="Model\Concepts\UserStory.cs" />
     <Compile Include="Model\Concepts\UserStoryList.cs" />
+    <Compile Include="Model\Storage\Feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
