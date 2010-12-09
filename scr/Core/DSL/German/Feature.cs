@@ -10,17 +10,17 @@ namespace BDDish.German
 	{
 		public const string LabelConcept = "Feature";
 
-		private readonly BDDish.Model.Concept.Feature _feature;
+		private readonly BDDish.Model.Feature _feature;
 
 		public Feature(string beschreibung)
 		{
 
-            _feature = new BDDish.Model.Concept.Feature(LabelConcept, beschreibung);
+            _feature = new BDDish.Model.Feature(LabelConcept, beschreibung);
 		}
 
 		public Anforderung Anforderung(string beschreibung)
 		{
-            var userStory = new BDDish.Model.Concept.UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
+            var userStory = new BDDish.Model.UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
 			_feature.AddUserStory(userStory);
 			return new Anforderung(userStory, this);
 		}

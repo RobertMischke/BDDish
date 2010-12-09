@@ -1,5 +1,5 @@
 ﻿using System;
-using BDDish.Model.Concept;
+using BDDish.Model;
 
 namespace BDDish.German
 {

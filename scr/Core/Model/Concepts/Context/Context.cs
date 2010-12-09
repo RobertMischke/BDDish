@@ -5,7 +5,7 @@ using System.Text;
 using BDDish.Model.Visualizer;
 using NUnit.Framework.Constraints;
 
-namespace BDDish.Model.Concept
+namespace BDDish.Model
 {
 	public class Context : SpecificationPart
 	{

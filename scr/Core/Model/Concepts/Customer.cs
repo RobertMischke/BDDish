@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using BDDish.Model.Visualizer;
 
-namespace BDDish.Model.Concept
+namespace BDDish.Model
 {
 	/// <summary>
 	/// The one who is paying for a feature or demanding the feature in order to archive the development goals.

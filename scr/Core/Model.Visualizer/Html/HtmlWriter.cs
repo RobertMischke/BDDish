@@ -2,7 +2,7 @@
 using System.Net.Mail;
 using RazorEngine;
 using RazorEngine.Templating;
-using BDDish.Model.Concept;
+using BDDish.Model;
 
 namespace BDDish
 {
