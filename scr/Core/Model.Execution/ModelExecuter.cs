@@ -8,10 +8,15 @@ namespace BDDish
 	public class ModelExecuter
 	{
 	    private readonly ConsoleWriter _consoleWriter = new ConsoleWriter();
+	    private readonly HtmlWriter _htmlWriter = new HtmlWriter();
 
 		public void Run(Feature feature)
 		{
-		    _consoleWriter.WriteFeature(feature);
+		    _consoleWriter.Write(feature);
+
+            if (Config.GenerateHtml)
+                _htmlWriter.Write(feature);
+
             ExecuteAllAssertions(feature.GetAllAssertions());
 		}
 

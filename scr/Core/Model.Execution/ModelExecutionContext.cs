@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish.Model.Execution
 {
-    public class ModelExectutionContext
+    public class ModelExecutionContext
     {
         public static ExecutedFeatureList ExecutedFeatures = new ExecutedFeatureList();
 

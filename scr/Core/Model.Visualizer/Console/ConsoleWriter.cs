@@ -13,7 +13,7 @@ namespace BDDish
 
         private readonly MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
 
-        public void WriteFeature(Feature feature)
+        public void Write(Feature feature)
         {
             Console.WriteLine(feature.Label);
             WriteUserStoryInfo(feature);            
