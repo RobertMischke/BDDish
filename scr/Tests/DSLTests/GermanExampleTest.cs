@@ -26,8 +26,12 @@ namespace BDDish.Tests
                                 Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
                             AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").
                             AkzeptanzKriterium("Und noch eins").
+                            AkzeptanzKriterium("Und noch eins").
 
                     Execute();
+
+
+            //Test().
 		}
 
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;

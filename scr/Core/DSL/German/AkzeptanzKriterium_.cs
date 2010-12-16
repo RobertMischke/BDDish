@@ -9,8 +9,7 @@ namespace BDDish.German
 		public const string LabelConcept = "AkzeptanzKriterium";
 
 		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
-
-		public Kunde ParentKunde;
+        public readonly Kunde ParentKunde;
 
 		public AkzeptanzKriterium_(AcceptanceCriterion modelAcceptanceCriterion, Kunde parentKunde) : base(parentKunde)
 		{
@@ -39,6 +38,11 @@ namespace BDDish.German
 	    public override ConceptNode GetConceptNode()
 	    {
 	        return _modelAcceptanceCriterion;
+	    }
+
+	    public void Test()
+	    {
+	        throw new NotImplementedException();
 	    }
 	}
 }

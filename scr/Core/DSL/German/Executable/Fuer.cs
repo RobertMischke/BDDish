@@ -11,7 +11,7 @@ namespace BDDish.German
 		public const string LabelConcept = "Für";
 
 		private readonly Context _modelContext;
-		public AkzeptanzKriterium_ ParentAkzeptanzkriterium;
+        public readonly AkzeptanzKriterium_ ParentAkzeptanzkriterium;
 
 		public Für(Context modelContext, AkzeptanzKriterium_ parentAkzeptanzkriterium) : base(parentAkzeptanzkriterium)
 		{

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using BDDish.Model.Tree;
-using NUnit.Framework;
 using NUnit.Framework.Constraints;
 using BDDish.Model;
 
@@ -12,8 +10,7 @@ namespace BDDish.German
 		public const string LabelConcept = "Gilt";
 
 		private readonly Context _modelContext;
-
-		public Für ParentFür;
+		public readonly Für ParentFür;
 
 		public Gilt_(Context modelContext, Für parentFür) : base(parentFür)
 		{

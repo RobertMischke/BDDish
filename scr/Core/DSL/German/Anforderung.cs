@@ -10,7 +10,7 @@ namespace BDDish.German
 	public class Anforderung : DSLNode
 	{
 		public const string LabelConcept = "Anforderung";
-		public Feature ParentFeature;
+        public readonly Feature ParentFeature;
 
 		public UserStory _modelUserStory;
 

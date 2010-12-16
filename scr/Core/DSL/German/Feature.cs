@@ -10,7 +10,6 @@ namespace BDDish.German
 
 		public Feature(string beschreibung) : base(null)
 		{
-
             _feature = new Model.Feature(LabelConcept, beschreibung);
 		}
 

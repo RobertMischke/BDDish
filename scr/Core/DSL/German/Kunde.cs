@@ -12,7 +12,7 @@ namespace BDDish.German
 		public const string LabelConcept = "Als";
 
 		private readonly Customer _modelCustomer;
-		public Anforderung ParentAnforderung;
+        public readonly Anforderung ParentAnforderung;
 
 		public Kunde(Customer modelCustomer, Anforderung parentAnforderung) : base(parentAnforderung)
 		{
