@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BDDish.Model;
+using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Anforderung
+	public class Anforderung : Node
 	{
 		public const string LabelConcept = "Anforderung";
 		public Feature ParentFeature;
@@ -14,7 +15,7 @@ namespace BDDish.German
 		public UserStory _modelUserStory;
 		public Customer _modelCustomer;
 
-		public Anforderung(UserStory modelUserStory, Feature parentFeature)
+		public Anforderung(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
 		{
 			_modelUserStory = modelUserStory;
 			ParentFeature = parentFeature;

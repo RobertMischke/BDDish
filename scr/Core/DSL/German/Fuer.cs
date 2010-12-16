@@ -1,18 +1,19 @@
 ﻿using System;
+using BDDish.Model.Tree;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 using BDDish.Model;
 
 namespace BDDish.German
 {
-	public class Für
+	public class Für : Node
 	{
 		public const string LabelConcept = "Für";
 
 		private readonly Context _modelContext;
-		public AkzeptanzKriterium ParentAkzeptanzkriterium;
+		public AkzeptanzKriterium_ ParentAkzeptanzkriterium;
 
-		public Für(Context modelContext, AkzeptanzKriterium parentAkzeptanzkriterium)
+		public Für(Context modelContext, AkzeptanzKriterium_ parentAkzeptanzkriterium) : base(parentAkzeptanzkriterium)
 		{
 			_modelContext = modelContext;
 			ParentAkzeptanzkriterium = parentAkzeptanzkriterium;

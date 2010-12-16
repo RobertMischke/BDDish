@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BDDish.Model;
+﻿using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Feature
+	public class Feature : Node
 	{
 		public const string LabelConcept = "Feature";
 
-		private readonly BDDish.Model.Feature _feature;
+		private readonly Model.Feature _feature;
 
-		public Feature(string beschreibung)
+		public Feature(string beschreibung) : base(null)
 		{
 
-            _feature = new BDDish.Model.Feature(LabelConcept, beschreibung);
+            _feature = new Model.Feature(LabelConcept, beschreibung);
 		}
 
 		public Anforderung Anforderung(string beschreibung)
 		{
-            var userStory = new BDDish.Model.UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
+            var userStory = new Model.UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
 			_feature.AddUserStory(userStory);
 			return new Anforderung(userStory, this);
 		}

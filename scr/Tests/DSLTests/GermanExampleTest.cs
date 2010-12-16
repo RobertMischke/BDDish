@@ -11,22 +11,24 @@ namespace BDDish.Tests
 		[Test]
 		public void ExampleTest()
 		{
-			new German.Feature("Schnittstellen").
-					Anforderung("FANTASYformat v1.0 exportieren").
-						Als(Auftraggeber.Normalo).
-							AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-								Für(ContextCamelCase()).
-								Gilt(SomeAssertionMethodWithCamelCase).
-							AkzeptanzKriterium("...").
-								Für(Context_with_underscores()).
-								Gilt(SomeAssertionMethodWithCamelCase).
-						Als(Auftraggeber.Sondermann).
-							AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-								Für(Context_with_underscores()).
-								Gilt(context2.Positions.Count, Is.EqualTo(3)).
-								Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
+            new German.Feature("Schnittstellen").
+                    Anforderung("FANTASYformat v1.0 exportieren").
+                        Als(Auftraggeber.Normalo).
+                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
+                                Für(ContextCamelCase()).
+                                Gilt(SomeAssertionMethodWithCamelCase).
+                            AkzeptanzKriterium("...").
+                                Für(Context_with_underscores()).
+                                Gilt(Some_assertion_method_with_underscores).
+                        Als(Auftraggeber.Sondermann).
+                            AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
+                                Für(Context_with_underscores()).
+                                Gilt(context2.Positions.Count, Is.EqualTo(3)).
+                                Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
+                            AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").
+                            AkzeptanzKriterium("Und noch eins").
 
-					Execute();
+                    Execute();
 		}
 
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;

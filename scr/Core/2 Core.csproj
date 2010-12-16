@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="DSL\German\AkzeptanzKriterium.cs" />
+    <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
     <Compile Include="DSL\German\Feature.cs" />
     <Compile Include="DSL\German\Fuer.cs" />
     <Compile Include="DSL\German\Gilt_.cs" />
@@ -67,31 +67,32 @@
     <Compile Include="Model.Visualizer\TextFormating\TextFormater.cs" />
     <Compile Include="Model.Visualizer\TextFormating\TextFormatingIdentifier.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\UnderscoresToText.cs" />
-    <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
-    <Compile Include="Model\Concepts\Context\Assertion.cs" />
-    <Compile Include="Model\Concepts\Context\AssertionResult.cs" />
-    <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
+    <Compile Include="Model\Concept.Tree\Node.cs" />
+    <Compile Include="Model\Concept\AcceptanceCriterionList.cs" />
+    <Compile Include="Model\Concept\Context\Assertion.cs" />
+    <Compile Include="Model\Concept\Context\AssertionResult.cs" />
+    <Compile Include="Model\Concept\Context\ContextBehavior.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\Context\IContextDescription.cs">
+    <Compile Include="Model\Concept\Context\IContextDescription.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\ICustomerDescription.cs">
+    <Compile Include="Model\Concept\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.Execution\ModelExecutionContext.cs" />
     <Compile Include="Model.Execution\ModelExecuter.cs" />
     <Compile Include="Model\SpecificationPart.cs" />
-    <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
-    <Compile Include="Model\Concepts\Context\Context.cs" />
-    <Compile Include="Model\Concepts\Context\AssertionList.cs" />
-    <Compile Include="Model\Concepts\Feature.cs" />
-    <Compile Include="Model\Concepts\Customer.cs" />
-    <Compile Include="Model\Concepts\CustomerList.cs">
+    <Compile Include="Model\Concept\AcceptanceCriterion.cs" />
+    <Compile Include="Model\Concept\Context\Context.cs" />
+    <Compile Include="Model\Concept\Context\AssertionList.cs" />
+    <Compile Include="Model\Concept\Feature.cs" />
+    <Compile Include="Model\Concept\Customer.cs" />
+    <Compile Include="Model\Concept\CustomerList.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\UserStory.cs" />
-    <Compile Include="Model\Concepts\UserStoryList.cs" />
+    <Compile Include="Model\Concept\UserStory.cs" />
+    <Compile Include="Model\Concept\UserStoryList.cs" />
     <Compile Include="Model\Storage\Feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

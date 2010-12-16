@@ -9,7 +9,6 @@ namespace BDDish.Model
 	{
 		public Context Context;
 		public Customer ParentCustomer;
-
 		
 		public AcceptanceCriterion(string labelConcept, string acceptanceContent, Customer parentCustomer)
 			: base(labelConcept, acceptanceContent)

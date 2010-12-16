@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using BDDish.Model.Tree;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
 using BDDish.Model;
 
 namespace BDDish.German
 {
-	public class Gilt_
+	public class Gilt_ : Node
 	{
 		public const string LabelConcept = "Gilt";
 
@@ -14,7 +15,7 @@ namespace BDDish.German
 
 		public Für ParentFür;
 
-		public Gilt_(Context modelContext, Für parentFür)
+		public Gilt_(Context modelContext, Für parentFür) : base(parentFür)
 		{
 			_modelContext = modelContext;
 			ParentFür = parentFür;
@@ -32,16 +33,16 @@ namespace BDDish.German
 			return new Gilt_(_modelContext, ParentFür);
 		}
 
-		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
+		public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
 		{
-			var modelAcceptanceCriterion = new AcceptanceCriterion(German.AkzeptanzKriterium.LabelConcept, beschreibung,
+			var modelAcceptanceCriterion = new AcceptanceCriterion(German.AkzeptanzKriterium_.LabelConcept, beschreibung,
 				_modelContext.ParentAceptanceCriterion.ParentCustomer);
 
 			_modelContext.
 				ParentAceptanceCriterion.
 				ParentCustomer.Add(modelAcceptanceCriterion);
 
-			return new AkzeptanzKriterium(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentKunde);
+			return new AkzeptanzKriterium_(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentKunde);
 		}
 
 		public Kunde Als(ICustomerDescription kundenBeschreibung)
