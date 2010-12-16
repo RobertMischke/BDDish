@@ -1,4 +1,4 @@
-﻿using BDDish.Model.Concept;
+﻿using BDDish.Model;
 
 namespace BDDish.Tests
 {

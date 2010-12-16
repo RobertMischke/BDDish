@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using BDDish.Model.Concept;
+using BDDish.Model;
 
 namespace BDDish.Tests
 {
