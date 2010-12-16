@@ -21,9 +21,9 @@ namespace BDDish.Tests.DSLTests
 				.Execute();
 		}
 
-		[Ignore("Manual test ")]
+		[Ignore("Manual test")]
 		[Test]
-		public void The_output_should_be_complete()
+		public void The_output_should_be_complete_and_the_test_should_be_red()
 		{
 			Arrange_sample_feature_with_failing_test();
 		}

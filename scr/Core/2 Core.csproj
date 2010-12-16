@@ -82,7 +82,7 @@
     </Compile>
     <Compile Include="Model.Execution\ModelExecutionContext.cs" />
     <Compile Include="Model.Execution\ModelExecuter.cs" />
-    <Compile Include="Model\SpecificationPart.cs" />
+    <Compile Include="Model\Concept.Tree\SpecificationNode.cs" />
     <Compile Include="Model\Concept\AcceptanceCriterion.cs" />
     <Compile Include="Model\Concept\Context\Context.cs" />
     <Compile Include="Model\Concept\Context\AssertionList.cs" />

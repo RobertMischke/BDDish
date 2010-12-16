@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using BDDish.German;
 
 namespace BDDish.Tests
 {
@@ -25,8 +24,6 @@ namespace BDDish.Tests
                                 Für(Context_with_underscores()).
                                 Gilt(context2.Positions.Count, Is.EqualTo(3)).
                                 Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
-                            AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").
-                            AkzeptanzKriterium("Und noch eins").
 
                     Execute();
 		}

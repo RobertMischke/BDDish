@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish.Model
 {
-	public class AcceptanceCriterion : SpecificationPart
+	public class AcceptanceCriterion : SpecificationNode
 	{
 		public Context Context;
 		public Customer ParentCustomer;

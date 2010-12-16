@@ -69,11 +69,7 @@ namespace BDDish.German
 					 	ParentUserStory.
 					 	ParentFeature);
 
-			return ParentFür.
-					ParentAkzeptanzkriterium.
-					ParentKunde.
-					ParentAnforderung.
-					ParentFeature;
+		    return (Feature) GetRoot();
 		}
 	}
 }

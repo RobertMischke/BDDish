@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish
 {
-	public abstract class SpecificationPart
+	public abstract class SpecificationNode
 	{
 		/// <summary>
 		/// Feature, UserStory, etc.
@@ -19,14 +19,14 @@ namespace BDDish
 			get { return LabelConcept + ": " + LabelBody; }
 		}
 
-		protected SpecificationPart(){}
+		protected SpecificationNode(){}
 
-		protected SpecificationPart(string labelConcept)
+		protected SpecificationNode(string labelConcept)
 		{
 			LabelConcept = labelConcept;
 		}
 
-		protected SpecificationPart(string labelConcept, string labelBody) : this(labelConcept)
+		protected SpecificationNode(string labelConcept, string labelBody) : this(labelConcept)
 		{
 			LabelBody = labelBody;
 		}

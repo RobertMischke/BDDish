@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish.Model
 {
-	public class UserStory : SpecificationPart
+	public class UserStory : SpecificationNode
 	{
 		public CustomerList Customers = new CustomerList();
 		
