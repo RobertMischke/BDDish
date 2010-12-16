@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
@@ -26,15 +27,16 @@ namespace BDDish.Tests
                                 Gilt(context2.Positions[0].Price, Is.EqualTo(22m)).
                             AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").
                             AkzeptanzKriterium("Und noch eins").
-                            AkzeptanzKriterium("Und noch eins").
+                            AkzeptanzKriterium("Und noch eins nur mit Tests").
+                                Test(Hier_die_Ausführung).
 
                     Execute();
 
-
-            //Test().
 		}
 
-		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
+	    
+
+	    private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;
 
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 ContextCamelCase(){
@@ -45,13 +47,9 @@ namespace BDDish.Tests
 			return context2 = new EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1();
 		}
 
-		public void SomeAssertionMethodWithCamelCase()
-		{
-		}
-
-        public void Some_assertion_method_with_underscores()
-        {
-        }
+		public void SomeAssertionMethodWithCamelCase(){}
+        public void Some_assertion_method_with_underscores(){}
+        private void Hier_die_Ausführung() { }
 
 	}
 }

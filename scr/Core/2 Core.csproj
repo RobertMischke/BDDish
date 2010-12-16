@@ -49,10 +49,10 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
-    <Compile Include="DSL\German\Ausführbar\Test_.cs" />
+    <Compile Include="DSL\German\Executable\Test_.cs" />
     <Compile Include="DSL\German\Feature.cs" />
-    <Compile Include="DSL\German\Ausführbar\Fuer.cs" />
-    <Compile Include="DSL\German\Ausführbar\Gilt_.cs" />
+    <Compile Include="DSL\German\Executable\Fuer.cs" />
+    <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
     <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />

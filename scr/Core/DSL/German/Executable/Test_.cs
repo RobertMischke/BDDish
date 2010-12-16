@@ -25,5 +25,10 @@ namespace BDDish.German
         {
             return _modelAssertion;
         }
+
+        public Feature Execute()
+        {
+            return Execute<Feature>();
+        }
     }
 }

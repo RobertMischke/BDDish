@@ -12,27 +12,23 @@ namespace BDDish.Model
 	{
 		public Func<AssertionResult> ActionWithResult;
 		public Action Action;
-		public Context ParentContext;
 
-		public Assertion(string labelConcept, Action action, Context parentContext) : 
+		public Assertion(string labelConcept, Action action) : 
 			base(labelConcept)
 		{
 			Action = action;
-			ParentContext = parentContext;
 		}
 
-		public Assertion(string labelConcept, object assertion, EqualConstraint equalTo, Context parentContext) : 
+		public Assertion(string labelConcept, object assertion, EqualConstraint equalTo) : 
 			base(labelConcept)
 		{
 			Action = () => Assert.That(assertion, equalTo);
-			ParentContext = parentContext;
 		}
 
-		public Assertion(string labelConcept, Func<AssertionResult> func, Context parentContext) : 
+		public Assertion(string labelConcept, Func<AssertionResult> func) : 
 			base(labelConcept)
 		{
 			ActionWithResult = func;
-			ParentContext = parentContext;
 		}
 
 	}

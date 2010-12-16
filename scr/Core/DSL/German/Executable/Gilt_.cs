@@ -20,7 +20,7 @@ namespace BDDish.German
 
 		public Gilt_ Gilt(Action asssertionAction)
 		{
-			_modelContext.Add(new Assertion(LabelConcept, asssertionAction, _modelContext));
+			_modelContext.Add(new Assertion(LabelConcept, asssertionAction));
 			return new Gilt_(_modelContext, ParentFür);
 		}
 

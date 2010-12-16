@@ -45,7 +45,9 @@ namespace BDDish
                 Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
                 if (!acceptanceCriterion.IsDraft)
                 {
-                    Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
+                    if(acceptanceCriterion.HasContext)
+                        Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
+
                     WriteAssertionInfo(acceptanceCriterion);    
                 }
                 
@@ -54,10 +56,9 @@ namespace BDDish
 
         private void WriteAssertionInfo(AcceptanceCriterion acceptanceCriterion)
         {
-            foreach (var assertion in acceptanceCriterion.Context.Assertions)
-            {
+            foreach (var assertion in acceptanceCriterion.GetAllAssertions())
                 Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _methodSignatureToString.GetString(assertion.Action));
-            }
+            
         }
     }
 }

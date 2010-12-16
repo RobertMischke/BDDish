@@ -23,6 +23,14 @@ namespace BDDish.German
 			return new Für(_modelAcceptanceCriterion.Context, this);
 		}
 
+        public Test_ Test(Action action)
+        {
+            var assertion = new Assertion(Test_.LabelConcept, action);
+            _modelAcceptanceCriterion.Add(assertion);
+            return new Test_(assertion, this);
+        }
+
+
         public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
 	    {
             var modelAcceptanceCriterion = new AcceptanceCriterion(LabelConcept, beschreibung, _modelAcceptanceCriterion.ParentCustomer );
@@ -40,9 +48,5 @@ namespace BDDish.German
 	        return _modelAcceptanceCriterion;
 	    }
 
-	    public void Test()
-	    {
-	        throw new NotImplementedException();
-	    }
 	}
 }

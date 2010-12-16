@@ -48,7 +48,7 @@ namespace BDDish.Model
 
 		public void Add(string labelConcept, object assertion, EqualConstraint equalTo)
 		{
-			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
+			Assertions.Add(new Assertion(labelConcept, assertion, equalTo));
 		}
 
 	    public AssertionList GetAllAssertions()
