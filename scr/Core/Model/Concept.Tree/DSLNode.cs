@@ -6,17 +6,16 @@ using System.Text;
 namespace BDDish.Model.Tree
 {
     /// <summary>
-    /// Base type for Node ind specific DSLs (For example German)
+    /// Base type for Nodes in specific DSLs (For example German)
     /// </summary>
-    public class DSLNode
+    public abstract class DSLNode
     {
-        /// <summary>
-        /// The underlying concept
-        /// </summary>
-        public ConceptNode Concept;
+
+        public abstract ConceptNode GetConceptNode();
+        
         public readonly DSLNode Parent;
 
-        public DSLNode(DSLNode parent)
+        protected DSLNode(DSLNode parent)
         {
             Parent = parent;
         }

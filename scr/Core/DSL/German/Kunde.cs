@@ -26,5 +26,10 @@ namespace BDDish.German
 			_modelCustomer.Add(modelAcceptanceCriterion);
 			return new AkzeptanzKriterium_(modelAcceptanceCriterion, this);
 		}
+
+        public override ConceptNode GetConceptNode()
+        {
+            return _modelCustomer;
+        }
 	}
 }

@@ -71,5 +71,10 @@ namespace BDDish.German
 
 		    return (Feature) GetRoot();
 		}
+
+        public override ConceptNode GetConceptNode()
+        {
+            return _modelContext;
+        }
 	}
 }

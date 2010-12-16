@@ -30,5 +30,10 @@ namespace BDDish.German
 			_modelContext.Add(Gilt_.LabelConcept, assertion, equalTo);
 			return new Gilt_(_modelContext, this);
 		}
+
+        public override ConceptNode GetConceptNode()
+        {
+            return _modelContext;
+        }
 	}
 }

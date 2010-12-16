@@ -33,5 +33,10 @@ namespace BDDish.German
 	    {
 	        throw new NotImplementedException();
 	    }
+
+	    public override ConceptNode GetConceptNode()
+	    {
+	        return _modelAcceptanceCriterion;
+	    }
 	}
 }

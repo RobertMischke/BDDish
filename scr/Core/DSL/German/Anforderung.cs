@@ -13,9 +13,8 @@ namespace BDDish.German
 		public Feature ParentFeature;
 
 		public UserStory _modelUserStory;
-		public Customer _modelCustomer;
 
-		public Anforderung(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
+        public Anforderung(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
 		{
 			_modelUserStory = modelUserStory;
 			ParentFeature = parentFeature;
@@ -34,6 +33,11 @@ namespace BDDish.German
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Kunde(modelCustomer, this);
 		}
+
+        public override ConceptNode GetConceptNode()
+        {
+            return _modelUserStory;
+        }
 
 	}
 }
