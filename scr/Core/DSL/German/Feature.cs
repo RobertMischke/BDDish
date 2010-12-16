@@ -2,7 +2,7 @@
 
 namespace BDDish.German
 {
-	public class Feature : Node
+	public class Feature : DSLNode
 	{
 		public const string LabelConcept = "Feature";
 

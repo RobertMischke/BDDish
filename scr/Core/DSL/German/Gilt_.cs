@@ -7,7 +7,7 @@ using BDDish.Model;
 
 namespace BDDish.German
 {
-	public class Gilt_ : Node
+	public class Gilt_ : DSLNode
 	{
 		public const string LabelConcept = "Gilt";
 

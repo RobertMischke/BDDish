@@ -5,15 +5,18 @@ using System.Text;
 
 namespace BDDish.Model.Tree
 {
-    public class Node
+    /// <summary>
+    /// Base type for Node ind specific DSLs (For example German)
+    /// </summary>
+    public class DSLNode
     {
         /// <summary>
         /// The underlying concept
         /// </summary>
         public ConceptNode Concept;
-        public readonly Node Parent;
+        public readonly DSLNode Parent;
 
-        public Node(Node parent)
+        public DSLNode(DSLNode parent)
         {
             Parent = parent;
         }
@@ -28,7 +31,7 @@ namespace BDDish.Model.Tree
             return Parent != null;
         }
 
-        public Node GetRoot()
+        public DSLNode GetRoot()
         {
             var currentNode = this;
 

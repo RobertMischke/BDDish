@@ -4,7 +4,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class AkzeptanzKriterium_ : Node
+	public class AkzeptanzKriterium_ : DSLNode
 	{
 		public const string LabelConcept = "AkzeptanzKriterium";
 

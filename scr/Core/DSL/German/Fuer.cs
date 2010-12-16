@@ -6,7 +6,7 @@ using BDDish.Model;
 
 namespace BDDish.German
 {
-	public class Für : Node
+	public class Für : DSLNode
 	{
 		public const string LabelConcept = "Für";
 

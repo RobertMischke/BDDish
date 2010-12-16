@@ -7,7 +7,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Kunde : Node
+	public class Kunde : DSLNode
 	{
 		public const string LabelConcept = "Als";
 

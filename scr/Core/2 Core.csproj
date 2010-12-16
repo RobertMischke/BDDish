@@ -67,7 +67,7 @@
     <Compile Include="Model.Visualizer\TextFormating\TextFormater.cs" />
     <Compile Include="Model.Visualizer\TextFormating\TextFormatingIdentifier.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\UnderscoresToText.cs" />
-    <Compile Include="Model\Concept.Tree\Node.cs" />
+    <Compile Include="Model\Concept.Tree\DSLNode.cs" />
     <Compile Include="Model\Concept\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concept\Context\Assertion.cs" />
     <Compile Include="Model\Concept\Context\AssertionResult.cs" />

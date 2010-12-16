@@ -7,7 +7,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Anforderung : Node
+	public class Anforderung : DSLNode
 	{
 		public const string LabelConcept = "Anforderung";
 		public Feature ParentFeature;
