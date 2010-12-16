@@ -62,14 +62,7 @@ namespace BDDish.German
 
 		public Feature Execute()
 		{
-			new ModelExecuter()
-				.Run( _modelContext.
-					 	ParentAceptanceCriterion.
-					 	ParentCustomer.
-					 	ParentUserStory.
-					 	ParentFeature);
-
-		    return (Feature) GetRoot();
+		    return Execute<Feature>();
 		}
 
         public override ConceptNode GetConceptNode()

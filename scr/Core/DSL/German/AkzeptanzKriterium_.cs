@@ -26,13 +26,15 @@ namespace BDDish.German
 
         public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
 	    {
-	        throw new NotImplementedException();
+            var modelAcceptanceCriterion = new AcceptanceCriterion(LabelConcept, beschreibung, _modelAcceptanceCriterion.ParentCustomer );
+            _modelAcceptanceCriterion.ParentCustomer.Add(modelAcceptanceCriterion);
+            return new AkzeptanzKriterium_(modelAcceptanceCriterion, ParentKunde);
 	    }
 
-	    public Feature Execute()
-	    {
-	        throw new NotImplementedException();
-	    }
+        public Feature Execute()
+        {
+            return Execute<Feature>();
+        }
 
 	    public override ConceptNode GetConceptNode()
 	    {

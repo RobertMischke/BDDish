@@ -43,8 +43,12 @@ namespace BDDish
             foreach (var acceptanceCriterion in customer.AcceptanceCriteria)
             {
                 Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
-                Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
-                WriteAssertionInfo(acceptanceCriterion);
+                if (!acceptanceCriterion.IsDraft)
+                {
+                    Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
+                    WriteAssertionInfo(acceptanceCriterion);    
+                }
+                
             }
         }
 

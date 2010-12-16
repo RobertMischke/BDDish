@@ -17,13 +17,21 @@ namespace BDDish.Model
 			ParentCustomer = parentCustomer;
 		}
 
-		public void AddContext(string labelConcept, IContextDescription contextDescription)
+	    public bool IsDraft
+	    {
+            get { return Context == null; }
+	    }
+
+	    public void AddContext(string labelConcept, IContextDescription contextDescription)
 		{
 			Context = new Context(labelConcept, contextDescription, this);
 		}
 
 	    public AssertionList GetAllAssertions()
 	    {
+            if (IsDraft)
+                return new AssertionList();
+
 	        return Context.GetAllAssertions();
 	    }
 	}
