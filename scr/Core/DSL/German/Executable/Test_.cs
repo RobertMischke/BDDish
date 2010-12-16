@@ -26,6 +26,14 @@ namespace BDDish.German
             return _modelAssertion;
         }
 
+        public Test_ Test(Action action)
+        {
+            var assertion = new Assertion(LabelConcept, action);
+            ((AcceptanceCriterion) ParentAkzeptanzkriterium.GetConceptNode()).Add(assertion);
+
+            return new Test_(assertion, ParentAkzeptanzkriterium);
+        }
+
         public Feature Execute()
         {
             return Execute<Feature>();

@@ -19,7 +19,7 @@ namespace BDDish.German
 
 		public Für Für(IContextDescription kontext)
 		{
-			_modelAcceptanceCriterion.AddContext(German.Für.LabelConcept, kontext);
+			_modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
 			return new Für(_modelAcceptanceCriterion.Context, this);
 		}
 

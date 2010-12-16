@@ -22,7 +22,7 @@ namespace BDDish.Model
 	    public bool IsDraft { get { return Context == null && Assertions.Count == 0; } }
         public bool HasContext { get { return Context != null; } }
 
-	    public void AddContext(string labelConcept, IContextDescription contextDescription)
+	    public void Add(string labelConcept, IContextDescription contextDescription)
 		{
 			Context = new Context(labelConcept, contextDescription, this);
 		}

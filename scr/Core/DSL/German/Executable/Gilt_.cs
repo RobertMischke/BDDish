@@ -32,7 +32,7 @@ namespace BDDish.German
 
 		public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
 		{
-			var modelAcceptanceCriterion = new AcceptanceCriterion(German.AkzeptanzKriterium_.LabelConcept, beschreibung,
+			var modelAcceptanceCriterion = new AcceptanceCriterion(AkzeptanzKriterium_.LabelConcept, beschreibung,
 				_modelContext.ParentAceptanceCriterion.ParentCustomer);
 
 			_modelContext.

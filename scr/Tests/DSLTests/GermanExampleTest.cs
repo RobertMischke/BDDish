@@ -29,6 +29,7 @@ namespace BDDish.Tests
                             AkzeptanzKriterium("Und noch eins").
                             AkzeptanzKriterium("Und noch eins nur mit Tests").
                                 Test(Hier_die_Ausführung).
+                                Test(Hier_die_Ausführung).
 
                     Execute();
 
