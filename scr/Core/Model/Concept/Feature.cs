@@ -6,7 +6,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.Model
 {
-	public class Feature : SpecificationNode
+	public class Feature : ConceptNode
 	{	
 		public UserStoryList UserStories = new UserStoryList();
 		public CustomerList Customers = new CustomerList();

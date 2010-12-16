@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BDDish.Model.Tree
 {
-	public abstract class SpecificationNode
+	public abstract class ConceptNode
 	{
 		/// <summary>
 		/// Feature, UserStory, etc.
@@ -19,14 +19,14 @@ namespace BDDish.Model.Tree
 			get { return LabelConcept + ": " + LabelBody; }
 		}
 
-		protected SpecificationNode(){}
+		protected ConceptNode(){}
 
-		protected SpecificationNode(string labelConcept)
+		protected ConceptNode(string labelConcept)
 		{
 			LabelConcept = labelConcept;
 		}
 
-		protected SpecificationNode(string labelConcept, string labelBody) : this(labelConcept)
+		protected ConceptNode(string labelConcept, string labelBody) : this(labelConcept)
 		{
 			LabelBody = labelBody;
 		}

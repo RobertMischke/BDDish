@@ -8,7 +8,7 @@ using NUnit.Framework.Constraints;
 
 namespace BDDish.Model
 {
-	public class Context : SpecificationNode
+	public class Context : ConceptNode
 	{
 		private readonly IContextDescription _internalDesrciption;
 

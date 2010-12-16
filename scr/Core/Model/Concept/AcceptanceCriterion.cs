@@ -6,7 +6,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.Model
 {
-	public class AcceptanceCriterion : SpecificationNode
+	public class AcceptanceCriterion : ConceptNode
 	{
 		public Context Context;
 		public Customer ParentCustomer;

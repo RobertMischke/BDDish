@@ -7,6 +7,10 @@ namespace BDDish.Model.Tree
 {
     public class Node
     {
+        /// <summary>
+        /// The underlying concept
+        /// </summary>
+        public ConceptNode Concept;
         public readonly Node Parent;
 
         public Node(Node parent)

@@ -8,7 +8,7 @@ using NUnit.Framework.Constraints;
 
 namespace BDDish.Model
 {
-	public class Assertion : SpecificationNode
+	public class Assertion : ConceptNode
 	{
 		public Func<AssertionResult> ActionWithResult;
 		public Action Action;
