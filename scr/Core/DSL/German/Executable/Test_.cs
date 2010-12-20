@@ -28,7 +28,7 @@ namespace BDDish.German
 
         public Test_ Test(Action action)
         {
-            var assertion = new Assertion(LabelConcept, action);
+            var assertion = new Assertion(LabelConcept, action, null);
             ((AcceptanceCriterion)ParentAkzeptanzkriterium.GetConceptNode()).Add(assertion);
 
             return new Test_(assertion, ParentAkzeptanzkriterium);

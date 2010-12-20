@@ -21,19 +21,25 @@ namespace BDDish.German
 
 		public Gilt_ Gilt(Action asssertionAction)
 		{
-			_modelContext.Add(new Assertion(Gilt_.LabelConcept, asssertionAction));
+			_modelContext.Add(new Assertion(Gilt_.LabelConcept, asssertionAction, _modelContext));
 			return new Gilt_(_modelContext, this);
 		}
 
 		public Gilt_ Gilt(object assertion, EqualConstraint equalTo)
 		{
-			_modelContext.Add(Gilt_.LabelConcept, assertion, equalTo);
-			return new Gilt_(_modelContext, this);
+            return Gilt(() => assertion, equalTo);
 		}
+
+        public Gilt_ Gilt(Func<object> assertionA, EqualConstraint equalTo)
+        {
+            _modelContext.Add(LabelConcept, assertionA, equalTo);
+            return new Gilt_(_modelContext, this);
+        }
 
         public override ConceptNode GetConceptNode()
         {
             return _modelContext;
         }
+
 	}
 }

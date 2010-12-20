@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSLTests\Execution_order.cs" />
     <Compile Include="DSLTests\GermanExampleTest.cs" />
     <Compile Include="DSLTests\When_assertion_fails.cs" />
     <Compile Include="UnitTests\Formating\TextFormaterTests.cs" />

@@ -25,7 +25,7 @@ namespace BDDish.German
 
         public Test_ Test(Action action)
         {
-            var assertion = new Assertion(Test_.LabelConcept, action);
+            var assertion = new Assertion(Test_.LabelConcept, action, null);
             _modelAcceptanceCriterion.Add(assertion);
             return new Test_(assertion, this);
         }
