@@ -6,6 +6,9 @@ using NUnit.Framework;
 
 namespace BDDish.Tests
 {
+    /// <summary>
+    /// No assertions. To inspect output and see usage.
+    /// </summary>
 	public class GermanExampleTest
 	{
 		[Test]
@@ -24,8 +27,8 @@ namespace BDDish.Tests
                         Als(Auftraggeber.Sondermann).
                             AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
                                 Für(Context_with_underscores()).
-                                Gilt(() => context2.Positions.Count , Is.EqualTo(3)).
-                                Gilt(() => context2.Positions[0].Price, Is.EqualTo(22m)).
+                                Gilt(() => context2.Positions.Count , () => Is.EqualTo(3)).
+                                Gilt(() => context2.Positions[0].Price, () => Is.EqualTo(22m)).
                             AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").
                             AkzeptanzKriterium("Und noch eins").
                             AkzeptanzKriterium("Und noch eins nur mit Tests").

@@ -24,12 +24,12 @@ namespace BDDish.German
 			return new Gilt_(_modelContext, ParentFür);
 		}
 
-        public Gilt_ Gilt(object assertionA, EqualConstraint equalTo)
+        public Gilt_ Gilt(object assertionA, Func<EqualConstraint> equalTo)
         {
             return Gilt(() => assertionA, equalTo);
         }
 
-		public Gilt_ Gilt(Func<object> assertionA, EqualConstraint equalTo)
+		public Gilt_ Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
 		{
 			_modelContext.Add(LabelConcept, assertionA, equalTo);
 			return new Gilt_(_modelContext, ParentFür);

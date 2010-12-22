@@ -22,10 +22,10 @@ namespace BDDish.Model
 		    Context = context;
 		}
 
-        public Assertion(string labelConcept, Func<object> assertion, EqualConstraint equalTo, Context context) : 
+        public Assertion(string labelConcept, Func<object> assertion, Func<EqualConstraint> equalTo, Context context) : 
 			base(labelConcept)
 		{
-			Action = () => Assert.That(assertion.Invoke(), equalTo);
+			Action = () => Assert.That(assertion.Invoke(), equalTo.Invoke());
             Context = context;
 		}
 

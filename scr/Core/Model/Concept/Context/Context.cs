@@ -47,7 +47,7 @@ namespace BDDish.Model
 			Assertions.Add(assertion);
 		}
 
-		public void Add(string labelConcept, Func<object> assertion, EqualConstraint equalTo)
+		public void Add(string labelConcept, Func<object> assertion, Func<EqualConstraint> equalTo)
 		{
 			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}

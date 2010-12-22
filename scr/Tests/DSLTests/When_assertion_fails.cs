@@ -15,8 +15,8 @@ namespace BDDish.Tests.DSLTests
 						Als(Auftraggeber.Normalo).
 							AkzeptanzKriterium("Aktzeptanzkriterium1").
 								Für(Sample.Order3Positions).
-								Gilt("Foo", Is.EqualTo("Bla")).
-								Gilt("Bla", Is.EqualTo("Bla"))
+								Gilt("Foo", () => Is.EqualTo("Bla")).
+								Gilt("Bla", () => Is.EqualTo("Bla"))
 
 				.Execute();
 		}
