@@ -71,7 +71,7 @@ namespace BDDish.German
 		    return Execute<Feature>();
 		}
 
-        public override ConceptNode GetConceptNode()
+        internal override ConceptNode GetConceptNode()
         {
             return _modelContext;
         }

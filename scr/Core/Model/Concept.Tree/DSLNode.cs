@@ -10,26 +10,26 @@ namespace BDDish.Model.Tree
     /// </summary>
     public abstract class DSLNode
     {
-        public abstract ConceptNode GetConceptNode();
-        
-        public readonly DSLNode Parent;
+        internal abstract ConceptNode GetConceptNode();
+
+        protected readonly DSLNode Parent;
 
         protected DSLNode(DSLNode parent)
         {
             Parent = parent;
         }
 
-        public bool IsRootNode()
+        protected bool IsRootNode()
         {
             return !HasParent();
         }
 
-        public bool HasParent()
+        protected bool HasParent()
         {
             return Parent != null;
         }
 
-        public DSLNode GetRoot()
+        protected DSLNode GetRoot()
         {
             var currentNode = this;
 
@@ -39,7 +39,7 @@ namespace BDDish.Model.Tree
             return currentNode;
         }
 
-        public TRootNode Execute<TRootNode>() where TRootNode : DSLNode 
+        protected TRootNode Execute<TRootNode>() where TRootNode : DSLNode 
         {
             var rootNode = (TRootNode) GetRoot();
             new ModelExecuter().Run((Feature)rootNode.GetConceptNode());

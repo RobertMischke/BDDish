@@ -34,7 +34,7 @@ namespace BDDish.German
 			return new Kunde(modelCustomer, this);
 		}
 
-        public override ConceptNode GetConceptNode()
+        internal override ConceptNode GetConceptNode()
         {
             return _modelUserStory;
         }

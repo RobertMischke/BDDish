@@ -21,7 +21,7 @@ namespace BDDish.German
             ParentAkzeptanzkriterium = parentAkzeptanzkriterium;
         }
 
-        public override ConceptNode GetConceptNode()
+        internal override ConceptNode GetConceptNode()
         {
             return _modelAssertion;
         }

@@ -28,7 +28,7 @@ namespace BDDish.German
 			return new Anforderung(userStory, this);
 		}
 
-        public override ConceptNode GetConceptNode()
+        internal override ConceptNode GetConceptNode()
         {
             return _feature;
         }

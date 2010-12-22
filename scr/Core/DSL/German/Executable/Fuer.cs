@@ -36,7 +36,7 @@ namespace BDDish.German
             return new Gilt_(_modelContext, this);
         }
 
-        public override ConceptNode GetConceptNode()
+        internal override ConceptNode GetConceptNode()
         {
             return _modelContext;
         }
