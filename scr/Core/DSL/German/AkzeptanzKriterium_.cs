@@ -1,4 +1,5 @@
 ﻿using System;
+using BDDish.DSL;
 using BDDish.Model;
 using BDDish.Model.Tree;
 
@@ -47,6 +48,12 @@ namespace BDDish.German
 	    {
 	        return _modelAcceptanceCriterion;
 	    }
+
+        public AkzeptanzKriterium_ Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
+        }
 
 	}
 }

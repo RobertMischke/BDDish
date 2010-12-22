@@ -55,6 +55,7 @@
     <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
+    <Compile Include="DSL\German\Words.cs" />
     <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Model\Concept\CustomerList.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Concept\Note.cs" />
     <Compile Include="Model\Concept\UserStory.cs" />
     <Compile Include="Model\Concept\UserStoryList.cs" />
     <Compile Include="Model\Storage\Feature.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BDDish.Model.Visualizer;
 using BDDish.Model;
 
@@ -6,6 +7,7 @@ namespace BDDish
 {
     public class ConsoleWriter
     {
+        private const string NoteIndent = " ";
         private const string IndentUserStory = " ";
         private const string IndentCustomer = " ";
         private const string IndentAceptanceCriteria = "    ";
@@ -17,18 +19,24 @@ namespace BDDish
         public void Write(Feature feature)
         {
             Console.WriteLine(feature.Label);
+            WriteNotes(feature.Notes, indent: NoteIndent);
 
             if (feature.FeatureDesription != null)
+            {
                 Console.WriteLine(" " + feature.FeatureDesription.Label);
+                WriteNotes(feature.FeatureDesription.Notes, indent: " " + NoteIndent);
+            }
 
             WriteUserStoryInfo(feature);            
         }
+
 
         private void WriteUserStoryInfo(Feature feature)
         {
             foreach (var userStory in feature.UserStories)
             {
                 Console.WriteLine(IndentUserStory + userStory.Label);
+                WriteNotes(userStory.Notes, indent: IndentUserStory + NoteIndent);
                 WriteCustomerInfo(userStory);
             }
         }
@@ -38,6 +46,7 @@ namespace BDDish
             foreach (var customer in userStory.Customers)
             {
                 Console.WriteLine(IndentCustomer + customer.Label);
+                WriteNotes(customer.Notes, indent: IndentCustomer + NoteIndent);
                 WriteAcceptanceInfo(customer);
             }
         }
@@ -47,11 +56,16 @@ namespace BDDish
             foreach (var acceptanceCriterion in customer.AcceptanceCriteria)
             {
                 Console.WriteLine(IndentAceptanceCriteria + acceptanceCriterion.Label);
+                WriteNotes(acceptanceCriterion.Notes, indent: IndentAceptanceCriteria + NoteIndent);
+                
                 if (!acceptanceCriterion.IsDraft)
                 {
-                    if(acceptanceCriterion.HasContext)
+                    if (acceptanceCriterion.HasContext)
+                    {
                         Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
-
+                        WriteNotes(acceptanceCriterion.Context.Notes, indent: IndentContext + NoteIndent);
+                    }
+                        
                     WriteAssertionInfo(acceptanceCriterion);    
                 }
                 
@@ -61,8 +75,17 @@ namespace BDDish
         private void WriteAssertionInfo(AcceptanceCriterion acceptanceCriterion)
         {
             foreach (var assertion in acceptanceCriterion.GetAllAssertions())
+            {
                 Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _methodSignatureToString.GetString(assertion.Action));
-            
+                WriteNotes(assertion.Notes, indent: IndentAssertion + NoteIndent);
+            }
+                
+        }
+
+        private static void WriteNotes(IEnumerable<Note> notes, string indent)
+        {
+            foreach (var note in notes)
+                Console.WriteLine(indent + note.Label);
         }
     }
 }

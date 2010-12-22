@@ -46,5 +46,10 @@ namespace BDDish.Model.Tree
 
             return rootNode;
         }
+
+        protected void AddNote(string labelNote, string note)
+        {
+            GetConceptNode().AddNote(labelNote, note);
+        }
     }
 }

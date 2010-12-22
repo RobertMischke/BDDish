@@ -1,4 +1,5 @@
 ﻿using System;
+using BDDish.DSL;
 using BDDish.Model.Tree;
 using NUnit.Framework;
 using NUnit.Framework.Constraints;
@@ -39,6 +40,12 @@ namespace BDDish.German
         internal override ConceptNode GetConceptNode()
         {
             return _modelContext;
+        }
+
+        public Für Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
         }
 
 	}

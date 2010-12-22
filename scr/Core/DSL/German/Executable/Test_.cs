@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.DSL;
 using BDDish.Model;
 using BDDish.Model.Tree;
 
@@ -47,6 +48,12 @@ namespace BDDish.German
         public Feature Execute()
         {
             return Execute<Feature>();
+        }
+
+        public Test_ Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
         }
     }
 }

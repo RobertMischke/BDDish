@@ -10,15 +10,19 @@ namespace BDDish.Model.Tree
 		/// <summary>
 		/// Feature, UserStory, etc.
 		/// </summary>
-		public string LabelConcept;
+		internal string LabelConcept;
 
-		public string LabelBody;
-		
-		public string Label
+        internal string LabelBody;
+
+        internal string Label
 		{
 			get { return LabelConcept + ": " + LabelBody; }
 		}
 
+        /// <summary>
+        /// Containing notes for the current Node
+        /// </summary>
+	    public List<Note> Notes = new List<Note>();
 
 		protected ConceptNode(string labelConcept)
 		{
@@ -29,6 +33,11 @@ namespace BDDish.Model.Tree
 		{
 			LabelBody = labelBody;
 		}
+
+        internal void AddNote(string labelConcept, string note)
+        {
+            Notes.Add(new Note(labelConcept, note));
+        }
 
 	}
 }

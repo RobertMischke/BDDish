@@ -9,13 +9,13 @@ namespace BDDish.Tests
     /// <summary>
     /// No assertions. To inspect output and see usage.
     /// </summary>
-	public class GermanExampleTest
+	public class German_example_test
 	{
 		[Test]
 		public void Example_test_complete()
 		{
-            new German.Feature("Schnittstellen").
-                    Beschreibung("Eine nähere Bschreibung des Features").
+            new German.Feature("Schnittstellen").Bemerkung("Work in Progress ").
+                    Beschreibung("Eine nähere Beschreibung des Features").
                     Anforderung("FANTASYformat v1.0 exportieren").
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
@@ -47,6 +47,18 @@ namespace BDDish.Tests
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
                                 Für(ContextCamelCase()).
+                                Gilt(SomeAssertionMethodWithCamelCase).
+                Execute();
+        }
+
+        [Test]
+        public void Example_test_with_notes()
+        {
+            new German.Feature("Schnittstellen").
+                    Anforderung("FANTASYformat v1.0 exportieren").Bemerkung("Anforderung - Bemerkung").
+                        Als(Auftraggeber.Normalo).Bemerkung("Als - Bermerkung").
+                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").Bemerkung("Aktzeptanzkriterium - Bemerkung").
+                                Für(ContextCamelCase()).Bemerkung("Für - Bemerkung").
                                 Gilt(SomeAssertionMethodWithCamelCase).
                 Execute();
         }

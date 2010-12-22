@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DSLTests\Execution_order.cs" />
-    <Compile Include="DSLTests\GermanExampleTest.cs" />
+    <Compile Include="DSLTests\German_example_test.cs" />
     <Compile Include="DSLTests\When_assertion_fails.cs" />
     <Compile Include="UnitTests\Formating\TextFormaterTests.cs" />
     <Compile Include="UnitTests\Formating\TextFormatIdentifierTests.cs" />

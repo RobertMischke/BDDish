@@ -1,4 +1,5 @@
-﻿using BDDish.Model;
+﻿using BDDish.DSL;
+using BDDish.Model;
 using BDDish.Model.Tree;
 
 namespace BDDish.German
@@ -31,6 +32,12 @@ namespace BDDish.German
         internal override ConceptNode GetConceptNode()
         {
             return _feature;
+        }
+
+        public Feature Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
         }
 
 
