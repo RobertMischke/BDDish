@@ -49,6 +49,9 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
+    <Compile Include="DSL\German\Beschreibung.cs">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSL\German\Executable\Test_.cs" />
     <Compile Include="DSL\German\Feature.cs" />
     <Compile Include="DSL\German\Executable\Fuer.cs" />
@@ -74,6 +77,9 @@
     </Compile>
     <Compile Include="Model\Concept\Context\IContextDescription.cs">
       <DependentUpon>Context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Concept\FeatureDescription.cs">
+      <DependentUpon>Feature.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Concept\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>

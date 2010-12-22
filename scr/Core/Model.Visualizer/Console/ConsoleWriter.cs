@@ -17,6 +17,10 @@ namespace BDDish
         public void Write(Feature feature)
         {
             Console.WriteLine(feature.Label);
+
+            if (feature.FeatureDesription != null)
+                Console.WriteLine(" " + feature.FeatureDesription.Label);
+
             WriteUserStoryInfo(feature);            
         }
 

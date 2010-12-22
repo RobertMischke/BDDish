@@ -9,9 +9,10 @@ namespace BDDish.Tests
 	public class GermanExampleTest
 	{
 		[Test]
-		public void ExampleTest()
+		public void Example_test_complete()
 		{
             new German.Feature("Schnittstellen").
+                    Beschreibung("Eine nähere Bschreibung des Features").
                     Anforderung("FANTASYformat v1.0 exportieren").
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
@@ -32,11 +33,20 @@ namespace BDDish.Tests
                                 Test(Hier_die_Ausführung).
                             AkzeptanzKriterium("..").
                                 Test(Hier_die_Ausführung).
-
                     Execute();
 		}
 
-	    
+        [Test]
+		public void Example_test_without_description()
+        {
+            new German.Feature("Schnittstellen").
+                    Anforderung("FANTASYformat v1.0 exportieren").
+                        Als(Auftraggeber.Normalo).
+                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
+                                Für(ContextCamelCase()).
+                                Gilt(SomeAssertionMethodWithCamelCase).
+                Execute();
+        }
 
 	    private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;

@@ -19,7 +19,6 @@ namespace BDDish.Model.Tree
 			get { return LabelConcept + ": " + LabelBody; }
 		}
 
-		protected ConceptNode(){}
 
 		protected ConceptNode(string labelConcept)
 		{
