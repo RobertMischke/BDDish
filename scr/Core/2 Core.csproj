@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
     <Compile Include="DSL\German\Executable\Test_.cs" />

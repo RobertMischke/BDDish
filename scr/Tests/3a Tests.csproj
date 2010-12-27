@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
     <Compile Include="DSLTests\Execution_order.cs" />
     <Compile Include="DSLTests\German_example_test.cs" />
     <Compile Include="DSLTests\When_assertion_fails.cs" />

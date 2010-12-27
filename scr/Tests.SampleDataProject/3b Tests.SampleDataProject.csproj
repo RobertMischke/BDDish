@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Order\Order.cs" />
     <Compile Include="Model\Order\Position.cs" />
