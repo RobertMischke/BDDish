@@ -25,6 +25,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Flavor=Retail")] // a.k.a. "Comments"
 #endif
 
-
 [assembly: AssemblyVersion("0.9.0.*")]
-[assembly: AssemblyFileVersion("0.9.0.*")]
