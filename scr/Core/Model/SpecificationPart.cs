@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Seedworks.Lib.Persistance;
 
 namespace BDDish
 {
-	public abstract class SpecificationPart
+	public abstract class SpecificationPart : IMutablePersistable
 	{
+        public int Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+        public DateTime DateModified { get; set; }
+
 		/// <summary>
 		/// Feature, UserStory, etc.
 		/// </summary>
-		public string LabelConcept;
+        public string LabelConcept { get; set; }
 
-		public string LabelBody;
+        public string LabelBody { get; set; }
 		
 		public string Label
 		{
@@ -30,6 +36,7 @@ namespace BDDish
 		{
 			LabelBody = labelBody;
 		}
+
 
 	}
 }

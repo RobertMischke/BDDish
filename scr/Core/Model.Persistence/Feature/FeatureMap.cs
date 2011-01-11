@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using FluentNHibernate.Mapping;
 
-namespace BDDish.Model
+namespace BDDish.Model.Persistence
 {
     public class FeatureMap : ClassMap<Feature>
     {

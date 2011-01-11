@@ -84,7 +84,9 @@
     <Compile Include="DSL\German\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
-    <Compile Include="Model.Persistence\Feature.cs" />
+    <Compile Include="Model.Persistence\FeatureLoader.cs" />
+    <Compile Include="Model.Persistence\FeatureSaver.cs" />
+    <Compile Include="Model.Persistence\Infrastructure\SessionFactory.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
