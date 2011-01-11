@@ -17,11 +17,14 @@ namespace BDDish
             ExecuteAllAssertions(feature.GetAllAssertions());
 		}
 
-        private void ExecuteAllAssertions(AssertionList assertions)
+        private static void ExecuteAllAssertions(AssertionList assertions)
         {
             assertions.ForEach(assertion =>
             {
-                try { assertion.Action(); }
+                if (assertion.Context != null && !assertion.Context.HasBeenSetup())
+                    assertion.Context.Setup();
+
+                try{assertion.Action();}
                 catch (NotImplementedException) { }
             });
         }

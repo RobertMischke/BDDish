@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Tests.DSL\GermanExampleTest.cs" />
     <Compile Include="Tests.DSL\When_assertion_fails.cs" />
     <Compile Include="Tests\Formating\TextFormaterTests.cs" />
@@ -59,6 +60,19 @@
     <Compile Include="Tests\Persistance\FeaturePersistanceTests.cs" />
     <Compile Include="Tests\TextParsing\CamelCaseToTextTests.cs" />
     <Compile Include="Tests\MethodSignatureToStringTests.cs" />
+=======
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
+    <Compile Include="DSLTests\Execution_order.cs" />
+    <Compile Include="DSLTests\German_example_test.cs" />
+    <Compile Include="DSLTests\When_assertion_fails.cs" />
+    <Compile Include="UnitTests\Formating\TextFormaterTests.cs" />
+    <Compile Include="UnitTests\Formating\TextFormatIdentifierTests.cs" />
+    <Compile Include="UnitTests\Model.Visualizer.Html\HtmlWriterTests.cs" />
+    <Compile Include="UnitTests\TextParsing\CamelCaseToTextTests.cs" />
+    <Compile Include="UnitTests\MethodSignatureToStringTests.cs" />
+>>>>>>> origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\TextParsing\UnderScoresToTextTests.cs" />
     <Compile Include="_GermanContextes\EinExportiertesFANTASYformatDokumentfuerMusterFirma1undMusterVorgang24.cs" />

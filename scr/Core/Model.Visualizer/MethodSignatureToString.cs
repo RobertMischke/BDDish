@@ -5,7 +5,7 @@ namespace BDDish.Model.Visualizer
 {
 	public class MethodSignatureToString
 	{
-		private readonly CamelCaseToText _camelCaseToText = new CamelCaseToText();
+		private readonly TextFormater _textFormater = new TextFormater();
 
 		public string GetString(Action<object, EqualConstraint> action)
 		{
@@ -19,7 +19,7 @@ namespace BDDish.Model.Visualizer
 			//if (methodName.Contains("<"))
 			//    return "No si";
 
-			return _camelCaseToText.GetText(action.Method.Name);
+			return _textFormater.GetText(action.Method.Name);
 		}
 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.Model.Tree;
 using BDDish.Model.Visualizer;
 
 namespace BDDish.Model
@@ -9,7 +10,7 @@ namespace BDDish.Model
 	/// <summary>
 	/// The one who is paying for a feature or demanding the feature in order to archive the development goals.
 	/// </summary>
-	public class Customer : SpecificationPart
+	public class Customer : ConceptNode
 	{
 		private readonly ICustomerDescription _customerDescription;
 

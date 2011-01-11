@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.DSL;
 using BDDish.Model;
+using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Anforderung
+	public class Anforderung : DSLNode
 	{
 		public const string LabelConcept = "Anforderung";
-		public Feature ParentFeature;
+        public readonly Feature ParentFeature;
 
 		public UserStory _modelUserStory;
-		public Customer _modelCustomer;
 
-		public Anforderung(UserStory modelUserStory, Feature parentFeature)
+        public Anforderung(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
 		{
 			_modelUserStory = modelUserStory;
 			ParentFeature = parentFeature;
@@ -33,6 +34,17 @@ namespace BDDish.German
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Kunde(modelCustomer, this);
 		}
+
+        internal override ConceptNode GetConceptNode()
+        {
+            return _modelUserStory;
+        }
+
+        public Anforderung Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
+        }
 
 	}
 }

@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -60,6 +61,9 @@
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+=======
+    <Reference Include="nunit.framework">
+>>>>>>> origin/master
       <HintPath>..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="RazorEngine.Core">
@@ -77,16 +81,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
+      <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
+    </Compile>
     <Compile Include="Config.cs" />
-    <Compile Include="DSL\German\AkzeptanzKriterium.cs" />
+    <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
+    <Compile Include="DSL\German\Executable\Test_.cs" />
     <Compile Include="DSL\German\Feature.cs" />
-    <Compile Include="DSL\German\Fuer.cs" />
-    <Compile Include="DSL\German\Gilt_.cs" />
+    <Compile Include="DSL\German\Executable\Fuer.cs" />
+    <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
+<<<<<<< HEAD
     <Compile Include="Model.Persistence\FeatureLoader.cs" />
     <Compile Include="Model.Persistence\FeatureSaver.cs" />
     <Compile Include="Model.Persistence\Infrastructure\SessionFactory.cs" />
+=======
+    <Compile Include="DSL\German\Words.cs" />
+    <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />
+>>>>>>> origin/master
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
@@ -96,20 +109,25 @@
     <Compile Include="Model.Visualizer\TextFormating\TextFormater.cs" />
     <Compile Include="Model.Visualizer\TextFormating\TextFormatingIdentifier.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\UnderscoresToText.cs" />
-    <Compile Include="Model\Concepts\AcceptanceCriterionList.cs" />
-    <Compile Include="Model\Concepts\Context\Assertion.cs" />
-    <Compile Include="Model\Concepts\Context\AssertionResult.cs" />
-    <Compile Include="Model\Concepts\Context\ContextBehavior.cs">
+    <Compile Include="Model\Concept.Tree\DSLNode.cs" />
+    <Compile Include="Model\Concept\AcceptanceCriterionList.cs" />
+    <Compile Include="Model\Concept\Context\Assertion.cs" />
+    <Compile Include="Model\Concept\Context\AssertionResult.cs" />
+    <Compile Include="Model\Concept\Context\ContextBehavior.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\Context\IContextDescription.cs">
+    <Compile Include="Model\Concept\Context\IContextDescription.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concepts\ICustomerDescription.cs">
+    <Compile Include="Model\Concept\FeatureDescription.cs">
+      <DependentUpon>Feature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Concept\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.Execution\ModelExecutionContext.cs" />
     <Compile Include="Model.Execution\ModelExecuter.cs" />
+<<<<<<< HEAD
     <Compile Include="Model\Concepts\FeatureMap.cs" />
     <Compile Include="Model\SpecificationPart.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
@@ -122,6 +140,21 @@
     </Compile>
     <Compile Include="Model\Concepts\UserStory.cs" />
     <Compile Include="Model\Concepts\UserStoryList.cs" />
+=======
+    <Compile Include="Model\Concept.Tree\ConceptNode.cs" />
+    <Compile Include="Model\Concept\AcceptanceCriterion.cs" />
+    <Compile Include="Model\Concept\Context\Context.cs" />
+    <Compile Include="Model\Concept\Context\AssertionList.cs" />
+    <Compile Include="Model\Concept\Feature.cs" />
+    <Compile Include="Model\Concept\Customer.cs" />
+    <Compile Include="Model\Concept\CustomerList.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Concept\Note.cs" />
+    <Compile Include="Model\Concept\UserStory.cs" />
+    <Compile Include="Model\Concept\UserStoryList.cs" />
+    <Compile Include="Model\Storage\Feature.cs" />
+>>>>>>> origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

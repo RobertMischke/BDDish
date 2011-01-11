@@ -2,28 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.DSL;
 using BDDish.Model;
+using BDDish.Model.Tree;
 
 namespace BDDish.German
 {
-	public class Kunde
+	public class Kunde : DSLNode
 	{
 		public const string LabelConcept = "Als";
 
 		private readonly Customer _modelCustomer;
-		public Anforderung ParentAnforderung;
+        public readonly Anforderung ParentAnforderung;
 
-		public Kunde(Customer modelCustomer, Anforderung parentAnforderung)
+		public Kunde(Customer modelCustomer, Anforderung parentAnforderung) : base(parentAnforderung)
 		{
 			_modelCustomer = modelCustomer;
 			ParentAnforderung = parentAnforderung;
 		}
 
-		public AkzeptanzKriterium AkzeptanzKriterium(string beschreibung)
+		public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
 		{
-			var modelAcceptanceCriterion = new AcceptanceCriterion(German.AkzeptanzKriterium.LabelConcept , beschreibung, _modelCustomer);
+			var modelAcceptanceCriterion = new AcceptanceCriterion(AkzeptanzKriterium_.LabelConcept , beschreibung, _modelCustomer);
 			_modelCustomer.Add(modelAcceptanceCriterion);
-			return new AkzeptanzKriterium(modelAcceptanceCriterion, this);
+			return new AkzeptanzKriterium_(modelAcceptanceCriterion, this);
 		}
+
+        internal override ConceptNode GetConceptNode()
+        {
+            return _modelCustomer;
+        }
+
+        public Kunde Bemerkung(string text)
+        {
+            AddNote(Words.LabelBemerkung, text);
+            return this;
+        }
 	}
 }

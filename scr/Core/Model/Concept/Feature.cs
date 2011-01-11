@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.Model.Tree;
 
 namespace BDDish.Model
 {
-	public class Feature : SpecificationPart
+	public class Feature : ConceptNode
 	{
+	    public FeatureDescription FeatureDesription;
 		public UserStoryList UserStories = new UserStoryList();
 		public CustomerList Customers = new CustomerList();
 		
@@ -32,6 +34,11 @@ namespace BDDish.Model
 	    public AssertionList GetAllAssertions()
 	    {
 	        return UserStories.GetAllessertions();
+	    }
+
+	    public void AddDescription(FeatureDescription featureDescription)
+	    {
+	        FeatureDesription = featureDescription;
 	    }
 	}
 }

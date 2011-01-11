@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.Model.Tree;
 
 namespace BDDish.Model
 {
-	public class UserStory : SpecificationPart
+	public class UserStory : ConceptNode
 	{
 		public CustomerList Customers = new CustomerList();
 		
