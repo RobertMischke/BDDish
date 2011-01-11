@@ -31,6 +31,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\..\lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\nunit.framework.dll</HintPath>
@@ -57,7 +84,7 @@
     <Compile Include="DSL\German\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
-    <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />
+    <Compile Include="Model.Persistence\Feature.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
@@ -81,6 +108,7 @@
     </Compile>
     <Compile Include="Model.Execution\ModelExecutionContext.cs" />
     <Compile Include="Model.Execution\ModelExecuter.cs" />
+    <Compile Include="Model\Concepts\FeatureMap.cs" />
     <Compile Include="Model\SpecificationPart.cs" />
     <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
     <Compile Include="Model\Concepts\Context\Context.cs" />
@@ -92,7 +120,6 @@
     </Compile>
     <Compile Include="Model\Concepts\UserStory.cs" />
     <Compile Include="Model\Concepts\UserStoryList.cs" />
-    <Compile Include="Model\Storage\Feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
