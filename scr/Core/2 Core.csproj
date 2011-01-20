@@ -31,7 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -59,18 +58,14 @@
     <Reference Include="NHibernate.ByteCode.Castle">
       <HintPath>..\..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-=======
     <Reference Include="nunit.framework">
->>>>>>> origin/master
       <HintPath>..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine.Core">
-      <HintPath>..\..\lib\RazorEngine.Core.dll</HintPath>
+    <Reference Include="Seedworks.Lib">
+      <HintPath>..\..\lib\Seedworks.Lib.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine.Templates">
-      <HintPath>..\..\lib\RazorEngine.Templates.dll</HintPath>
+    <Reference Include="Seedworks.Lib.Persistance">
+      <HintPath>..\..\lib\Seedworks.Lib.Persistance.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -92,14 +87,11 @@
     <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
-<<<<<<< HEAD
-    <Compile Include="Model.Persistence\FeatureLoader.cs" />
-    <Compile Include="Model.Persistence\FeatureSaver.cs" />
-    <Compile Include="Model.Persistence\Infrastructure\SessionFactory.cs" />
-=======
+    <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureMap.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureRepository.cs" />
     <Compile Include="DSL\German\Words.cs" />
-    <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />
->>>>>>> origin/master
+    <Compile Include="Model.Persistence\SessionFactory.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
@@ -127,20 +119,6 @@
     </Compile>
     <Compile Include="Model.Execution\ModelExecutionContext.cs" />
     <Compile Include="Model.Execution\ModelExecuter.cs" />
-<<<<<<< HEAD
-    <Compile Include="Model\Concepts\FeatureMap.cs" />
-    <Compile Include="Model\SpecificationPart.cs" />
-    <Compile Include="Model\Concepts\AcceptanceCriterion.cs" />
-    <Compile Include="Model\Concepts\Context\Context.cs" />
-    <Compile Include="Model\Concepts\Context\AssertionList.cs" />
-    <Compile Include="Model\Concepts\Feature.cs" />
-    <Compile Include="Model\Concepts\Customer.cs" />
-    <Compile Include="Model\Concepts\CustomerList.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Concepts\UserStory.cs" />
-    <Compile Include="Model\Concepts\UserStoryList.cs" />
-=======
     <Compile Include="Model\Concept.Tree\ConceptNode.cs" />
     <Compile Include="Model\Concept\AcceptanceCriterion.cs" />
     <Compile Include="Model\Concept\Context\Context.cs" />
@@ -153,8 +131,6 @@
     <Compile Include="Model\Concept\Note.cs" />
     <Compile Include="Model\Concept\UserStory.cs" />
     <Compile Include="Model\Concept\UserStoryList.cs" />
-    <Compile Include="Model\Storage\Feature.cs" />
->>>>>>> origin/master
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

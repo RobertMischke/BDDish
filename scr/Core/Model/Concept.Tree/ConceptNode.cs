@@ -7,12 +7,17 @@ namespace BDDish.Model.Tree
 {
 	public abstract class ConceptNode
 	{
+
+        public int Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+        public DateTime DateModified { get; set; }
+
 		/// <summary>
 		/// Feature, UserStory, etc.
 		/// </summary>
-		internal string LabelConcept;
-
-        internal string LabelBody;
+        internal string LabelConcept { get; set; }
+        internal string LabelBody { get; set; }
 
         internal string Label
 		{
