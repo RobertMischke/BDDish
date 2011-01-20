@@ -30,7 +30,6 @@ namespace BDDish.Model
 			return this;
 		}
 
-
 	    public AssertionList GetAllAssertions()
 	    {
 	        return UserStories.GetAllessertions();
