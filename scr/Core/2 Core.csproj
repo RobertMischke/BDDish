@@ -90,8 +90,8 @@
     <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
-    <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureMap.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureRepository.cs" />
     <Compile Include="DSL\German\Words.cs" />
     <Compile Include="Model.Persistence\SessionFactory.cs" />
