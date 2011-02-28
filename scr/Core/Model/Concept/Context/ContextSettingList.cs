@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BDDish.German
+namespace BDDish.Model
 {
-    class Fuer_Und
+    public class ContextSettingList : List<ContextSetting>
     {
     }
 }

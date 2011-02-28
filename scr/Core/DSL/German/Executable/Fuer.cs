@@ -37,6 +37,13 @@ namespace BDDish.German
             return new Gilt_(_modelContext, this);
         }
 
+        public Und_ Und(Action contextAction)
+        {
+            _modelContext.Add(new ContextSetting(Und_.LabelConcept, contextAction, _modelContext));
+            return new Und_(_modelContext, this);
+        }
+
+
         internal override ConceptNode GetConceptNode()
         {
             return _modelContext;

@@ -19,7 +19,8 @@ namespace BDDish.Tests
                     Anforderung("FANTASYformat v1.0 exportieren").
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-                                Für(ContextCamelCase()).
+                                Für(ContextCamelCase())
+                                    .Und(Weitere_action_fuer_context).
                                 Gilt(SomeAssertionMethodWithCamelCase).
                             AkzeptanzKriterium("...").
                                 Für(Context_with_underscores()).
@@ -66,9 +67,16 @@ namespace BDDish.Tests
 	    private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;
 
+
+
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 ContextCamelCase(){
 			return context1 = new EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24();
 		}
+
+        private void Weitere_action_fuer_context()
+        {
+            Console.WriteLine("WeitereActionFuerContext");
+        }
 
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 Context_with_underscores(){
 			return context2 = new EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1();

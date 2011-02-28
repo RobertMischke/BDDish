@@ -26,7 +26,11 @@ namespace BDDish
             assertions.ForEach(assertion =>
             {
                 if (assertion.Context != null && !assertion.Context.HasBeenSetup())
+                {
                     assertion.Context.Setup();
+                    foreach (var contextSetting in assertion.Context.ContextSettings)
+                        contextSetting.Action.Invoke();                    
+                }
 
                 try{assertion.Action();}
                 catch (NotImplementedException e) { }

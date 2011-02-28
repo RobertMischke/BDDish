@@ -54,7 +54,9 @@
     </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
-    <Compile Include="DSL\German\Executable\Fuer_Und.cs" />
+    <Compile Include="DSL\German\Executable\Und_.cs">
+      <DependentUpon>Fuer.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSL\German\Executable\Test_.cs" />
     <Compile Include="DSL\German\Feature.cs" />
     <Compile Include="DSL\German\Executable\Fuer.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="Model\Concept\AcceptanceCriterionList.cs" />
     <Compile Include="Model\Concept\Context\Assertion.cs" />
     <Compile Include="Model\Concept\Context\AssertionResult.cs" />
+    <Compile Include="Model\Concept\Context\ContextSetting.cs" />
+    <Compile Include="Model\Concept\Context\ContextSettingList.cs" />
     <Compile Include="Model\Concept\Context\IContextDescription.cs">
       <DependentUpon>Context.cs</DependentUpon>
     </Compile>

@@ -19,7 +19,9 @@ namespace BDDish.Model
         public bool HasBeenSetup() { return _hasBeenSetup; }
 
 		public AssertionList Assertions = new AssertionList();
-		public AcceptanceCriterion ParentAceptanceCriterion;
+        public ContextSettingList ContextSettings = new ContextSettingList();
+
+        public AcceptanceCriterion ParentAceptanceCriterion;
 
 		private class InternalDescription : IContextDescription
 		{
@@ -51,6 +53,11 @@ namespace BDDish.Model
 		{
 			Assertions.Add(new Assertion(labelConcept, assertion, equalTo, this));
 		}
+
+        public void Add(ContextSetting contextSetting)
+        {
+            ContextSettings.Add(contextSetting);
+        }
 
 	    public AssertionList GetAllAssertions()
 	    {
