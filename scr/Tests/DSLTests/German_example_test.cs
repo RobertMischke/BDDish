@@ -19,8 +19,9 @@ namespace BDDish.Tests
                     Anforderung("FANTASYformat v1.0 exportieren").
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-                                Für(ContextCamelCase())
-                                    .Und(Weitere_action_fuer_context).
+                                Für(ContextCamelCase()).
+                                    Und(Weitere_action_fuer_context).
+                                    Und(Weitere_action_fuer_context).
                                 Gilt(SomeAssertionMethodWithCamelCase).
                             AkzeptanzKriterium("...").
                                 Für(Context_with_underscores()).

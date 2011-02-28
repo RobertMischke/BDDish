@@ -24,7 +24,7 @@ namespace BDDish
                 if (assertion.Context != null && !assertion.Context.HasBeenSetup())
                 {
                     assertion.Context.Setup();
-                    foreach (var contextSetting in assertion.Context.ContextSettings)
+                    foreach (var contextSetting in assertion.Context.Settings)
                         contextSetting.Action.Invoke();                    
                 }
 

@@ -34,6 +34,13 @@ namespace BDDish.German
             return this;
         }
 
+        public Und_ Und(Action contextAction)
+        {
+            _modelContext.Add(new ContextSetting(LabelConcept, contextAction, _modelContext));
+            return new Und_(_modelContext, ParentFuer);
+        }
+
+
         public Gilt_ Gilt(Action asssertionAction)
         {
             _modelContext.Add(new Assertion(Gilt_.LabelConcept, asssertionAction, _modelContext));
