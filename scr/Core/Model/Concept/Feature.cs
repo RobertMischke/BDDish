@@ -6,7 +6,7 @@ using BDDish.Model.Tree;
 
 namespace BDDish.Model
 {
-	public class Feature : ConceptNode
+	public class Feature : ConceptNode 
 	{
 	    public FeatureDescription FeatureDesription;
 		public UserStoryList UserStories = new UserStoryList();
@@ -29,7 +29,6 @@ namespace BDDish.Model
 			Customers.Add(customer);
 			return this;
 		}
-
 
 	    public AssertionList GetAllAssertions()
 	    {

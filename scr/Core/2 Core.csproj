@@ -31,14 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\..\lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine.Core">
-      <HintPath>..\..\lib\RazorEngine.Core.dll</HintPath>
+    <Reference Include="Seedworks.Lib">
+      <HintPath>..\..\lib\Seedworks.Lib.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine.Templates">
-      <HintPath>..\..\lib\RazorEngine.Templates.dll</HintPath>
+    <Reference Include="Seedworks.Lib.Persistance">
+      <HintPath>..\..\lib\Seedworks.Lib.Persistance.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,8 +90,11 @@
     <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureMap.cs" />
+    <Compile Include="Model.Persistence\Feature\FeatureRepository.cs" />
     <Compile Include="DSL\German\Words.cs" />
-    <Compile Include="Model.Visualizer\Html\HtmlWriter.cs" />
+    <Compile Include="Model.Persistence\SessionFactory.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
@@ -86,6 +116,7 @@
     <Compile Include="Model\Concept\FeatureDescription.cs">
       <DependentUpon>Feature.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Concept\FeatureList.cs" />
     <Compile Include="Model\Concept\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
@@ -103,7 +134,6 @@
     <Compile Include="Model\Concept\Note.cs" />
     <Compile Include="Model\Concept\UserStory.cs" />
     <Compile Include="Model\Concept\UserStoryList.cs" />
-    <Compile Include="Model\Storage\Feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
