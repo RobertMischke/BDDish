@@ -12,7 +12,7 @@ namespace BDDish.Tests
 	public class German_example_test
 	{
 		[Test]
-		public void Example_test_complete()
+		public void Example_test_with_multiple_nonsense_combinations()
 		{
             new German.Feature("Schnittstellen").Bemerkung("Work in Progress ").
                     Beschreibung("Eine nähere Beschreibung des Features").
@@ -22,10 +22,15 @@ namespace BDDish.Tests
                                 Für(ContextCamelCase()).
                                     Und(Weitere_action_fuer_context).
                                     Und(Weitere_action_fuer_context).
+                                    Dann(Weitere_action_fuer_context).
                                 Gilt(SomeAssertionMethodWithCamelCase).
                             AkzeptanzKriterium("...").
-                                Für(Context_with_underscores()).
+                                Wenn(Context_with_underscores()).
                                 Gilt(Some_assertion_method_with_underscores).
+                            AkzeptanzKriterium("...").
+                                GegebenIst(ContextCamelCase()).
+                                    Dann(Weitere_action_fuer_context).
+                                Soll(SomeAssertionMethodWithCamelCase).
                         Als(Auftraggeber.Sondermann).
                             AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
                                 Für(Context_with_underscores()).

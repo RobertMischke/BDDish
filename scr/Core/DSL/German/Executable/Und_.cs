@@ -40,6 +40,10 @@ namespace BDDish.German
             return new Und_(_modelContext, ParentFuer);
         }
 
+        public Und_ Dann(Action contextAction)
+        {
+            return Und(contextAction);
+        }
 
         public Gilt_ Gilt(Action asssertionAction)
         {
@@ -57,5 +61,9 @@ namespace BDDish.German
             _modelContext.Add(LabelConcept, assertionA, equalTo);
             return new Gilt_(_modelContext, ParentFuer);
         }
+
+        public Gilt_ Soll(Action asssertionAction) { return Gilt(asssertionAction); }
+        public Gilt_ Soll(object assertion, Func<EqualConstraint> equalTo) { return Gilt(assertion, equalTo); }
+        public Gilt_ Soll(Func<object> assertionA, Func<EqualConstraint> equalTo) { return Gilt(assertionA, equalTo); }
     }
 }
