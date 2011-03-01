@@ -67,6 +67,10 @@ namespace BDDish.German
 												ParentAnforderung);
 		}
 
+        public Gilt_ Soll(Action asssertionAction) { return Gilt(asssertionAction); }
+        public Gilt_ Soll(object assertion, Func<EqualConstraint> equalTo) { return Gilt(assertion, equalTo); }
+        public Gilt_ Soll(Func<object> assertionA, Func<EqualConstraint> equalTo) { return Gilt(assertionA, equalTo); }
+
 		public Feature Execute()
 		{
 		    return Execute<Feature>();
