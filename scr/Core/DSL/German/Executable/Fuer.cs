@@ -43,10 +43,8 @@ namespace BDDish.German
             return new Und_(_modelContext, this);
         }
 
-        public Und_ Dann(Action contextAction)
-        {
-            return Und(contextAction);
-        }
+        public Und_ Dann(Action contextAction){ return Und(contextAction); }
+        public Und_ Wenn(Action contextAction) { return Und(contextAction); }
 
 	    internal override ConceptNode GetConceptNode()
         {
@@ -62,6 +60,10 @@ namespace BDDish.German
         public Gilt_ Soll(Action asssertionAction) { return Gilt(asssertionAction); }
         public Gilt_ Soll(object assertion, Func<EqualConstraint> equalTo) { return Gilt(assertion, equalTo); }
         public Gilt_ Soll(Func<object> assertionA, Func<EqualConstraint> equalTo) { return Gilt(assertionA, equalTo); }
+
+        public Gilt_ DannSoll(Action asssertionAction) { return Gilt(asssertionAction); }
+        public Gilt_ DannSoll(object assertion, Func<EqualConstraint> equalTo) { return Gilt(assertion, equalTo); }
+        public Gilt_ DannSoll(Func<object> assertionA, Func<EqualConstraint> equalTo) { return Gilt(assertionA, equalTo); }
 
 
 	}
