@@ -43,6 +43,8 @@ namespace BDDish.German
             return new Und_(_modelContext, this);
         }
 
+        public Und_ GegebenIst(Action contextAction) { return Und(contextAction); }
+        public Und_ GegebenSind(Action contextAction) { return Und(contextAction); }
         public Und_ Dann(Action contextAction){ return Und(contextAction); }
         public Und_ Wenn(Action contextAction) { return Und(contextAction); }
 
