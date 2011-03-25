@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BDDish.DSL;
 using BDDish.Model;
 using BDDish.Model.Tree;
 

@@ -3,43 +3,43 @@ using BDDish.Model.Tree;
 using NUnit.Framework.Constraints;
 using BDDish.Model;
 
-namespace BDDish.German
+namespace BDDish.English
 {
-	public class Gilt_ : DSLNode
+	public class Given : DSLNode
 	{
 		public const string LabelConcept = "Gilt";
 
 		private readonly Context _modelContext;
 		public readonly Für ParentFür;
 
-		public Gilt_(Context modelContext, Für parentFür) : base(parentFür)
+		public Given(Context modelContext, Für parentFür) : base(parentFür)
 		{
 			_modelContext = modelContext;
 			ParentFür = parentFür;
 		}
 
-		public Gilt_ Gilt(Action asssertionAction)
+		public Given Gilt(Action asssertionAction)
 		{
 			_modelContext.Add(new Assertion(LabelConcept, asssertionAction, _modelContext));
-			return new Gilt_(_modelContext, ParentFür);
+			return new Given(_modelContext, ParentFür);
 		}
 
-        public Gilt_ Gilt(object assertionA, Func<EqualConstraint> equalTo)
+        public Given Gilt(object assertionA, Func<EqualConstraint> equalTo)
         {
             return Gilt(() => assertionA, equalTo);
         }
 
-		public Gilt_ Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
+		public Given Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
 		{
 			_modelContext.Add(LabelConcept, assertionA, equalTo);
-			return new Gilt_(_modelContext, ParentFür);
+			return new Given(_modelContext, ParentFür);
 		}
 
-		public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
+		public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
 		{
             var modelAcceptanceCriterion =
                 new AcceptanceCriterion(
-                    AkzeptanzKriterium_.LabelConcept,
+                    AceptanceCriterion.LabelConcept,
                     beschreibung,
                     _modelContext.ParentAceptanceCriterion.ParentCustomer
             );
@@ -48,22 +48,22 @@ namespace BDDish.German
                 ParentAceptanceCriterion.
                 ParentCustomer.Add(modelAcceptanceCriterion);
 
-			return new AkzeptanzKriterium_(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentKunde);
+			return new AceptanceCriterion(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentCustomer);
 		}
 
-		public Kunde Als(ICustomerDescription kundenBeschreibung)
+		public Customer_ Als(ICustomerDescription kundenBeschreibung)
 		{
-			var modelCustomer = new Customer(Kunde.LabelConcept, kundenBeschreibung,
+			var modelCustomer = new Customer(Customer_.LabelConcept, kundenBeschreibung,
 			                                 _modelContext.ParentAceptanceCriterion.ParentCustomer.ParentUserStory);
 
 			_modelContext.ParentAceptanceCriterion.
 				ParentCustomer.
 				ParentUserStory.AddCustomer(modelCustomer);
 
-			return new Kunde(modelCustomer, ParentFür.
+			return new Customer_(modelCustomer, ParentFür.
 												ParentAkzeptanzkriterium.
-												ParentKunde.
-												ParentAnforderung);
+												ParentCustomer.
+												ParentRequirement);
 		}
 
 		public Feature Execute()

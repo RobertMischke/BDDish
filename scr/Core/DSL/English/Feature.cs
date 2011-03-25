@@ -1,7 +1,7 @@
 ﻿using BDDish.Model;
 using BDDish.Model.Tree;
 
-namespace BDDish.German
+namespace BDDish.English
 {
 	public class Feature : DSLNode
 	{
@@ -14,18 +14,18 @@ namespace BDDish.German
             _feature = new Model.Feature(LabelConcept, titel);
 		}
 
-        public Feature Beschreibung(string beschreibung)
+        public Feature Description(string description)
         {
-            var featureDescription = new FeatureDescription("Beschreibung", beschreibung);
+            var featureDescription = new FeatureDescription("Beschreibung", description);
             _feature.AddDescription(featureDescription);
             return this;
         }
 
-		public Anforderung Anforderung(string beschreibung)
+		public Requirement_ Requirement(string description)
 		{
-            var userStory = new UserStory(German.Anforderung.LabelConcept, beschreibung, _feature);
+            var userStory = new UserStory(German.Anforderung.LabelConcept, description, _feature);
 			_feature.AddUserStory(userStory);
-			return new Anforderung(userStory, this);
+			return new Requirement_(userStory, this);
 		}
 
         internal override ConceptNode GetConceptNode()
@@ -33,7 +33,7 @@ namespace BDDish.German
             return _feature;
         }
 
-        public Feature Bemerkung(string text)
+        public Feature Note(string text)
         {
             AddNote(Words.LabelBemerkung, text);
             return this;

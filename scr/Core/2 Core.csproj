@@ -80,6 +80,33 @@
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="DSL\English\AceptanceCriterion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Requirement_.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Executable\Fuer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Executable\Given.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Executable\Test_.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Executable\And.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Feature.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Customer_.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSL\English\Words.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
     <Compile Include="DSL\German\Executable\Und_.cs">
       <DependentUpon>Fuer.cs</DependentUpon>
@@ -136,9 +163,7 @@
     <Compile Include="Model\Concept\UserStoryList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DSL\English\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

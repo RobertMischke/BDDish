@@ -1,33 +1,33 @@
 ﻿using BDDish.Model;
 using BDDish.Model.Tree;
 
-namespace BDDish.German
+namespace BDDish.English
 {
-	public class Anforderung : DSLNode
+	public class Requirement_ : DSLNode
 	{
 		public const string LabelConcept = "Anforderung";
         public readonly Feature ParentFeature;
 
 		public UserStory _modelUserStory;
 
-        public Anforderung(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
+        public Requirement_(UserStory modelUserStory, Feature parentFeature) : base(parentFeature)
 		{
 			_modelUserStory = modelUserStory;
 			ParentFeature = parentFeature;
 		}
 
-		public Kunde Als(string name)
+		public Customer_ As(string name)
 		{
-			var modelCustomer = new Customer(Kunde.LabelConcept, name, _modelUserStory);
+			var modelCustomer = new Customer(Customer_.LabelConcept, name, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
-			return new Kunde(modelCustomer, this);
+			return new Customer_(modelCustomer, this);
 		}
 
-		public Kunde Als(ICustomerDescription kunde)
+		public Customer_ As(ICustomerDescription kunde)
 		{
-			var modelCustomer = new Customer(Kunde.LabelConcept, kunde, _modelUserStory);
+			var modelCustomer = new Customer(Customer_.LabelConcept, kunde, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
-			return new Kunde(modelCustomer, this);
+			return new Customer_(modelCustomer, this);
 		}
 
         internal override ConceptNode GetConceptNode()
@@ -35,7 +35,7 @@ namespace BDDish.German
             return _modelUserStory;
         }
 
-        public Anforderung Bemerkung(string text)
+        public Requirement_ Note(string text)
         {
             AddNote(Words.LabelBemerkung, text);
             return this;

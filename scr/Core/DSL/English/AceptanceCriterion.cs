@@ -2,19 +2,19 @@
 using BDDish.Model;
 using BDDish.Model.Tree;
 
-namespace BDDish.German
+namespace BDDish.English
 {
-	public class AkzeptanzKriterium_ : DSLNode
+	public class AceptanceCriterion : DSLNode
 	{
 		public const string LabelConcept = "AkzeptanzKriterium";
 
 		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
-        public readonly Kunde ParentKunde;
+        public readonly Customer_ ParentCustomer;
 
-		public AkzeptanzKriterium_(AcceptanceCriterion modelAcceptanceCriterion, Kunde parentKunde) : base(parentKunde)
+		public AceptanceCriterion(AcceptanceCriterion modelAcceptanceCriterion, Customer_ parentCustomer) : base(parentCustomer)
 		{
 			_modelAcceptanceCriterion = modelAcceptanceCriterion;
-			ParentKunde = parentKunde;
+			ParentCustomer = parentCustomer;
 		}
 
 		public Für Für(IContextDescription kontext)
@@ -31,11 +31,11 @@ namespace BDDish.German
         }
 
 
-        public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
+        public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
 	    {
             var modelAcceptanceCriterion = new AcceptanceCriterion(LabelConcept, beschreibung, _modelAcceptanceCriterion.ParentCustomer );
             _modelAcceptanceCriterion.ParentCustomer.Add(modelAcceptanceCriterion);
-            return new AkzeptanzKriterium_(modelAcceptanceCriterion, ParentKunde);
+            return new AceptanceCriterion(modelAcceptanceCriterion, ParentCustomer);
 	    }
 
         public Feature Execute()
@@ -48,7 +48,7 @@ namespace BDDish.German
 	        return _modelAcceptanceCriterion;
 	    }
 
-        public AkzeptanzKriterium_ Bemerkung(string text)
+        public AceptanceCriterion Bemerkung(string text)
         {
             AddNote(Words.LabelBemerkung, text);
             return this;

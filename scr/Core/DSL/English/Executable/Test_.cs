@@ -2,16 +2,16 @@
 using BDDish.Model;
 using BDDish.Model.Tree;
 
-namespace BDDish.German
+namespace BDDish.English
 {
     public class Test_ : DSLNode
     {
         public const string LabelConcept = "Test";
 
         private readonly Assertion _modelAssertion;
-        public readonly AkzeptanzKriterium_ ParentAkzeptanzkriterium;
+        public readonly AceptanceCriterion ParentAkzeptanzkriterium;
 
-        public Test_(Assertion modelAssertion, AkzeptanzKriterium_ parentAkzeptanzkriterium)
+        public Test_(Assertion modelAssertion, AceptanceCriterion parentAkzeptanzkriterium)
             : base(parentAkzeptanzkriterium)
         {
             _modelAssertion = modelAssertion;
@@ -31,14 +31,14 @@ namespace BDDish.German
             return new Test_(assertion, ParentAkzeptanzkriterium);
         }
 
-        public AkzeptanzKriterium_ AkzeptanzKriterium(string beschreibung)
+        public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
         {
             var parentAceptanceCriterion = (AcceptanceCriterion) ParentAkzeptanzkriterium.GetConceptNode();
 
-            var modelAcceptanceCriterion = new AcceptanceCriterion(AkzeptanzKriterium_.LabelConcept, beschreibung, (parentAceptanceCriterion.ParentCustomer));
+            var modelAcceptanceCriterion = new AcceptanceCriterion(AceptanceCriterion.LabelConcept, beschreibung, (parentAceptanceCriterion.ParentCustomer));
             parentAceptanceCriterion.ParentCustomer.Add(modelAcceptanceCriterion);
 
-            return new AkzeptanzKriterium_(modelAcceptanceCriterion, ParentAkzeptanzkriterium.ParentKunde);
+            return new AceptanceCriterion(modelAcceptanceCriterion, ParentAkzeptanzkriterium.ParentCustomer);
         }
 
         public Feature Execute()

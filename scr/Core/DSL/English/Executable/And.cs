@@ -3,16 +3,16 @@ using BDDish.Model;
 using BDDish.Model.Tree;
 using NUnit.Framework.Constraints;
 
-namespace BDDish.German
+namespace BDDish.English
 {
-    public class Und_ : DSLNode
+    public class And : DSLNode
     {
         public const string LabelConcept = "Und";
 
         private readonly Context _modelContext;
         public readonly Für ParentFuer;
 
-        public Und_(Context modelContext, Für parentFür)
+        public And(Context modelContext, Für parentFür)
             : base(parentFür)
         {
             _modelContext = modelContext;
@@ -24,27 +24,27 @@ namespace BDDish.German
             return _modelContext;
         }
 
-        public Und_ Bemerkung(string text)
+        public And Bemerkung(string text)
         {
             AddNote(Words.LabelBemerkung, text);
             return this;
         }
 
-        public Gilt_ Gilt(Action asssertionAction)
+        public Given Gilt(Action asssertionAction)
         {
-            _modelContext.Add(new Assertion(Gilt_.LabelConcept, asssertionAction, _modelContext));
-            return new Gilt_(_modelContext, ParentFuer);
+            _modelContext.Add(new Assertion(Given.LabelConcept, asssertionAction, _modelContext));
+            return new Given(_modelContext, ParentFuer);
         }
 
-        public Gilt_ Gilt(object assertion, Func<EqualConstraint> equalTo)
+        public Given Gilt(object assertion, Func<EqualConstraint> equalTo)
         {
             return Gilt(() => assertion, equalTo);
         }
 
-        public Gilt_ Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
+        public Given Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
         {
             _modelContext.Add(LabelConcept, assertionA, equalTo);
-            return new Gilt_(_modelContext, ParentFuer);
+            return new Given(_modelContext, ParentFuer);
         }
     }
 }
