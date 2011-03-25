@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSLTests\German_example_test_without_description.cs" />
+    <Compile Include="DSLTests\German_example_with_note.cs" />
     <Compile Include="Tests.DSL\When_assertion_fails.cs" />
     <Compile Include="Tests\Formating\TextFormaterTests.cs" />
     <Compile Include="Tests\Formating\TextFormatIdentifierTests.cs" />

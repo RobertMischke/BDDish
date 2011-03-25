@@ -40,35 +40,9 @@ namespace BDDish.Tests
                     Execute();
 		}
 
-        [Test]
-		public void Example_test_without_description()
-        {
-            new German.Feature("Schnittstellen").
-                    Anforderung("FANTASYformat v1.0 exportieren").
-                        Als(Auftraggeber.Normalo).
-                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-                                Für(ContextCamelCase()).
-                                Gilt(SomeAssertionMethodWithCamelCase).
-                Execute();
-        }
-
-        [Test]
-        public void Example_test_with_notes()
-        {
-            new German.Feature("Schnittstellen").
-                    Anforderung("FANTASYformat v1.0 exportieren").Bemerkung("Anforderung - Bemerkung").
-                        Als(Auftraggeber.Normalo).Bemerkung("Als - Bermerkung").
-                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").Bemerkung("Aktzeptanzkriterium - Bemerkung").
-                                Für(ContextCamelCase()).Bemerkung("Für - Bemerkung").
-                                Gilt(SomeAssertionMethodWithCamelCase).
-                Execute();
-        }
 
 	    private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 context1;
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 context2;
-
-
-
 		private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 ContextCamelCase(){
 			return context1 = new EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24();
 		}
