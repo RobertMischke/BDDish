@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.Model;
 using NUnit.Framework;
 
 namespace BDDish.Tests
@@ -13,7 +14,9 @@ namespace BDDish.Tests
         {
             //new English.Feature("Example Feature")
             //    .Requirement("Some customer needs something")
-            //    .As("the default customer").
+            //    .Customer("the default customer").
+            //        AceptanceCriterion("The need").
+            //            Given(Some_context)
 
             /* 
              * Feature(Example).
@@ -34,6 +37,11 @@ namespace BDDish.Tests
              * When()
              * ItsExpectedThat()
              */
+        }
+
+        private IContextDescription Some_context()
+        {
+            throw new NotImplementedException();
         }
     }
 }

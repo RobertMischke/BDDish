@@ -9,13 +9,13 @@ namespace BDDish.English
         public const string LabelConcept = "Test";
 
         private readonly Assertion _modelAssertion;
-        public readonly AceptanceCriterion ParentAkzeptanzkriterium;
+        public readonly AceptanceCriterion_ ParentAceptanceCriterion;
 
-        public Test_(Assertion modelAssertion, AceptanceCriterion parentAkzeptanzkriterium)
-            : base(parentAkzeptanzkriterium)
+        public Test_(Assertion modelAssertion, AceptanceCriterion_ parentAceptanceCriterion)
+            : base(parentAceptanceCriterion)
         {
             _modelAssertion = modelAssertion;
-            ParentAkzeptanzkriterium = parentAkzeptanzkriterium;
+            ParentAceptanceCriterion = parentAceptanceCriterion;
         }
 
         internal override ConceptNode GetConceptNode()
@@ -26,19 +26,19 @@ namespace BDDish.English
         public Test_ Test(Action action)
         {
             var assertion = new Assertion(LabelConcept, action, null);
-            ((AcceptanceCriterion)ParentAkzeptanzkriterium.GetConceptNode()).Add(assertion);
+            ((AcceptanceCriterion)ParentAceptanceCriterion.GetConceptNode()).Add(assertion);
 
-            return new Test_(assertion, ParentAkzeptanzkriterium);
+            return new Test_(assertion, ParentAceptanceCriterion);
         }
 
-        public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
+        public AceptanceCriterion_ AceptanceCriterion(string beschreibung)
         {
-            var parentAceptanceCriterion = (AcceptanceCriterion) ParentAkzeptanzkriterium.GetConceptNode();
+            var parentAceptanceCriterion = (AcceptanceCriterion) ParentAceptanceCriterion.GetConceptNode();
 
-            var modelAcceptanceCriterion = new AcceptanceCriterion(AceptanceCriterion.LabelConcept, beschreibung, (parentAceptanceCriterion.ParentCustomer));
+            var modelAcceptanceCriterion = new AcceptanceCriterion(English.AceptanceCriterion_.LabelConcept, beschreibung, (parentAceptanceCriterion.ParentCustomer));
             parentAceptanceCriterion.ParentCustomer.Add(modelAcceptanceCriterion);
 
-            return new AceptanceCriterion(modelAcceptanceCriterion, ParentAkzeptanzkriterium.ParentCustomer);
+            return new AceptanceCriterion_(modelAcceptanceCriterion, ParentAceptanceCriterion.ParentCustomer);
         }
 
         public Feature Execute()
@@ -48,7 +48,7 @@ namespace BDDish.English
 
         public Test_ Bemerkung(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
     }

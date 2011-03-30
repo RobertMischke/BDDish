@@ -10,13 +10,13 @@ namespace BDDish.English
         public const string LabelConcept = "Und";
 
         private readonly Context _modelContext;
-        public readonly Für ParentFuer;
+        public readonly Given_ ParentFuer;
 
-        public And(Context modelContext, Für parentFür)
-            : base(parentFür)
+        public And(Context modelContext, Given_ parentGiven)
+            : base(parentGiven)
         {
             _modelContext = modelContext;
-            ParentFuer = parentFür;
+            ParentFuer = parentGiven;
         }
 
         internal override ConceptNode GetConceptNode()
@@ -24,27 +24,27 @@ namespace BDDish.English
             return _modelContext;
         }
 
-        public And Bemerkung(string text)
+        public And Note(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
 
-        public Given Gilt(Action asssertionAction)
+        public Then_ Then(Action asssertionAction)
         {
-            _modelContext.Add(new Assertion(Given.LabelConcept, asssertionAction, _modelContext));
-            return new Given(_modelContext, ParentFuer);
+            _modelContext.Add(new Assertion(Then_.LabelConcept, asssertionAction, _modelContext));
+            return new Then_(_modelContext, ParentFuer);
         }
 
-        public Given Gilt(object assertion, Func<EqualConstraint> equalTo)
+        public Then_ Then(object assertion, Func<EqualConstraint> equalTo)
         {
-            return Gilt(() => assertion, equalTo);
+            return Then(() => assertion, equalTo);
         }
 
-        public Given Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
+        public Then_ Then(Func<object> assertionA, Func<EqualConstraint> equalTo)
         {
             _modelContext.Add(LabelConcept, assertionA, equalTo);
-            return new Given(_modelContext, ParentFuer);
+            return new Then_(_modelContext, ParentFuer);
         }
     }
 }

@@ -7,6 +7,6 @@ namespace BDDish.English
 {
     internal class Words
     {
-        public const string LabelBemerkung = "Bemerkung";
+        public const string LabelNote = "Note";
     }
 }

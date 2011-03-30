@@ -16,7 +16,7 @@ namespace BDDish.English
 
         public Feature Description(string description)
         {
-            var featureDescription = new FeatureDescription("Beschreibung", description);
+            var featureDescription = new FeatureDescription("Description", description);
             _feature.AddDescription(featureDescription);
             return this;
         }
@@ -35,7 +35,7 @@ namespace BDDish.English
 
         public Feature Note(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
 

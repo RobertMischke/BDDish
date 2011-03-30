@@ -5,41 +5,41 @@ using BDDish.Model;
 
 namespace BDDish.English
 {
-	public class Given : DSLNode
+	public class Then_ : DSLNode
 	{
 		public const string LabelConcept = "Gilt";
 
 		private readonly Context _modelContext;
-		public readonly Für ParentFür;
+		public readonly Given_ ParentGiven;
 
-		public Given(Context modelContext, Für parentFür) : base(parentFür)
+		public Then_(Context modelContext, Given_ parentGiven) : base(parentGiven)
 		{
 			_modelContext = modelContext;
-			ParentFür = parentFür;
+			ParentGiven = parentGiven;
 		}
 
-		public Given Gilt(Action asssertionAction)
+		public Then_ Then(Action asssertionAction)
 		{
 			_modelContext.Add(new Assertion(LabelConcept, asssertionAction, _modelContext));
-			return new Given(_modelContext, ParentFür);
+			return new Then_(_modelContext, ParentGiven);
 		}
 
-        public Given Gilt(object assertionA, Func<EqualConstraint> equalTo)
+        public Then_ Then(object assertionA, Func<EqualConstraint> equalTo)
         {
-            return Gilt(() => assertionA, equalTo);
+            return Then(() => assertionA, equalTo);
         }
 
-		public Given Gilt(Func<object> assertionA, Func<EqualConstraint> equalTo)
+		public Then_ Then(Func<object> assertionA, Func<EqualConstraint> equalTo)
 		{
 			_modelContext.Add(LabelConcept, assertionA, equalTo);
-			return new Given(_modelContext, ParentFür);
+			return new Then_(_modelContext, ParentGiven);
 		}
 
-		public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
+		public AceptanceCriterion_ AkzeptanzKriterium(string beschreibung)
 		{
             var modelAcceptanceCriterion =
                 new AcceptanceCriterion(
-                    AceptanceCriterion.LabelConcept,
+                    AceptanceCriterion_.LabelConcept,
                     beschreibung,
                     _modelContext.ParentAceptanceCriterion.ParentCustomer
             );
@@ -48,10 +48,10 @@ namespace BDDish.English
                 ParentAceptanceCriterion.
                 ParentCustomer.Add(modelAcceptanceCriterion);
 
-			return new AceptanceCriterion(modelAcceptanceCriterion, ParentFür.ParentAkzeptanzkriterium.ParentCustomer);
+			return new AceptanceCriterion_(modelAcceptanceCriterion, ParentGiven.ParentAceptanceCriterion.ParentCustomer);
 		}
 
-		public Customer_ Als(ICustomerDescription kundenBeschreibung)
+		public Customer_ As(ICustomerDescription kundenBeschreibung)
 		{
 			var modelCustomer = new Customer(Customer_.LabelConcept, kundenBeschreibung,
 			                                 _modelContext.ParentAceptanceCriterion.ParentCustomer.ParentUserStory);
@@ -60,8 +60,8 @@ namespace BDDish.English
 				ParentCustomer.
 				ParentUserStory.AddCustomer(modelCustomer);
 
-			return new Customer_(modelCustomer, ParentFür.
-												ParentAkzeptanzkriterium.
+			return new Customer_(modelCustomer, ParentGiven.
+												ParentAceptanceCriterion.
 												ParentCustomer.
 												ParentRequirement);
 		}

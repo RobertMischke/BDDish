@@ -80,16 +80,16 @@
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
     <Compile Include="Config.cs" />
-    <Compile Include="DSL\English\AceptanceCriterion.cs">
+    <Compile Include="DSL\English\AceptanceCriterion_.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DSL\English\Requirement_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\Fuer.cs">
+    <Compile Include="DSL\English\Executable\Given_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\Given.cs">
+    <Compile Include="DSL\English\Executable\Then_.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DSL\English\Executable\Test_.cs">

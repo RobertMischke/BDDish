@@ -4,24 +4,26 @@ using BDDish.Model.Tree;
 
 namespace BDDish.English
 {
-	public class AceptanceCriterion : DSLNode
+	public class AceptanceCriterion_ : DSLNode
 	{
 		public const string LabelConcept = "AkzeptanzKriterium";
 
 		private readonly AcceptanceCriterion _modelAcceptanceCriterion;
         public readonly Customer_ ParentCustomer;
 
-		public AceptanceCriterion(AcceptanceCriterion modelAcceptanceCriterion, Customer_ parentCustomer) : base(parentCustomer)
+		public AceptanceCriterion_(AcceptanceCriterion modelAcceptanceCriterion, Customer_ parentCustomer) : base(parentCustomer)
 		{
 			_modelAcceptanceCriterion = modelAcceptanceCriterion;
 			ParentCustomer = parentCustomer;
 		}
 
-		public Für Für(IContextDescription kontext)
+		public Given_ Given(IContextDescription kontext)
 		{
 			_modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
-			return new Für(_modelAcceptanceCriterion.Context, this);
+			return new Given_(_modelAcceptanceCriterion.Context, this);
 		}
+
+        public void Given(Func<IContextDescription> someContext){ Given(someContext.Invoke());}
 
         public Test_ Test(Action action)
         {
@@ -31,11 +33,11 @@ namespace BDDish.English
         }
 
 
-        public AceptanceCriterion AkzeptanzKriterium(string beschreibung)
+        public AceptanceCriterion_ AceptanceCriterion(string beschreibung)
 	    {
             var modelAcceptanceCriterion = new AcceptanceCriterion(LabelConcept, beschreibung, _modelAcceptanceCriterion.ParentCustomer );
             _modelAcceptanceCriterion.ParentCustomer.Add(modelAcceptanceCriterion);
-            return new AceptanceCriterion(modelAcceptanceCriterion, ParentCustomer);
+            return new AceptanceCriterion_(modelAcceptanceCriterion, ParentCustomer);
 	    }
 
         public Feature Execute()
@@ -48,11 +50,10 @@ namespace BDDish.English
 	        return _modelAcceptanceCriterion;
 	    }
 
-        public AceptanceCriterion Bemerkung(string text)
+        public AceptanceCriterion_ Note(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
-
 	}
 }

@@ -5,7 +5,7 @@ namespace BDDish.English
 {
 	public class Customer_ : DSLNode
 	{
-		public const string LabelConcept = "Als";
+		public const string LabelConcept = "As";
 
 		private readonly Customer _modelCustomer;
         public readonly Requirement_ ParentRequirement;
@@ -16,11 +16,11 @@ namespace BDDish.English
 			ParentRequirement = parentRequirement;
 		}
 
-		public AceptanceCriterion AceptanceCriterion(string beschreibung)
+		public AceptanceCriterion_ AceptanceCriterion(string beschreibung)
 		{
-			var modelAcceptanceCriterion = new AcceptanceCriterion(English.AceptanceCriterion.LabelConcept , beschreibung, _modelCustomer);
+			var modelAcceptanceCriterion = new AcceptanceCriterion(English.AceptanceCriterion_.LabelConcept , beschreibung, _modelCustomer);
 			_modelCustomer.Add(modelAcceptanceCriterion);
-			return new AceptanceCriterion(modelAcceptanceCriterion, this);
+			return new AceptanceCriterion_(modelAcceptanceCriterion, this);
 		}
 
         internal override ConceptNode GetConceptNode()
@@ -30,7 +30,7 @@ namespace BDDish.English
 
         public Customer_ Note(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
 	}

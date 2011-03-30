@@ -5,7 +5,7 @@ namespace BDDish.English
 {
 	public class Requirement_ : DSLNode
 	{
-		public const string LabelConcept = "Anforderung";
+		public const string LabelConcept = "RequirementS";
         public readonly Feature ParentFeature;
 
 		public UserStory _modelUserStory;
@@ -23,12 +23,16 @@ namespace BDDish.English
 			return new Customer_(modelCustomer, this);
 		}
 
-		public Customer_ As(ICustomerDescription kunde)
+		public Customer_ As(ICustomerDescription customer)
 		{
-			var modelCustomer = new Customer(Customer_.LabelConcept, kunde, _modelUserStory);
+			var modelCustomer = new Customer(Customer_.LabelConcept, customer, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Customer_(modelCustomer, this);
 		}
+
+        public Customer_ Customer(string name) { return As(name); }
+        public Customer_ Customer(ICustomerDescription customer) { return As(customer); }
+
 
         internal override ConceptNode GetConceptNode()
         {
@@ -37,7 +41,7 @@ namespace BDDish.English
 
         public Requirement_ Note(string text)
         {
-            AddNote(Words.LabelBemerkung, text);
+            AddNote(Words.LabelNote, text);
             return this;
         }
 
