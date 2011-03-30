@@ -12,6 +12,7 @@ namespace BDDish
         private const string IndentCustomer = " ";
         private const string IndentAceptanceCriteria = "    ";
         private const string IndentContext = "      ";
+        private const string IndentContextSetting = "        ";
         private const string IndentAssertion = "      ";
 
         private readonly MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
@@ -64,6 +65,10 @@ namespace BDDish
                     {
                         Console.WriteLine(IndentContext + acceptanceCriterion.Context.Label);
                         WriteNotes(acceptanceCriterion.Context.Notes, indent: IndentContext + NoteIndent);
+
+                        foreach(var contextInfo in acceptanceCriterion.Context.Settings)
+                            Console.WriteLine(IndentContextSetting + contextInfo.Label + _methodSignatureToString.GetString(contextInfo.Action));
+
                     }
                         
                     WriteAssertionInfo(acceptanceCriterion);    

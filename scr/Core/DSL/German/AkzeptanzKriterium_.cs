@@ -17,6 +17,11 @@ namespace BDDish.German
 			ParentKunde = parentKunde;
 		}
 
+        public Für GegebenIst(IContextDescription kontext){ return Für(kontext); }
+        public Für GegebenSind(IContextDescription kontext) { return Für(kontext); }
+
+        public Für Wenn(IContextDescription kontext){ return Für(kontext); }
+
 		public Für Für(IContextDescription kontext)
 		{
 			_modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
