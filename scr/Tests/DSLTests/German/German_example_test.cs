@@ -19,21 +19,21 @@ namespace BDDish.Tests
                     Anforderung("FANTASYformat v1.0 exportieren").
                         Als(Auftraggeber.Normalo).
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-                                Für(ContextCamelCase()).
+                                Für(ContextCamelCase).
                                     Und(Weitere_action_fuer_context).
                                     Und(Weitere_action_fuer_context).
                                     Dann(Weitere_action_fuer_context).
                                 Gilt(SomeAssertionMethodWithCamelCase).
                             AkzeptanzKriterium("...").
-                                Wenn(Context_with_underscores()).
+                                Wenn(Context_with_underscores).
                                 Gilt(Some_assertion_method_with_underscores).
                             AkzeptanzKriterium("...").
-                                GegebenIst(ContextCamelCase()).
+                                GegebenIst(ContextCamelCase).
                                     Dann(Weitere_action_fuer_context).
                                 Soll(SomeAssertionMethodWithCamelCase).
                         Als(Auftraggeber.Sondermann).
                             AkzeptanzKriterium("Die Auftragseigenschaften sind vollständig im Zieldokument zu finden").
-                                Für(Context_with_underscores()).
+                                Für(Context_with_underscores).
                                 Gilt(() => context2.Positions.Count , () => Is.EqualTo(3)).
                                 Gilt(() => context2.Positions[0].Price, () => Is.EqualTo(22m)).
                             AkzeptanzKriterium("Ein weiteres noch nicht spezifiziertes Kriterium ").

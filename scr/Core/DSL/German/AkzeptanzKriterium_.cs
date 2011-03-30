@@ -17,16 +17,21 @@ namespace BDDish.German
 			ParentKunde = parentKunde;
 		}
 
-        public Für GegebenIst(IContextDescription kontext){ return Für(kontext); }
+        public Für GegebenIst(Func<IContextDescription> kontext){ return Für(kontext); }
+        public Für GegebenIst(IContextDescription kontext) { return Für(kontext); }
+        
+        public Für GegebenSind(Func<IContextDescription> kontext) { return Für(kontext); }
         public Für GegebenSind(IContextDescription kontext) { return Für(kontext); }
 
-        public Für Wenn(IContextDescription kontext){ return Für(kontext); }
+        public Für Wenn(Func<IContextDescription> kontext){ return Für(kontext); }
+        public Für Wenn(IContextDescription kontext) { return Für(kontext); }
 
-		public Für Für(IContextDescription kontext)
-		{
-			_modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
-			return new Für(_modelAcceptanceCriterion.Context, this);
-		}
+		public Für Für(Func<IContextDescription> kontext){return Für(kontext.Invoke());}
+        public Für Für(IContextDescription kontext)
+        {
+            _modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
+            return new Für(_modelAcceptanceCriterion.Context, this);
+        }
 
         public Test_ Test(Action action)
         {
@@ -58,6 +63,5 @@ namespace BDDish.German
             AddNote(Words.LabelBemerkung, text);
             return this;
         }
-
 	}
 }

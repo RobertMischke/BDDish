@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-namespace BDDish.Tests
+namespace BDDish.Tests.DSLTests
 {
-    public class German_example_test_without_description
+    public class German_example_with_note
     {
         [Test]
-        public void Example_test_without_description()
+        public void Example_test_with_notes()
         {
             new German.Feature("Schnittstellen").
-                    Anforderung("FANTASYformat v1.0 exportieren").
-                        Als(Auftraggeber.Normalo).
-                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
-                                Für(ContextCamelCase()).
+                    Anforderung("FANTASYformat v1.0 exportieren").Bemerkung("Anforderung - Bemerkung").
+                        Als(Auftraggeber.Normalo).Bemerkung("Als - Bermerkung").
+                            AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").Bemerkung("Aktzeptanzkriterium - Bemerkung").
+                                Für(ContextCamelCase).Bemerkung("Für - Bemerkung").
                                 Gilt(SomeAssertionMethodWithCamelCase).
                 Execute();
         }
@@ -25,6 +25,5 @@ namespace BDDish.Tests
         }
 
         public void SomeAssertionMethodWithCamelCase() { }
-
     }
 }
