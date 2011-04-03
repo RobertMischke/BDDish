@@ -4,7 +4,7 @@ using Seedworks.Lib.Persistance;
 
 namespace BDDish.Model.Tree
 {
-	public abstract class ConceptNode : IMutablePersistable
+    public abstract class ConceptNode : IPersistable, WithDateCreated
 	{
         public int Id { get; set; }
 

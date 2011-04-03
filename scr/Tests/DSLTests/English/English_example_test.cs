@@ -12,36 +12,16 @@ namespace BDDish.Tests
         [Test]
         public void Example_Test()
         {
-            //new English.Feature("Example Feature")
-            //    .Requirement("Some customer needs something")
-            //    .Customer("the default customer").
-            //        AceptanceCriterion("The need").
-            //            Given(Some_context)
-
-            /* 
-             * Feature(Example).
-             * Requirement("Sth should be")
-             * For("the given customer")
-             * 
-             * Given(this context)
-             * When()
-             * Then()
-             */
-
-            /* 
-             * Feature(Example).
-             * Requirement("Sth should be")
-             * As("the given customer")
-             * 
-             * Given(this context)
-             * When()
-             * ItsExpectedThat()
-             */
+            new English.Feature("Example Feature")
+                .Requirement("Some customer needs something")
+                .Customer(Customers.Normal).
+                    AceptanceCriterion("The need").
+                        Given(Some_context).
+                        Then(We_expect_the_following).Execute();
         }
 
-        private IContextDescription Some_context()
-        {
-            throw new NotImplementedException();
-        }
+        private IContextDescription Some_context(){ return Sample.Order1Position; }
+        private void We_expect_the_following(){ Assert.That("bla", Is.EqualTo("bla")); }
+
     }
 }

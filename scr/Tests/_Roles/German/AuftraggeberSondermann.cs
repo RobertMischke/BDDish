@@ -4,7 +4,7 @@ namespace BDDish.Tests
 {
 	public class AuftraggeberSondermann : ICustomerDescription
 	{
-		public string Desription { get; set; }
+		public string About { get; set; }
 
 		public AuftraggeberSondermann()
 		{

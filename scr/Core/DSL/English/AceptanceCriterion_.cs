@@ -17,13 +17,15 @@ namespace BDDish.English
 			ParentCustomer = parentCustomer;
 		}
 
+        public Given_ When(Func<IContextDescription> someContext) { return Given(someContext.Invoke()); }
+        public Given_ When(IContextDescription someContext) { return Given(someContext); }
+
+        public Given_ Given(Func<IContextDescription> someContext) { return Given(someContext.Invoke()); }
 		public Given_ Given(IContextDescription kontext)
 		{
 			_modelAcceptanceCriterion.Add(German.Für.LabelConcept, kontext);
 			return new Given_(_modelAcceptanceCriterion.Context, this);
 		}
-
-        public void Given(Func<IContextDescription> someContext){ Given(someContext.Invoke());}
 
         public Test_ Test(Action action)
         {

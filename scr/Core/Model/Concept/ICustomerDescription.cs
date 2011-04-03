@@ -2,6 +2,6 @@
 {
 	public interface ICustomerDescription
 	{
-		string Desription { get; set; }
+		string About { get; set; }
 	}
 }

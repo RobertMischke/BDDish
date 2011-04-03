@@ -13,6 +13,9 @@ namespace BDDish.English
 		private readonly Context _modelContext;
         public readonly AceptanceCriterion_ ParentAceptanceCriterion;
 
+        public And GivenIs(Action contextAction) { return And(contextAction); }
+        public And When(Action contextAction) { return And(contextAction); }
+
 		public Given_(Context modelContext, AceptanceCriterion_ parentAceptanceCriterion) : base(parentAceptanceCriterion)
 		{
 			_modelContext = modelContext;

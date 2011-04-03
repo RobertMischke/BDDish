@@ -14,7 +14,7 @@ namespace BDDish.Model
 	{
 		private readonly ICustomerDescription _customerDescription;
 
-		public string Desription { get { return _customerDescription.Desription; } set { _customerDescription.Desription = value; } }
+		public string Desription { get { return _customerDescription.About; } set { _customerDescription.About = value; } }
 
 		public UserStory ParentUserStory;
 
@@ -22,7 +22,7 @@ namespace BDDish.Model
 
 		private class InternalDescription : ICustomerDescription
 		{
-			public string Desription { get; set; }
+			public string About { get; set; }
 		}
 
 		public Customer(string labelConcept, string labelBody, UserStory userStory) : base(labelConcept, labelBody)
