@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSLTests\English\English_empty_context.cs" />
     <Compile Include="DSLTests\English\English_example_test.cs" />
     <Compile Include="DSLTests\German\German_example_test_without_description.cs" />
     <Compile Include="DSLTests\German\German_example_with_note.cs" />

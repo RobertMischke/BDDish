@@ -80,6 +80,8 @@
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="DSL\EmptyContext.cs" />
+    <Compile Include="DSL\English\Metadata\EmptyContext.cs" />
     <Compile Include="DSL\English\AceptanceCriterion_.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,7 +106,7 @@
     <Compile Include="DSL\English\Customer_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Words.cs">
+    <Compile Include="DSL\English\Metadata\Words.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
@@ -117,10 +119,11 @@
     <Compile Include="DSL\German\Executable\Gilt_.cs" />
     <Compile Include="DSL\German\Kunde.cs" />
     <Compile Include="DSL\German\Anforderung.cs" />
+    <Compile Include="DSL\German\MetaData\LeererContext.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureMap.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureRepository.cs" />
-    <Compile Include="DSL\German\Words.cs" />
+    <Compile Include="DSL\German\MetaData\Words.cs" />
     <Compile Include="Model.Persistence\SessionFactory.cs" />
     <Compile Include="Model.Visualizer\Console\ConsoleWriter.cs" />
     <Compile Include="Model.Execution\ExecutedFeature.cs" />
