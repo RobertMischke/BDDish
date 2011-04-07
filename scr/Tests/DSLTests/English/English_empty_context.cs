@@ -21,7 +21,7 @@ namespace BDDish.Tests
                         Then(we_expect_the_following).Execute();
         }
 
-        private EmptyContext some_context = new EmptyContext(() => Console.WriteLine("foo context"));
+        private EmptyContext some_context = new EmptyContext(() => {});
         void we_expect_the_following(){}
     }
 }
