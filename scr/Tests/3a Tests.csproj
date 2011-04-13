@@ -52,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DSLTests\English\English_empty_context.cs" />
-    <Compile Include="DSLTests\English\English_example_test.cs" />
-    <Compile Include="DSLTests\German\German_example_test_without_description.cs" />
-    <Compile Include="DSLTests\German\German_example_with_note.cs" />
+    <Compile Include="Tests.DSL\English\English_empty_context.cs" />
+    <Compile Include="Tests.DSL\English\English_example_test.cs" />
+    <Compile Include="Tests.DSL\German\German_example_test_without_description.cs" />
+    <Compile Include="Tests.DSL\German\German_example_with_note.cs" />
     <Compile Include="Tests.DSL\When_assertion_fails.cs" />
     <Compile Include="Tests\Formating\TextFormaterTests.cs" />
     <Compile Include="Tests\Formating\TextFormatIdentifierTests.cs" />
@@ -65,8 +65,8 @@
     <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
-    <Compile Include="DSLTests\Execution_order.cs" />
-    <Compile Include="DSLTests\German\German_example_test.cs" />
+    <Compile Include="Tests.DSL\Execution_order.cs" />
+    <Compile Include="Tests.DSL\German\German_example_test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\TextParsing\UnderScoresToTextTests.cs" />
     <Compile Include="_Contexts\German\EinExportiertesFANTASYformatDokumentfuerMusterFirma1undMusterVorgang24.cs" />
