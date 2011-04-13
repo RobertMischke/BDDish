@@ -82,43 +82,43 @@
     <Compile Include="Config.cs" />
     <Compile Include="DSL\EmptyContext.cs" />
     <Compile Include="DSL\English\Metadata\EmptyContext.cs" />
-    <Compile Include="DSL\English\AceptanceCriterion_.cs">
+    <Compile Include="DSL\English\Model\AceptanceCriterion_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Requirement_.cs">
+    <Compile Include="DSL\English\Model\Requirement_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\Given_.cs">
+    <Compile Include="DSL\English\Model\Executable\Given_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\Then_.cs">
+    <Compile Include="DSL\English\Model\Executable\Then_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\Test_.cs">
+    <Compile Include="DSL\English\Model\Executable\Test_.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Executable\And.cs">
+    <Compile Include="DSL\English\Model\Executable\And.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Feature.cs">
+    <Compile Include="DSL\English\Model\Feature.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\English\Customer_.cs">
+    <Compile Include="DSL\English\Model\Customer_.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DSL\English\Metadata\Words.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DSL\German\AkzeptanzKriterium_.cs" />
-    <Compile Include="DSL\German\Executable\Und_.cs">
+    <Compile Include="DSL\German\Model\AkzeptanzKriterium_.cs" />
+    <Compile Include="DSL\German\Model\Executable\Und_.cs">
       <DependentUpon>Fuer.cs</DependentUpon>
     </Compile>
-    <Compile Include="DSL\German\Executable\Test_.cs" />
-    <Compile Include="DSL\German\Feature.cs" />
-    <Compile Include="DSL\German\Executable\Fuer.cs" />
-    <Compile Include="DSL\German\Executable\Gilt_.cs" />
-    <Compile Include="DSL\German\Kunde.cs" />
-    <Compile Include="DSL\German\Anforderung.cs" />
+    <Compile Include="DSL\German\Model\Executable\Test_.cs" />
+    <Compile Include="DSL\German\Model\Feature.cs" />
+    <Compile Include="DSL\German\Model\Executable\Fuer.cs" />
+    <Compile Include="DSL\German\Model\Executable\Gilt_.cs" />
+    <Compile Include="DSL\German\Model\Kunde.cs" />
+    <Compile Include="DSL\German\Model\Anforderung.cs" />
     <Compile Include="DSL\German\MetaData\LeererContext.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureMap.cs" />
     <Compile Include="Model.Persistence\Feature\FeatureLoader.cs" />
