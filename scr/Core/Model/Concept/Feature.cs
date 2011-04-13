@@ -11,6 +11,8 @@ namespace BDDish.Model
 	    public FeatureDescription FeatureDesription;
 		public UserStoryList UserStories = new UserStoryList();
 		public CustomerList Customers = new CustomerList();
+
+        public object InstanceOfTestFixture = null;
 		
 		public Feature(string labelConcept, string labelBody) : base(labelConcept, labelBody)
 		{

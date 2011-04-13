@@ -39,10 +39,12 @@ namespace BDDish.Model.Tree
             return currentNode;
         }
 
-        protected TRootNode Execute<TRootNode>() where TRootNode : DSLNode 
+        protected TRootNode Execute<TRootNode>(object sender = null) where TRootNode : DSLNode 
         {
             var rootNode = (TRootNode) GetRoot();
-            new ModelExecuter().Run((Feature)rootNode.GetConceptNode());
+            var feature = (Feature) rootNode.GetConceptNode();
+            feature.InstanceOfTestFixture = sender;
+            new ModelExecuter().Run(feature);
 
             return rootNode;
         }
