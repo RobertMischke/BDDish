@@ -66,9 +66,9 @@ namespace BDDish.English
 												ParentRequirement);
 		}
 
-		public Feature Execute()
+        public Feature Execute(object sender)
 		{
-		    return Execute<Feature>();
+		    return Execute<Feature>(sender);
 		}
 
         internal override ConceptNode GetConceptNode()

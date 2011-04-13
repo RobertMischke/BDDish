@@ -40,7 +40,7 @@ namespace BDDish.Tests
 
             Assert.That(_executionCount, Is.EqualTo(0));
 
-            feature.Execute();
+            feature.Execute(this);
 
             Assert.That(_executionCount, Is.EqualTo(3));
 

@@ -78,9 +78,9 @@ namespace BDDish.German
         public Gilt_ DannSollen(object assertion, Func<EqualConstraint> equalTo) { return Gilt(assertion, equalTo); }
         public Gilt_ DannSollen(Func<object> assertionA, Func<EqualConstraint> equalTo) { return Gilt(assertionA, equalTo); }
 
-		public Feature Execute()
+        public Feature Execute(object sender)
 		{
-		    return Execute<Feature>();
+		    return Execute<Feature>(sender);
 		}
 
         internal override ConceptNode GetConceptNode()

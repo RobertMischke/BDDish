@@ -18,7 +18,7 @@ namespace BDDish.Tests
                 .Customer(Customers.Normal).
                     AceptanceCriterion("The need").
                         Given(some_context).
-                        Then(we_expect_the_following).Execute();
+                        Then(we_expect_the_following).Execute(this);
         }
 
         private EmptyContext some_context = new EmptyContext(() => {});

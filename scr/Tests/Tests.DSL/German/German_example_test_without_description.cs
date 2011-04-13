@@ -17,7 +17,7 @@ namespace BDDish.Tests
                             AkzeptanzKriterium("Das erstellte Dokument ist gegen XSD zu validieren").
                                 Für(ContextCamelCase).
                                 Gilt(SomeAssertionMethodWithCamelCase).
-                Execute();
+                Execute(this);
         }
 
         private EinExportiertesFANTASYFormatDokumentFürMusterFirma1UndMusterVorgang24 ContextCamelCase(){

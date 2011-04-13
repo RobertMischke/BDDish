@@ -43,7 +43,7 @@ namespace BDDish.Tests
                                 Test(Hier_die_Ausführung).
                             AkzeptanzKriterium("..").
                                 Test(Hier_die_Ausführung).
-                    Execute();
+                    Execute(this);
 		}
 
 
@@ -55,7 +55,6 @@ namespace BDDish.Tests
 
         private void Weitere_action_fuer_context()
         {
-            Console.WriteLine("WeitereActionFuerContext");
         }
 
 		private EinExportiertesFANTASYFormatMit3PositionenUndMusterFirma1 Context_with_underscores(){

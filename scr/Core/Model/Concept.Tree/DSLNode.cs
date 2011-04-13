@@ -39,7 +39,7 @@ namespace BDDish.Model.Tree
             return currentNode;
         }
 
-        protected TRootNode Execute<TRootNode>(object sender = null) where TRootNode : DSLNode 
+        internal TRootNode Execute<TRootNode>(object sender) where TRootNode : DSLNode 
         {
             var rootNode = (TRootNode) GetRoot();
             var feature = (Feature) rootNode.GetConceptNode();

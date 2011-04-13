@@ -18,7 +18,7 @@ namespace BDDish.Tests.DSLTests
 								Gilt("Foo", () => Is.EqualTo("Bla")).
 								Gilt("Bla", () => Is.EqualTo("Bla"))
 
-				.Execute();
+				.Execute(this);
 		}
 
         /// <summary>

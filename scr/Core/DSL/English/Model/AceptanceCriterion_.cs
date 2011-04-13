@@ -43,9 +43,9 @@ namespace BDDish.English
             return new AceptanceCriterion_(modelAcceptanceCriterion, ParentCustomer);
 	    }
 
-        public Feature Execute()
+        public Feature Execute(object sender)
         {
-            return Execute<Feature>();
+            return Execute<Feature>(sender);
         }
 
         internal override ConceptNode GetConceptNode()

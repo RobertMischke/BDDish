@@ -17,7 +17,7 @@ namespace BDDish.Tests
                 .Customer(Customers.Normal).
                     AceptanceCriterion("The need").
                         Given(Some_context).
-                        Then(We_expect_the_following).Execute();
+                        Then(We_expect_the_following).Execute(this);
         }
 
         private IContextDescription Some_context(){ return Sample.Order1Position; }

@@ -17,7 +17,7 @@ namespace BDDish.Tests.DSLTests
                             AceptanceCriterion("Aktzeptanzkriterium1").
                             Given(some_context).
                             Then(we_expect_something).
-            Execute();
+            Execute(this);
         }
 
         private EmptyContext some_context = new EmptyContext(()=>{});

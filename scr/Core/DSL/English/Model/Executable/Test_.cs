@@ -41,9 +41,9 @@ namespace BDDish.English
             return new AceptanceCriterion_(modelAcceptanceCriterion, ParentAceptanceCriterion.ParentCustomer);
         }
 
-        public Feature Execute()
+        public Feature Execute(object sender)
         {
-            return Execute<Feature>();
+            return Execute<Feature>(sender);
         }
 
         public Test_ Bemerkung(string text)
