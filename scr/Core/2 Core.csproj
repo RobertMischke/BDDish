@@ -130,7 +130,7 @@
     <Compile Include="Model.Execution\ExecutedFeatureList.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\CamelCaseToText.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\CapitalizeText.cs" />
-    <Compile Include="Model.Visualizer\MethodSignatureToString.cs" />
+    <Compile Include="Model.Visualizer\AssertionActionToString.cs" />
     <Compile Include="Model.Visualizer\TextFormating\TextFormater.cs" />
     <Compile Include="Model.Visualizer\TextFormating\TextFormatingIdentifier.cs" />
     <Compile Include="Model.Visualizer\TextTransformations\UnderscoresToText.cs" />

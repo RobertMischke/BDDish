@@ -15,7 +15,7 @@ namespace BDDish
         private const string IndentContextSetting = "        ";
         private const string IndentAssertion = "      ";
 
-        private readonly MethodSignatureToString _methodSignatureToString = new MethodSignatureToString();
+        private readonly AssertionActionToString _assertionActionToString = new AssertionActionToString();
 
         public void Write(Feature feature)
         {
@@ -67,7 +67,7 @@ namespace BDDish
                         WriteNotes(acceptanceCriterion.Context.Notes, indent: IndentContext + NoteIndent);
 
                         foreach(var contextInfo in acceptanceCriterion.Context.Settings)
-                            Console.WriteLine(IndentContextSetting + contextInfo.Label + _methodSignatureToString.GetString(contextInfo.Action));
+                            Console.WriteLine(IndentContextSetting + contextInfo.Label + _assertionActionToString.GetString(contextInfo.Action));
 
                     }
                         
@@ -81,7 +81,7 @@ namespace BDDish
         {
             foreach (var assertion in acceptanceCriterion.GetAllAssertions())
             {
-                Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _methodSignatureToString.GetString(assertion.Action));
+                Console.WriteLine(IndentAssertion + assertion.LabelConcept + ": " + _assertionActionToString.GetString(assertion.Action));
                 WriteNotes(assertion.Notes, indent: IndentAssertion + NoteIndent);
             }
                 

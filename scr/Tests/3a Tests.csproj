@@ -63,7 +63,7 @@
     <Compile Include="Tests\Formating\TextFormatIdentifierTests.cs" />
     <Compile Include="Tests\Persistance\FeaturePersistanceTests.cs" />
     <Compile Include="Tests\TextParsing\CamelCaseToTextTests.cs" />
-    <Compile Include="Tests\MethodSignatureToStringTests.cs" />
+    <Compile Include="Tests\Assertion_actions_to_meaningfull_name.cs" />
     <Compile Include="..\AssemblyVersionAndPublisherInfo.cs">
       <Link>Properties\AssemblyVersionAndPublisherInfo.cs</Link>
     </Compile>
