@@ -33,9 +33,9 @@ namespace BDDish.Tests
         Action we_expect_something = ()=>{};
 
         [Test]
-        public void Anonymous_action_to_string_if_it_assigned_to_a_property()
+        public void Anonymous_action_to_string_if_its_assigned_to_a_property()
         {
-            Assert.That(_assertionActionToString.GetString(we_expect_something), Is.EqualTo("we expect something"));
+            Assert.That(_assertionActionToString.GetString(we_expect_something, this), Is.EqualTo("we expect something"));
         }
 
 	}
