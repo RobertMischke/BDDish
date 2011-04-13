@@ -14,10 +14,8 @@ namespace BDDish.Model.Visualizer
 
 		public string GetString(Action action)
 		{
-			string methodName = action.Method.Name;
-
-			//if (methodName.Contains("<"))
-			//    return "No si";
+            if (action == null)
+                return "not implemented";
 
 			return _textFormater.GetText(action.Method.Name);
 		}

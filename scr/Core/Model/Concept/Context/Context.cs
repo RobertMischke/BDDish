@@ -48,7 +48,7 @@ namespace BDDish.Model
         public static string ContextDescriptionToString(IContextDescription contextDescription)
         {
             if (contextDescription == null)
-                return "Empty context";
+                return "not implemented";
 
             return new TextFormater().GetText(contextDescription.GetType().Name);
         }

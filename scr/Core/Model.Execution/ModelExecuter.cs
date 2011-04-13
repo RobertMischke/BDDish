@@ -35,6 +35,9 @@ namespace BDDish
                             { Assert.Ignore(); }                
                 }
 
+                if (assertion.Action == null)
+                    Assert.Ignore();
+
                 try
                     {assertion.Action();}
                 catch (NotImplementedException)

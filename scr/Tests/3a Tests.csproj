@@ -57,6 +57,7 @@
     <Compile Include="Tests.DSL\German\German_example_test_without_description.cs" />
     <Compile Include="Tests.DSL\German\German_example_with_note.cs" />
     <Compile Include="Tests.DSL\When_assertion_fails.cs" />
+    <Compile Include="Tests.DSL\When_assertion_is_null.cs" />
     <Compile Include="Tests.DSL\When_context_is_null.cs" />
     <Compile Include="Tests\Formating\TextFormaterTests.cs" />
     <Compile Include="Tests\Formating\TextFormatIdentifierTests.cs" />
