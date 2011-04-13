@@ -21,11 +21,14 @@ namespace BDDish.Tests.DSLTests
 				.Execute();
 		}
 
-		[Ignore("Manual test")]
+        /// <summary>
+        /// "The_test_should_be_red" == an AssertionException gets thrown.
+        /// </summary>
 		[Test]
+        [ExpectedException( "NUnit.Framework.AssertionException")]
 		public void The_output_should_be_complete_and_the_test_should_be_red()
 		{
-			Arrange_sample_feature_with_failing_test();
+            Arrange_sample_feature_with_failing_test();    			
 		}
 
 	}
