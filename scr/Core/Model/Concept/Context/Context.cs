@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BDDish.English;
 using BDDish.Model.Tree;
 using BDDish.Model.Visualizer;
 using NUnit.Framework.Constraints;
@@ -38,11 +39,19 @@ namespace BDDish.Model
 		}
 
 		public Context(string labelConcept, IContextDescription contextDescription, AcceptanceCriterion parentAcceptanceCriterion)
-			: base(labelConcept, new TextFormater().GetText(contextDescription.GetType().Name))
+            : base(labelConcept, ContextDescriptionToString(contextDescription))
 		{
 			_internalDescription = contextDescription;
 			ParentAceptanceCriterion = parentAcceptanceCriterion;
 		}
+
+        public static string ContextDescriptionToString(IContextDescription contextDescription)
+        {
+            if (contextDescription == null)
+                return "Empty context";
+
+            return new TextFormater().GetText(contextDescription.GetType().Name);
+        }
 
 		public void Add(Assertion assertion)
 		{
@@ -68,6 +77,11 @@ namespace BDDish.Model
         {
             _internalDescription.Setup();
             _hasBeenSetup = true;
+        }
+
+        public bool IsContextEmpty()
+        {
+            return _internalDescription == null;
         }
 
 	}

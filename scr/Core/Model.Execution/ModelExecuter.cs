@@ -24,6 +24,9 @@ namespace BDDish
             {
                 if (assertion.Context != null && !assertion.Context.HasBeenSetup())
                 {
+                    if (assertion.Context.IsContextEmpty())
+                        Assert.Ignore("context has not been implemented");
+
                     assertion.Context.Setup();
                     foreach (var contextSetting in assertion.Context.Settings)
                         try
