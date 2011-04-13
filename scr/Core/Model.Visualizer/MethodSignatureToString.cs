@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using NUnit.Framework.Constraints;
 
 namespace BDDish.Model.Visualizer
@@ -12,13 +15,26 @@ namespace BDDish.Model.Visualizer
 			throw new NotImplementedException();
 		}
 
-		public string GetString(Action action)
-		{
+        public string GetString(Expression<Action> expression)
+        {
+            return "";
+        }
+
+
+        public string GetString(Action action)
+        {
             if (action == null)
                 return "not implemented";
 
-			return _textFormater.GetText(action.Method.Name);
-		}
+            //object[] attributes = info.GetCustomAttributes(typeof(CompilerGeneratedAttribute)).Any()
+            if (action.Target == null)
+            {
+                //ToDo: use Cecil to print MethodBody
+                return "unknown assertion";
+            }
+
+            return _textFormater.GetText(action.Method.Name);
+        }
 
 
 	}

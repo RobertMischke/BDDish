@@ -26,7 +26,7 @@ namespace BDDish.Tests
 		{
 			//TODO
 			Action action = () => Assert.That((object)"test", Is.EqualTo("test"));
-			Console.WriteLine(_signatureToString.GetString(action));
+            Assert.That(_signatureToString.GetString(action), Is.EqualTo("unknown assertion"));
 		}
 
 	}
