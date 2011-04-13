@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BDDish.Model;
+using NUnit.Framework;
 
 namespace BDDish
 {
@@ -25,11 +26,16 @@ namespace BDDish
                 {
                     assertion.Context.Setup();
                     foreach (var contextSetting in assertion.Context.Settings)
-                        contextSetting.Action.Invoke();                    
+                        try
+                            { contextSetting.Action.Invoke(); }
+                        catch (NotImplementedException)
+                            { Assert.Ignore(); }                
                 }
 
-                try{assertion.Action();}
-                catch (NotImplementedException) { }
+                try
+                    {assertion.Action();}
+                catch (NotImplementedException)
+                    { Assert.Ignore(); }
             });
         }
 
