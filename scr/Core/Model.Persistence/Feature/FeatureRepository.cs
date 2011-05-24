@@ -7,7 +7,7 @@ using Seedworks.Lib.Persistance;
 
 namespace BDDish.Model.Persistence
 {
-    public class FeatureRepository : RepositoryDb<Feature, FeatureList>
+    public class FeatureRepository : RepositoryDb<Feature>
     {
         public FeatureRepository(ISession session) : base(session)
         {

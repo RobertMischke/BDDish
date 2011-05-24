@@ -35,11 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Seedworks.Lib, Version=0.8.1.34871, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Seedworks.Persistance.0.8.1.34871\lib\Seedworks.Lib.dll</HintPath>
+    <Reference Include="Seedworks.Lib, Version=0.8.2.3904, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Seedworks.Persistence.0.8.2.2\lib\Seedworks.Lib.dll</HintPath>
     </Reference>
-    <Reference Include="Seedworks.Lib.Persistance, Version=0.8.1.34871, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Seedworks.Persistance.0.8.1.34871\lib\Seedworks.Lib.Persistance.dll</HintPath>
+    <Reference Include="Seedworks.Lib.Persistence">
+      <HintPath>..\packages\Seedworks.Persistence.0.8.2.2\lib\Seedworks.Lib.Persistence.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
