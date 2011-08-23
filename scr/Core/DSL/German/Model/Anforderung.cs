@@ -23,12 +23,16 @@ namespace BDDish.German
 			return new Kunde(modelCustomer, this);
 		}
 
+        public Kunde Fuer(string name){ return Als(name);}
+
 		public Kunde Als(ICustomerDescription kunde)
 		{
 			var modelCustomer = new Customer(Kunde.LabelConcept, kunde, _modelUserStory);
 			_modelUserStory.AddCustomer(modelCustomer);
 			return new Kunde(modelCustomer, this);
 		}
+
+        public Kunde Fuer(ICustomerDescription kunde) { return Als(kunde); }
 
         internal override ConceptNode GetConceptNode()
         {
