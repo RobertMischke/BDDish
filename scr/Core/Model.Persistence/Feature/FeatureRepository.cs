@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NHibernate;
-using Seedworks.Lib.Persistance;
+using Seedworks.Lib.Persistence;
 
 namespace BDDish.Model.Persistence
 {
-    public class FeatureRepository : RepositoryDb<Feature, FeatureList>
+    public class FeatureRepository : RepositoryDb<Feature>
     {
         public FeatureRepository(ISession session) : base(session)
         {

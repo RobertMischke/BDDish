@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Seedworks.Lib.Persistance;
+using Seedworks.Lib.Persistence;
 
 namespace BDDish.Model.Tree
 {
-    public abstract class ConceptNode : IPersistable, WithDateCreated
+    public abstract class ConceptNode : DomainEntity
 	{
-        public int Id { get; set; }
-
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
-
 		/// <summary>
 		/// Feature, UserStory, etc.
 		/// </summary>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>BDDish</id>
-    <version>0.1.1.39440</version>
+    <version>0.1.2.2</version>
     <authors>Robert Mischke</authors>
     <owners>Robert Mischke</owners>
     <projectUrl>https://github.com/RobertMischke/BDDish</projectUrl>
@@ -10,7 +10,6 @@
     <description>Package description</description>
     <tags>BDD</tags>
     <dependencies>
-      <dependency id="Seedworks.Persistance" version="0.8.1.34871" />
       <dependency id="NUnit" />
     </dependencies>
   </metadata>

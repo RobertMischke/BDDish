@@ -58,13 +58,12 @@
     <Reference Include="pnunit.framework">
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Seedworks.Lib, Version=0.8.1.34871, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Seedworks.Lib, Version=0.8.2.33157, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Seedworks.Persistance.0.8.1.34871\lib\Seedworks.Lib.dll</HintPath>
+      <HintPath>..\packages\Seedworks.Persistence.0.8.2.12\lib\Seedworks.Lib.dll</HintPath>
     </Reference>
-    <Reference Include="Seedworks.Lib.Persistance, Version=0.8.1.34871, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Seedworks.Persistance.0.8.1.34871\lib\Seedworks.Lib.Persistance.dll</HintPath>
+    <Reference Include="Seedworks.Lib.Persistence, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Seedworks.Persistence.0.8.2.12\lib\Seedworks.Lib.Persistence.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -144,7 +143,6 @@
     <Compile Include="Model\Concept\FeatureDescription.cs">
       <DependentUpon>Feature.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Concept\FeatureList.cs" />
     <Compile Include="Model\Concept\ICustomerDescription.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
