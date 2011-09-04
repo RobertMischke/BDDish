@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Tests.DSL\English\English_empty_context.cs" />
     <Compile Include="Tests.DSL\English\English_example_test.cs" />
+    <Compile Include="Tests.DSL\German\German_example_without_aceptance_criteria.cs" />
     <Compile Include="Tests.DSL\German\German_example_test_without_description.cs" />
     <Compile Include="Tests.DSL\German\German_example_with_note.cs" />
     <Compile Include="Tests.DSL\When_assertion_fails.cs" />
